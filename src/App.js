@@ -1,13 +1,21 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import ReactDOM from "react-dom";
+import Preloader from "./components/Preloader/Preloader";
+import Timer from "./components/Countdown/Timer";
 
-function App() {
-  const [data, setData] = useState([]);
+import "./styles.css";
 
+export default function App() {
   return (
-    <div>
-      <h1>Hamarosan érkezünk...</h1>
+    <div className="App">
+      <div className="container">
+        <h1>Hamarosan érkezünk...</h1>
+        <Timer />
+        <Preloader />
+      </div>
     </div>
   );
 }
 
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
