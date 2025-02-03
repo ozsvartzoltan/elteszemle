@@ -1,21 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Preloader from "./components/Preloader/Preloader";
-import Timer from "./components/Countdown/Timer";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import "./styles.css";
+import Fooldal from './pages/fooldal';
+import Kapcsolat from './pages/kapcsolat';
+import Home from './pages';
 
 export default function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <h1>Hamarosan érkezünk...</h1>
-        <Timer />
-        <Preloader />
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Fooldal />} />
+          <Route path="/kapcsolat" element={<Kapcsolat />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
