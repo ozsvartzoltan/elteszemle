@@ -35,12 +35,12 @@ export default function Header() {
         />
       </NavbarBrand>
       {/* Mobile Toggle */}
-      <NavbarContent className="sm:hidden ml-[120px]" justify="start">
+      <NavbarContent className="sm:hidden ml-[120px] " justify="start">
         <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} className="text-white" />
       </NavbarContent>
 
       {/* Desktop Content */}
-      <NavbarContent className="hidden sm:flex items-center gap-4 pr-0" justify="center">
+      <NavbarContent className="hidden sm:flex items-center gap-3 -mr-4 justify-center" justify="center">
         {Object.entries(links).map(([key, { href, text }], index, array) => (
           <React.Fragment key={key}>
             <NavbarItem>
