@@ -10,9 +10,9 @@ export default function Footer() {
           <h2 className="mb-6 text-xl font-light tracking-wide">FŐ TÁMOGATÓ</h2>
           <Link href="#" className="inline-block">
             <Image
-              src="https://www.citypng.com/public/uploads/preview/canon-white-logo-png-image-701751694773721wbk5u4quml.png"
+              src="/images/canon.png"
               alt="Canon"
-              className="h-16 w-auto bg-inherit "
+              className="h-16 w-auto bg-transparent "
               radius="none"
             />
           </Link>
@@ -24,16 +24,16 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="#" className="inline-block">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-17%20at%2023.02.19-SLjzBaEI4Pb2445OMFxoMjAhnmiHHU.png"
+                src="/images/filmtansz_logo.png"
                 alt="ELTE BTK"
-                className="h-12 w-auto brightness-0 invert"
+                className="h-36 w-auto "
               />
             </Link>
             <Link href="#" className="inline-block">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-17%20at%2023.02.19-SLjzBaEI4Pb2445OMFxoMjAhnmiHHU.png"
+                src="/images/mha_logo.png"
                 alt="m•ha [elte]"
-                className="h-8 w-auto brightness-0 invert"
+                className="h-8 w-auto "
               />
             </Link>
           </div>
