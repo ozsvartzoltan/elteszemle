@@ -1,53 +1,57 @@
-import { Facebook, Instagram } from 'lucide-react';
-import { Link, Image } from '@heroui/react';
+import { Image } from "@heroui/react";
+import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   return (
     <footer className="bg-[#913E35] px-6 py-12 text-white sm:px-12">
       <div className="mx-auto grid max-w-7xl gap-12 sm:grid-cols-3">
-        {/* Main Sponsor Section */}
         <div>
-          <h2 className="mb-6 text-xl font-light tracking-wide">FŐ TÁMOGATÓ</h2>
-          <Link href="#" className="inline-block">
-            <Image
-              src="/images/canon.png"
-              alt="Canon"
-              className="h-16 w-auto bg-transparent "
-              radius="none"
-            />
-          </Link>
+          <h2 className="mb-6 text-xl font-light ">FŐ TÁMOGATÓ</h2>
+          <Image
+            src="/images/canon.png"
+            alt="Canon"
+            className="w-[300px] h-auto object-contain bg-transparent cursor-pointer flex-shrink-0"
+            radius="none"
+            onClick={() => {
+              window.open("https://www.canon.hu/", "_blank");
+            }}
+          />
         </div>
-
-        {/* Partners Section */}
         <div>
-          <h2 className="mb-6 text-xl font-light tracking-wide">PARTNEREK</h2>
+          <h2 className="mb-6 text-xl font-light ">PARTNEREK</h2>
           <div className="flex flex-col gap-6">
-            <Link href="#" className="inline-block">
-              <img
-                src="/images/filmtansz_logo.png"
-                alt="ELTE BTK"
-                className="h-36 w-auto "
-              />
-            </Link>
-            <Link href="#" className="inline-block">
-              <img
-                src="/images/mha_logo.png"
-                alt="m•ha [elte]"
-                className="h-8 w-auto "
-              />
-            </Link>
+            <Image
+              src="/images/filmtansz_logo.png"
+              alt="ELTE BTK"
+              className="w-[240px] h-auto object-contain bg-transparent cursor-pointer flex-shrink-0"
+              onClick={() => {
+                window.open("https://film.elte.hu/", "_blank");
+              }}
+            />
+            <Image
+              src="/images/mha_logo.png"
+              alt="m•ha [elte]"
+              className="w-[200px] h-auto object-contain bg-transparent cursor-pointer flex-shrink-0"
+              onClick={() => {
+                window.open(
+                  "https://www.facebook.com/share/13tyreHCvy/",
+                  "_blank"
+                );
+              }}
+            />
           </div>
         </div>
-
-        {/* Contact Section */}
         <div>
-          <h2 className="mb-6 text-xl font-light tracking-wide">KAPCSOLAT</h2>
-          <Link href="mailto:elteszemle@gmail.com" className="mb-8 inline-block text-lg hover:underline text-white">
+          <h2 className="mb-6 text-xl font-light">KAPCSOLAT</h2>
+          <div className="mb-4 inline-block text-lg text-white">
             elteszemle@gmail.com
-          </Link>
+          </div>
 
-          <h3 className="mb-4 mt-8 text-lg font-light tracking-wide">SOCIAL MEDIA</h3>
-          <div className="flex gap-4">
+          <h3 className="mb-4 mt-4 text-lg font-light tracking-wide">
+            SOCIAL MEDIA
+          </h3>
+          <SocialIcon url="https://www.facebook.com/profile.php?id=61557156184640" />
+          {/* <div className="flex gap-4">
             <Link href="#" className="rounded-full bg-white/10 p-2 transition-colors hover:bg-white/20">
               <Facebook className="h-6 w-6" />
               <span className="sr-only">Facebook</span>
@@ -62,7 +66,7 @@ export default function Footer() {
               </svg>
               <span className="sr-only">TikTok</span>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
