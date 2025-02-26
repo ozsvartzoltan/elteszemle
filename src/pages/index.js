@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   useDisclosure,
@@ -8,9 +8,12 @@ import {
   ModalFooter,
   Image,
 } from "@heroui/react";
+import { SocialIcon } from "../../node_modules/react-social-icons/dist/react-social-icons";
+import SVG from "components/svg/SVG";
 
 function Home() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { onOpen, onOpenChange } = useDisclosure();
+  const [showScroll, setShowScroll] = useState(true);
   const img_num = Math.floor(Math.random() * 6);
   const images = {
     0: "/images/nyitokepek/IMG_1.jpg",
@@ -112,6 +115,16 @@ function Home() {
       <div id="stab" className="p-4 px-16 text-xl space-y-6 text-justify">
         <div className="font-bold text-4xl">Stáb</div>
       </div>
+      {showScroll && (
+        <Button
+          onPress={() => {
+            document.body.scrollTop = 0;
+          }}
+          className="fixed bottom-6 right-6 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+        >
+          <SVG type="chevronUp" />
+        </Button>
+      )}
     </>
   );
 }

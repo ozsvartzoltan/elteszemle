@@ -17,7 +17,6 @@ import {
   DropdownMenu,
   Button,
 } from "@heroui/react";
-import { useNavigate } from "react-router-dom";
 import SVG from "components/svg/SVG";
 
 export default function Header() {
@@ -29,12 +28,21 @@ export default function Header() {
     galeria: { href: "/galeria", text: "galéria" },
   };
 
+  const programLinks = [
+    { key: "napi_bontas", text: "Napi bontás", href: "#napi_bontas" },
+    { key: "fotokiallitas", text: "Fotókiállítás", href: "#fotokiallitas" },
+    {
+      key: "szakmai_programok",
+      text: "Szakmai programok",
+      href: "#szakmai_programok",
+    },
+  ];
+
   return (
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className="bg-[#913E35] text-white h-[100px] w-full flex-shrink-0 justify-start"
-      id="header"
     >
       <div className="flex w-full items-center">
         {/* Logo and Mobile Toggle Container */}
