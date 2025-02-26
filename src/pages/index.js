@@ -8,7 +8,6 @@ import {
   ModalFooter,
   Image,
 } from "@heroui/react";
-import { SocialIcon } from "../../node_modules/react-social-icons/dist/react-social-icons";
 import SVG from "components/svg/SVG";
 
 function Home() {
@@ -31,7 +30,7 @@ function Home() {
   return (
     <>
       <Modal
-        isOpen={false}
+        isOpen={onOpen} //onOpen
         placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"

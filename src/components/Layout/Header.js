@@ -21,6 +21,7 @@ import SVG from "components/svg/SVG";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false);
   const links = {
     hirek: { href: "#hirek", text: "hírek" },
     rolunk: { href: "#rolunk", text: "rólunk" },
@@ -73,7 +74,7 @@ export default function Header() {
               <DropdownTrigger className="text-white hover:opacity-80 transition-opacity ml-3 py-2 text-lg">
                 <Button
                   disableRipple
-                  className="p-0 bg-transparent data-[hover=true]:bg-transparent -mr-2"
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent -mr-2 "
                   endContent={<SVG type="chevron" />}
                   variant="light"
                 >
@@ -81,28 +82,12 @@ export default function Header() {
                 </Button>
               </DropdownTrigger>
             </NavbarItem>
-            <DropdownMenu>
-              <DropdownItem
-                key="napi_bontas"
-                //startContent={icons.scale}
-                className="h-14"
-              >
-                Napi bontás
-              </DropdownItem>
-              <DropdownItem
-                key="fotokiallitas"
-                //startContent={icons.activity}
-                className="h-14"
-              >
-                Fotókiállítás
-              </DropdownItem>
-              <DropdownItem
-                key="production_ready"
-                //startContent={icons.flash}
-                className="h-14"
-              >
-                Szakmai programok
-              </DropdownItem>
+            <DropdownMenu className="bg-black  text-white rounded-none border-none ">
+              {programLinks.map(({ key, text, href }) => (
+                <DropdownItem key={key} className="h-14 " href={href}>
+                  {text}
+                </DropdownItem>
+              ))}
             </DropdownMenu>
           </Dropdown>
           {Object.entries(links).map(([key, { href, text }], index, array) => (
@@ -130,6 +115,30 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <NavbarMenu className="bg-[#913E35]/95 mt-8">
+        <NavbarMenuItem>
+          <Link
+            onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}
+            className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity items-center hover:cursor-pointer"
+          >
+            program
+            <SVG type={isProgramDropdownOpen ? "chevronUp" : "chevronDown"} />
+          </Link>
+        </NavbarMenuItem>
+        {isProgramDropdownOpen &&
+          programLinks.map(({ key, href, text }) => (
+            <NavbarMenuItem key={key} className="ml-4">
+              <Link
+                href={href}
+                className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setIsProgramDropdownOpen(false);
+                }}
+              >
+                {text}
+              </Link>
+            </NavbarMenuItem>
+          ))}
         {Object.entries(links).map(([key, { href, text }]) => (
           <NavbarMenuItem key={key}>
             <Link
