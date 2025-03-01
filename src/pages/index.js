@@ -30,7 +30,7 @@ function Home() {
   return (
     <>
       <Modal
-        isOpen={onOpen} //onOpen
+        isOpen={false} //onOpen
         placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"

@@ -69,7 +69,7 @@ export default function Header() {
 
         {/* Desktop Content */}
         <NavbarContent className="hidden sm:flex flex-1 items-center justify-center">
-          <Dropdown>
+          <Dropdown classNames={{ content: "bg-black" }}>
             <NavbarItem>
               <DropdownTrigger className="text-white hover:opacity-80 transition-opacity ml-3 py-2 text-lg">
                 <Button
@@ -82,7 +82,11 @@ export default function Header() {
                 </Button>
               </DropdownTrigger>
             </NavbarItem>
-            <DropdownMenu className="bg-black  text-white rounded-none border-none ">
+            <DropdownMenu
+              className="bg-black  text-white rounded-none border-none p-0 
+            "
+              classNames={{ base: "bg-black" }}
+            >
               {programLinks.map(({ key, text, href }) => (
                 <DropdownItem key={key} className="h-14 " href={href}>
                   {text}
