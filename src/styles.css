@@ -16,7 +16,11 @@ html {
 
 html,
 body {
-  overflow-x: hidden; /* OK */
-  overflow-y: auto; /* Make sure Y scrolling is allowed */
+  overflow-x: hidden;
+  overflow-y: auto;
   scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 90px;
 }

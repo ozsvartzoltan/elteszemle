@@ -25,7 +25,7 @@ function Home() {
   return (
     <>
       <Modal
-        isOpen={isOpen} //isOpen
+        isOpen={false} //isOpen
         placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"
@@ -34,16 +34,20 @@ function Home() {
         <ModalContent className="bg-black">
           {(onClose) => (
             <>
-              <ModalBody className="pt-8">
-                {!imageLoaded && (
-                  <Skeleton className="w-full h-[400px] rounded-3xl" />
+              <ModalBody className="pt-8 flex justify-center items-center">
+                {!imageLoaded ? (
+                  <Skeleton className="w-full h-[400px] rounded-3xl bg-black" />
+                ) : (
+                  <Image
+                    src={modalImages[img_num]}
+                    alt="Nyitókép"
+                    className="object-cover w-full h-full rounded-3xl transition-opacity duration-500 opacity-100"
+                  />
                 )}
                 <Image
                   src={modalImages[img_num]}
-                  alt="Nyitókép"
-                  className={`object-cover w-full h-full rounded-3xl transition-opacity duration-500 ${
-                    imageLoaded ? "opacity-100" : "opacity-0"
-                  }`}
+                  alt=""
+                  className="hidden"
                   onLoad={() => setImageLoaded(true)}
                 />
               </ModalBody>
@@ -114,6 +118,14 @@ function Home() {
       </div>
       <div id="stab" className="p-4 px-16 text-xl space-y-6 text-justify">
         <div className="font-bold text-4xl">Stáb</div>
+        <div className="font-bold my-0">Az ELTE Szemle csapata:</div>
+        <div>
+          <div>Tóth Anna Júlia és Kristóf Álmos (főszervezők)</div>
+          <div>
+            Kriza Áron, Bíró Rozi, Hurtik Nóra, Somorjai Máté, Rözge Borisz,
+            Szirmai János, Vajda Fruzsi, Mrena Dorka, Vigh Martin, Igaz Réka
+          </div>
+        </div>
       </div>
       {showScroll && (
         <Button

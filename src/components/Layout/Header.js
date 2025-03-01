@@ -27,7 +27,7 @@ export default function Header() {
     hirek: { href: "#hirek", text: "hírek" },
     rolunk: { href: "#rolunk", text: "rólunk" },
     stab: { href: "#stab", text: "stáb" },
-    galeria: { href: "/galeria", text: "galéria" },
+    galeria: { href: "/zsurik", text: "zsűrik" },
   };
 
   const programLinks = [
