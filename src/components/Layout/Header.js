@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom"; // ✅ React Router
 import {
   Navbar,
   NavbarBrand,
@@ -18,27 +19,35 @@ import {
   Button,
 } from "@heroui/react";
 import SVG from "components/svg/SVG";
-import { headerImage } from "utils/const";
+import { headerImage, links, programLinks } from "utils/const";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false);
-  const links = {
-    hirek: { href: "#hirek", text: "hírek" },
-    rolunk: { href: "#rolunk", text: "rólunk" },
-    stab: { href: "#stab", text: "stáb" },
-    galeria: { href: "/zsurik", text: "zsűrik" },
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (targetId) => {
+    setIsMenuOpen(false);
+    setTimeout(() => {
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        console.error("Target not found:", targetId);
+      }
+    }, 100);
   };
 
-  const programLinks = [
-    { key: "napi_bontas", text: "Napi bontás", href: "#napi_bontas" },
-    { key: "fotokiallitas", text: "Fotókiállítás", href: "#fotokiallitas" },
-    {
-      key: "szakmai_programok",
-      text: "Szakmai programok",
-      href: "#szakmai_programok",
-    },
-  ];
+  const handleNavigation = (e, targetId) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      scrollToSection(targetId);
+    } else {
+      navigate("/");
+      setTimeout(() => scrollToSection(targetId), 500);
+    }
+  };
 
   return (
     <Navbar
@@ -57,9 +66,7 @@ export default function Header() {
               width={100}
               height={100}
               className="w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent"
-              onClick={() => {
-                window.open("/", "_self");
-              }}
+              onClick={() => navigate("/")}
             />
           </NavbarBrand>
           <NavbarMenuToggle
@@ -68,14 +75,14 @@ export default function Header() {
           />
         </div>
 
-        {/* Desktop Content */}
+        {/* Desktop Navigation */}
         <NavbarContent className="hidden sm:flex flex-1 items-center justify-center">
-          <Dropdown classNames={{ content: "bg-black" }}>
+          {/* <Dropdown classNames={{ content: "bg-black" }}>
             <NavbarItem>
               <DropdownTrigger className="text-white hover:opacity-80 transition-opacity ml-3 py-2 text-lg">
                 <Button
                   disableRipple
-                  className="p-0 bg-transparent data-[hover=true]:bg-transparent -mr-2 "
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent -mr-2"
                   endContent={<SVG type="chevron" />}
                   variant="light"
                 >
@@ -83,27 +90,34 @@ export default function Header() {
                 </Button>
               </DropdownTrigger>
             </NavbarItem>
-            <DropdownMenu
-              className="bg-black  text-white rounded-none border-none p-0 
-            "
-              classNames={{ base: "bg-black" }}
-            >
+            <DropdownMenu className="bg-black text-white rounded-none border-none p-0">
               {programLinks.map(({ key, text, href }) => (
                 <DropdownItem key={key} className="h-14 " href={href}>
                   {text}
                 </DropdownItem>
               ))}
             </DropdownMenu>
-          </Dropdown>
+          </Dropdown> */}
+
           {Object.entries(links).map(([key, { href, text }], index, array) => (
             <React.Fragment key={key}>
               <NavbarItem>
-                <Link
-                  href={href}
-                  className="text-white hover:opacity-80 transition-opacity px-4 py-2 text-lg"
-                >
-                  {text}
-                </Link>
+                {href.startsWith("#") ? (
+                  <Link
+                    href={href}
+                    onClick={(e) => handleNavigation(e, href.substring(1))}
+                    className="text-white hover:opacity-80 transition-opacity px-4 py-2 text-lg"
+                  >
+                    {text}
+                  </Link>
+                ) : (
+                  <Link
+                    href={href}
+                    className="text-white hover:opacity-80 transition-opacity px-4 py-2 text-lg"
+                  >
+                    {text}
+                  </Link>
+                )}
               </NavbarItem>
               {index < array.length - 1 && (
                 <NavbarItem>
@@ -120,7 +134,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <NavbarMenu className="bg-[#913E35]/95 mt-8">
-        <NavbarMenuItem>
+        {/* <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}
             className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity items-center hover:cursor-pointer"
@@ -135,7 +149,7 @@ export default function Header() {
               <Link
                 href={href}
                 className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
-                onClick={() => {
+                onPress={() => {
                   setIsMenuOpen(false);
                   setIsProgramDropdownOpen(false);
                 }}
@@ -143,18 +157,25 @@ export default function Header() {
                 {text}
               </Link>
             </NavbarMenuItem>
-          ))}
+          ))} */}
         {Object.entries(links).map(([key, { href, text }]) => (
           <NavbarMenuItem key={key}>
-            <Link
-              href={href}
-              className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity items-center"
-              onPress={() => {
-                setIsMenuOpen(false);
-              }}
-            >
-              {text}
-            </Link>
+            {href.startsWith("#") ? (
+              <Link
+                href={href}
+                onClick={(e) => handleNavigation(e, href.substring(1))}
+                className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
+              >
+                {text}
+              </Link>
+            ) : (
+              <Link
+                href={href}
+                className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
+              >
+                {text}
+              </Link>
+            )}
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
