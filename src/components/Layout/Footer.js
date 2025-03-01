@@ -1,5 +1,6 @@
 import { Image } from "@heroui/react";
 import { SocialIcon } from "react-social-icons";
+import { canonImage, elteImage, mhaImage } from "utils/const";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div>
           <h2 className="mb-6 text-xl font-light ">FŐ TÁMOGATÓ</h2>
           <Image
-            src="/images/canon.png"
+            src={canonImage}
             alt="Canon"
             className="w-[300px] h-auto object-contain bg-transparent cursor-pointer flex-shrink-0"
             radius="none"
@@ -21,7 +22,7 @@ export default function Footer() {
           <h2 className="mb-6 text-xl font-light ">PARTNEREK</h2>
           <div className="flex flex-col gap-6">
             <Image
-              src="/images/filmtansz_logo.png"
+              src={elteImage}
               alt="ELTE BTK"
               className="w-[240px] h-auto object-contain bg-transparent cursor-pointer flex-shrink-0"
               onClick={() => {
@@ -29,7 +30,7 @@ export default function Footer() {
               }}
             />
             <Image
-              src="/images/mha_logo.png"
+              src={mhaImage}
               alt="m•ha [elte]"
               className="w-[200px] h-auto object-contain bg-transparent cursor-pointer flex-shrink-0"
               onClick={() => {

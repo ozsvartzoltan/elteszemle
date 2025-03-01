@@ -18,6 +18,7 @@ import {
   Button,
 } from "@heroui/react";
 import SVG from "components/svg/SVG";
+import { headerImage } from "utils/const";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +51,7 @@ export default function Header() {
         <div className="flex items-center">
           <NavbarBrand className="flex-shrink-0 w-[100px]">
             <Image
-              src="/images/feher.png"
+              src={headerImage}
               alt="ELTE Szemle Logo"
               radius="none"
               width={100}

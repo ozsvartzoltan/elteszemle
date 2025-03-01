@@ -7,21 +7,16 @@ import {
   ModalBody,
   ModalFooter,
   Image,
+  Skeleton,
 } from "@heroui/react";
 import SVG from "components/svg/SVG";
+import { modalImages } from "utils/const";
 
 function Home() {
-  const { onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [showScroll, setShowScroll] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const img_num = Math.floor(Math.random() * 6);
-  const images = {
-    0: "/images/nyitokepek/IMG_1.jpg",
-    2: "/images/nyitokepek/IMG_3.jpg",
-    1: "/images/nyitokepek/IMG_2.jpg",
-    3: "/images/nyitokepek/IMG_4.jpg",
-    4: "/images/nyitokepek/IMG_5.jpg",
-    5: "/images/nyitokepek/IMG_6.jpg",
-  };
 
   useEffect(() => {
     onOpen();
@@ -30,7 +25,7 @@ function Home() {
   return (
     <>
       <Modal
-        isOpen={false} //onOpen
+        isOpen={isOpen} //isOpen
         placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"
@@ -40,10 +35,16 @@ function Home() {
           {(onClose) => (
             <>
               <ModalBody className="pt-8">
+                {!imageLoaded && (
+                  <Skeleton className="w-full h-[400px] rounded-3xl" />
+                )}
                 <Image
-                  src={images[img_num]}
+                  src={modalImages[img_num]}
                   alt="Nyitókép"
-                  className="object-cover w-full h-full rounded-3xl"
+                  className={`object-cover w-full h-full rounded-3xl transition-opacity duration-500 ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
+                  onLoad={() => setImageLoaded(true)}
                 />
               </ModalBody>
               <ModalFooter className="-mt-4 items-center justify-center">
