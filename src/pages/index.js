@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Button,
   useDisclosure,
@@ -10,13 +10,21 @@ import {
   Skeleton,
 } from "@heroui/react";
 import SVG from "components/svg/SVG";
-import { modalImages } from "utils/const";
+import { modalImages, news } from "utils/const";
+import { Swiper, SwiperSlide } from "swiper/react";
+import NewsCard from "components/NewsCard/index";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "../styles.css";
 
 function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [showScroll, setShowScroll] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
   const img_num = Math.floor(Math.random() * 6);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     onOpen();
@@ -60,8 +68,60 @@ function Home() {
           )}
         </ModalContent>
       </Modal>
-      <div id="hirek" className="p-4 px-16 text-xl space-y-6 text-justify">
-        <div className="font-bold text-4xl">Hírek</div>
+      <div id="hirek" className="p-4  text-xl space-y-6 text-justify">
+        <div className="font-bold text-4xl px-12">Hírek</div>
+        {Object.keys(news).length > 3 && (
+          <div className="flex justify-center items-center">
+            <Button
+              id="prev-button"
+              variant="light"
+              className=" rounded-full text-white bg-transparent hover:bg-white/10 mr-2 -ml-6 border-gray-600 border-2 hidden sm:flex"
+              size="md"
+            >
+              <SVG type="chevronLeft" />
+            </Button>
+            <Swiper
+              ref={swiperRef}
+              modules={[Autoplay, Pagination, Navigation]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation={{
+                nextEl: "#next-button",
+                prevEl: "#prev-button",
+              }}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                780: { slidesPerView: 2 },
+                1150: { slidesPerView: 3 },
+              }}
+              className="w-full h-auto rounded-none"
+            >
+              {Object.entries(news).map(([key, newsItem]) => (
+                <SwiperSlide key={key} className="!bg-black">
+                  <NewsCard newsItem={{ id: key, ...newsItem }} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <Button
+              id="next-button"
+              variant="light"
+              className="p-2 rounded-full text-white bg-transparent hover:bg-white/10 ml-2 -mr-6 border-gray-600 border-2 hidden sm:flex"
+            >
+              <SVG type="chevronRight" />
+            </Button>
+          </div>
+        )}
+        {Object.keys(news).length <= 3 && (
+          <div className=" flex-row gap-8 px-12 hidden md:flex">
+            {Object.entries(news).map(([key, newsItem], index) => (
+              <NewsCard key={index} newsItem={{ id: key, ...newsItem }} />
+            ))}
+          </div>
+        )}
       </div>
       <div id="rolunk" className="p-4 px-16 text-xl space-y-6 text-justify">
         <div className="font-bold text-4xl">Rólunk</div>
