@@ -94,7 +94,7 @@ function Home() {
         </div>
 
         {/* For small screens */}
-        <div className=" hidden sm:flex lg:hidden">
+        <div className=" hidden sm:flex lg:hidden ">
           <Swiper
             modules={[Autoplay, Pagination]}
             pagination={{ clickable: true }}
@@ -108,8 +108,11 @@ function Home() {
             className="w-full h-auto"
           >
             {Object.entries(news).map(([key, newsItem]) => (
-              <SwiperSlide key={key} className="!bg-black">
-                <NewsCard newsItem={{ id: key, ...newsItem }} />
+              <SwiperSlide key={key} className="!bg-black ">
+                <NewsCard
+                  newsItem={{ id: key, ...newsItem }}
+                  className="w-[500px]"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
