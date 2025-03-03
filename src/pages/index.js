@@ -31,7 +31,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div className="px-2 md:px-10 xl:px-16">
       <Modal
         isOpen={false} //isOpen
         placement="center"
@@ -68,14 +68,60 @@ function Home() {
           )}
         </ModalContent>
       </Modal>
-      <div id="hirek" className="p-4  text-xl space-y-6 text-justify">
-        <div className="font-bold text-4xl px-12">Hírek</div>
+      <div id="hirek" className=" py-4 text-xl space-y-6 text-justify">
+        <div className="font-bold text-4xl">Hírek</div>
+
+        {/* For small screens */}
+        <div className="sm:hidden">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop
+            className="w-full h-auto"
+          >
+            {Object.entries(news).map(([key, newsItem]) => (
+              <SwiperSlide key={key} className="!bg-black">
+                <NewsCard newsItem={{ id: key, ...newsItem }} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* For small screens */}
+        <div className=" hidden sm:flex lg:hidden">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={20}
+            slidesPerView={2}
+            loop
+            className="w-full h-auto"
+          >
+            {Object.entries(news).map(([key, newsItem]) => (
+              <SwiperSlide key={key} className="!bg-black">
+                <NewsCard newsItem={{ id: key, ...newsItem }} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* For larger screens */}
         {Object.keys(news).length > 3 && (
-          <div className="flex justify-center items-center">
+          <div className="hidden lg:flex justify-center items-center">
             <Button
               id="prev-button"
               variant="light"
-              className=" rounded-full text-white bg-transparent hover:bg-white/10 mr-2 -ml-6 border-gray-600 border-2 hidden sm:flex"
+              className="rounded-full text-white bg-transparent hover:bg-white/10 mr-2 border-gray-600 border-2"
               size="md"
             >
               <SVG type="chevronLeft" />
@@ -109,22 +155,24 @@ function Home() {
             <Button
               id="next-button"
               variant="light"
-              className="p-2 rounded-full text-white bg-transparent hover:bg-white/10 ml-2 -mr-6 border-gray-600 border-2 hidden sm:flex"
+              className="p-2 rounded-full text-white bg-transparent hover:bg-white/10 ml-2 border-gray-600 border-2"
             >
               <SVG type="chevronRight" />
             </Button>
           </div>
         )}
+
         {Object.keys(news).length <= 3 && (
-          <div className=" flex-row gap-8 px-12 hidden md:flex">
+          <div className="hidden lg:flex flex-row gap-8 pb-5">
             {Object.entries(news).map(([key, newsItem], index) => (
               <NewsCard key={index} newsItem={{ id: key, ...newsItem }} />
             ))}
           </div>
         )}
       </div>
-      <div id="rolunk" className="p-4 px-16 text-xl space-y-6 text-justify">
-        <div className="font-bold text-4xl">Rólunk</div>
+
+      <div id="rolunk" className="text-xl space-y-6 text-justify">
+        <div className="font-bold text-4xl mt-10">Rólunk</div>
         <div>
           Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi
           filmfesztivál, amelyen az ELTE Filmtanszékén készülő hallgatói filmek
@@ -164,7 +212,7 @@ function Home() {
         <div>
           Az ELTE Szemle összes programja nyitott és ingyenesen látogatható.
         </div>
-        <div>
+        <div className="pb-4">
           Az ELTE filmszakos diákjai{" "}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScHt5MEKUovXFPOUiP9uKdk0kkgaaueTRiyAZUvhaCKMka63A/viewform"
@@ -176,8 +224,8 @@ function Home() {
           tudnak nevezni március 17-ig.
         </div>
       </div>
-      <div id="stab" className="p-4 px-16 text-xl space-y-6 text-justify">
-        <div className="font-bold text-4xl">Stáb</div>
+      <div id="stab" className="text-xl space-y-6 text-justify">
+        <div className="font-bold text-4xl mt-10">Stáb</div>
         <div className="font-bold my-0">Az ELTE Szemle csapata:</div>
         <div>
           <div>Tóth Anna Júlia és Kristóf Álmos (főszervezők)</div>
@@ -197,7 +245,7 @@ function Home() {
           <SVG type="chevronUp" />
         </Button>
       )}
-    </>
+    </div>
   );
 }
 
