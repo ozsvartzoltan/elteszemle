@@ -4,7 +4,7 @@ import { canonImage, elteImage, mhaImage } from "utils/const";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#913E35] px-6 py-12 text-white sm:px-12">
+    <footer className="bg-[#cc2d1c] px-6 py-12 text-white sm:px-12">
       <div className="mx-auto grid max-w-7xl gap-12 sm:grid-cols-3">
         <div>
           <h2 className="mb-6 text-xl font-light ">FŐ TÁMOGATÓ</h2>

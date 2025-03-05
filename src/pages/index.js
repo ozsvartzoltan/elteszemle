@@ -32,7 +32,7 @@ function Home() {
   return (
     <div className="px-2 md:px-10 xl:px-16">
       <Modal
-        isOpen={isOpen} //TODO: isOpen
+        isOpen={false} //TODO: isOpen
         placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"
@@ -172,7 +172,7 @@ function Home() {
         )}
       </div>
 
-      <div id="rolunk" className="text-sm sm:text-xl space-y-6 text-justify">
+      <div id="rolunk" className=" space-y-6 text-justify">
         <div className="font-bold text-4xl mt-10">Rólunk</div>
         <div>
           Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi
@@ -229,10 +229,25 @@ function Home() {
         <div className="font-bold text-4xl mt-10">Stáb</div>
         <div className="font-bold my-0">Az ELTE Szemle csapata:</div>
         <div>
-          <div>Tóth Anna Júlia és Kristóf Álmos (főszervezők)</div>
+          <div className="font-bold">Főszervezők:</div>
+          <div>Tóth Anna Júlia és Kristóf Álmos</div>
+          <div className="font-bold pt-4">Szervezői csapat:</div>
           <div>
             Kriza Áron, Bíró Rozi, Hurtik Nóra, Somorjai Máté, Rözge Borisz,
-            Szirmai János, Vajda Fruzsi, Mrena Dorka, Vigh Martin, Igaz Réka
+            Szirmai János, Vajda Fruzsi, Mrena Dorka, Vigh Martin, Igaz Réka,
+            Orbán Róza
+          </div>{" "}
+          <div className=" pt-4">
+            <div>
+              <span className="font-bold">Technikusok:</span> Dér Zsolt, Dr.
+              Kerekes Zoltán
+            </div>
+            <div>
+              <span className="font-bold">Arculat:</span> Kristóf Viola
+            </div>
+            <div>
+              <span className="font-bold">Weboldal:</span> Ozsvárt Zoltán
+            </div>
           </div>
         </div>
       </div>

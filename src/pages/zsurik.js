@@ -30,7 +30,7 @@ function Zsurik() {
                 <h2 className="text-white text-2xl font-semibold">
                   {zsuri.name}
                 </h2>
-                <p className="text-gray-400 text-sm mb-4">{zsuri.title}</p>
+                <p className="text-gray-400 mb-4">{zsuri.title}</p>
                 <p className="text-gray-300">{zsuri.description}</p>
               </CardBody>
             </Card>

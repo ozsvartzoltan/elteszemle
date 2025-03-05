@@ -20,8 +20,8 @@ const NewsCard = ({ newsItem }) => {
           {newsItem.description}
         </p>
         <Button
-          className="bg-[#702a25] text-white hover:bg-[#913E35] transition-all"
-          onClick={() => window.open(`/news${newsItem?.link?.page}`, "_self")}
+          className="bg-[#702a25] text-white hover:bg-[#cc2d1c] transition-all"
+          onClick={() => window.open(`${newsItem?.link?.page}`, "_self")}
         >
           Megtekintés
         </Button>

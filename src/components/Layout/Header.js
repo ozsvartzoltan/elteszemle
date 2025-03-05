@@ -9,9 +9,14 @@ import {
   NavbarItem,
   Link,
   Image,
+  Button,
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from "@heroui/react";
 import SVG from "components/svg/SVG";
 import { headerImage, links, programLinks } from "utils/const";
@@ -48,7 +53,7 @@ export default function Header() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#913E35] text-white h-[100px] w-full flex-shrink-0 justify-start"
+      className="bg-[#cc2d1c] text-white h-[100px] w-full flex-shrink-0 justify-start"
     >
       <div className="flex w-full items-center">
         {/* Logo and Mobile Toggle Container */}
@@ -64,15 +69,11 @@ export default function Header() {
               onClick={() => navigate("/")}
             />
           </NavbarBrand>
-          <NavbarMenuToggle
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden text-white w-12 h-12 p-3 rounded-lg hover:bg-white/10 transition flex justify-end"
-          />
         </div>
 
         {/* Desktop Navigation */}
         <NavbarContent className="hidden sm:flex flex-1 items-center justify-center">
-          {/* <Dropdown classNames={{ content: "bg-black" }}>
+          <Dropdown classNames={{ content: "bg-black" }}>
             <NavbarItem>
               <DropdownTrigger className="text-white hover:opacity-80 transition-opacity ml-3 py-2 text-lg">
                 <Button
@@ -92,7 +93,7 @@ export default function Header() {
                 </DropdownItem>
               ))}
             </DropdownMenu>
-          </Dropdown> */}
+          </Dropdown>
 
           {Object.entries(links).map(([key, { href, text }], index, array) => (
             <React.Fragment key={key}>
@@ -128,8 +129,14 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <NavbarMenu className="bg-[#913E35]/95 mt-16">
-        {/* <NavbarMenuItem>
+      <div className="ml-auto sm:hidden">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden text-white w-12 h-12 p-3 rounded-lg hover:bg-white/10 transition flex justify-end"
+        />
+      </div>
+      <NavbarMenu className="bg-[#cc2d1c]/95 mt-16 ">
+        <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}
             className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity items-center hover:cursor-pointer"
@@ -152,7 +159,7 @@ export default function Header() {
                 {text}
               </Link>
             </NavbarMenuItem>
-          ))} */}
+          ))}
         {Object.entries(links).map(([key, { href, text }]) => (
           <NavbarMenuItem key={key}>
             {href.startsWith("#") ? (
