@@ -70,13 +70,13 @@ export const links = {
 };
 
 export const programLinks = [
+  { key: "napi_bontas", text: "napi bontás", href: "/napi_bontas" },
+  { key: "filmek", text: "filmek", href: "/filmek" },
   {
     key: "szakmai_programok",
     text: "szakmai programok",
     href: "/szakmai_programok",
   },
-  { key: "napi_bontas", text: "napi bontás", href: "/napi_bontas" },
-  { key: "filmek", text: "filmek", href: "/filmek" },
 
   { key: "fotokiallitas", text: "fotókiállítás", href: "/fotokiallitas" },
 ];
