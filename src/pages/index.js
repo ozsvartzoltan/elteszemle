@@ -226,7 +226,7 @@ function Home() {
           tudnak nevezni március 17-ig.
         </div>
       </div>
-      <div id="stab" className="text-xl space-y-6 text-justify">
+      <div id="stab" className="space-y-6 text-justify">
         <div className="font-bold text-4xl mt-10">Stáb</div>
         <div className="font-bold my-0">Az ELTE Szemle csapata:</div>
         <div>

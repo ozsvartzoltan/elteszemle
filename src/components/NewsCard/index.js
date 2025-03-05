@@ -14,9 +14,11 @@ const NewsCard = ({ newsItem }) => {
         />
       </CardHeader>
       <CardBody className="p-6">
-        <h2 className="text-white text-2xl font-semibold">{newsItem.title}</h2>
+        <h2 className="text-white font-semibold ">{newsItem.title}</h2>
         <p className="text-gray-400 text-sm mb-2">{newsItem.date}</p>
-        <p className="text-gray-300 mb-4">{newsItem.description}</p>
+        <p className="text-gray-300 mb-4 text-sm sm:text-md">
+          {newsItem.description}
+        </p>
         <Button
           className="bg-[#702a25] text-white hover:bg-[#913E35] transition-all"
           onClick={() => window.open(`/news${newsItem?.link?.page}`, "_self")}
