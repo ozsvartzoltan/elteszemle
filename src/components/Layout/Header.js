@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom"; // ✅ React Router
+import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -12,11 +12,6 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Dropdown,
-  DropdownTrigger,
-  DropdownItem,
-  DropdownMenu,
-  Button,
 } from "@heroui/react";
 import SVG from "components/svg/SVG";
 import { headerImage, links, programLinks } from "utils/const";
@@ -133,7 +128,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <NavbarMenu className="bg-[#913E35]/95 mt-8">
+      <NavbarMenu className="bg-[#913E35]/95 mt-16">
         {/* <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}

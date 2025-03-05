@@ -5,7 +5,6 @@ import {
   Modal,
   ModalContent,
   ModalBody,
-  ModalFooter,
   Image,
   Skeleton,
 } from "@heroui/react";
@@ -33,7 +32,7 @@ function Home() {
   return (
     <div className="px-2 md:px-10 xl:px-16">
       <Modal
-        isOpen={false} //TODO: isOpen
+        isOpen={isOpen} //TODO: isOpen
         placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"
