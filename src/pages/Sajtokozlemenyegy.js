@@ -41,8 +41,21 @@ function Sajtokozlemenyegy() {
             majd fel a filmszakma különböző területeinek összefüggéseit,
             aktuális tendenciáit. Mindemellett egy két részből álló
             fotókiállítás is színesíti majd a programot. A művészeti
-            perspektívájú hívószava a JELEN, míg a szakmaié a WERK lesznek.
-            Részletek itt, a nevezési felhívásban elérhetőek. Az egyetem
+            perspektívájú hívószava a{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeTKWaHaQYd_14OGYkOQkCEdDajwxlgRlg1t5kPAxH3KIb-Lg/viewform"
+              className="underline"
+            >
+              JELEN
+            </a>
+            , míg a szakmaié a{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSentFwpUuQncf6JbpqmeaZHHn25vx0wIXZJFnQn7o3H5AJaSA/viewform"
+              className="underline"
+            >
+              WERK
+            </a>{" "}
+            lesznek. Részletek a nevezési felhívásban elérhetőek. Az egyetem
             hallgatói március 31-ig adhatják le a munkáikat. Az ELTE Szemlét
             idén is a BEST OF vetítés zárja a Puskin Moziban, a legjobb filmeket
             később a Kerekdomb fesztiválon is vetítik majd. Továbbá idén vendég

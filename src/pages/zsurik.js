@@ -6,7 +6,7 @@ import { zsurik } from "utils/const";
 function Zsurik() {
   return (
     <div className="min-h-screen bg-black text-white p-10">
-      <h1 className="text-5xl font-bold text-center mb-12">Zsűrik</h1>
+      <h1 className="text-5xl font-bold text-center mb-12">Zsűri</h1>
 
       <div className="flex flex-wrap justify-center gap-8">
         {zsurik.map((zsuri, index) => (

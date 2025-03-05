@@ -33,23 +33,27 @@ function Home() {
   return (
     <div className="px-2 md:px-10 xl:px-16">
       <Modal
-        isOpen={false} //isOpen
+        isOpen={false} //TODO: isOpen
         placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"
-        size="4xl"
+        size="full"
+        hideCloseButton
       >
         <ModalContent className="bg-black">
           {(onClose) => (
             <>
-              <ModalBody className="pt-8 flex justify-center items-center">
+              <ModalBody
+                className="pt-8 flex justify-center items-center"
+                onClick={onClose}
+              >
                 {!imageLoaded ? (
                   <Skeleton className="w-full h-[400px] rounded-3xl bg-black" />
                 ) : (
                   <Image
                     src={modalImages[img_num]}
                     alt="Nyitókép"
-                    className="object-cover w-full h-full rounded-3xl transition-opacity duration-500 opacity-100"
+                    className="object-contain w-full h-full transition-opacity duration-500 opacity-100"
                   />
                 )}
                 <Image
@@ -59,11 +63,6 @@ function Home() {
                   onLoad={() => setImageLoaded(true)}
                 />
               </ModalBody>
-              <ModalFooter className="-mt-4 items-center justify-center">
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Bezárás
-                </Button>
-              </ModalFooter>
             </>
           )}
         </ModalContent>
@@ -174,7 +173,7 @@ function Home() {
         )}
       </div>
 
-      <div id="rolunk" className="text-xl space-y-6 text-justify">
+      <div id="rolunk" className="text-sm sm:text-xl space-y-6 text-justify">
         <div className="font-bold text-4xl mt-10">Rólunk</div>
         <div>
           Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi

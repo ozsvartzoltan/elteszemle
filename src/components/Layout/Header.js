@@ -40,7 +40,7 @@ export default function Header() {
   };
 
   const handleNavigation = (e, targetId) => {
-    e.preventDefault();
+    //e.preventDefault();
     if (location.pathname === "/") {
       scrollToSection(targetId);
     } else {
@@ -58,7 +58,7 @@ export default function Header() {
       <div className="flex w-full items-center">
         {/* Logo and Mobile Toggle Container */}
         <div className="flex items-center">
-          <NavbarBrand className="flex-shrink-0 w-[100px]">
+          <NavbarBrand className="flex-shrink-0 w-[100px] -ml-6 sm:ml-0">
             <Image
               src={headerImage}
               alt="ELTE Szemle Logo"
@@ -71,7 +71,7 @@ export default function Header() {
           </NavbarBrand>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden text-white w-12 h-12 p-3 rounded-lg hover:bg-white/10 transition"
+            className="sm:hidden text-white w-12 h-12 p-3 rounded-lg hover:bg-white/10 transition flex justify-end"
           />
         </div>
 
