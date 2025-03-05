@@ -20,7 +20,7 @@ const NewsCard = ({ newsItem }) => {
           {newsItem.description}
         </p>
         <Button
-          className="bg-[#702a25] text-white hover:bg-[#cc2d1c] transition-all"
+          className="bg-[#cc2d1c] text-white transition-all"
           onClick={() => window.open(`${newsItem?.link?.page}`, "_self")}
         >
           Megtekintés
