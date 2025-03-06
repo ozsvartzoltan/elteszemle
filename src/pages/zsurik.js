@@ -5,8 +5,10 @@ import { zsurik } from "utils/const";
 
 function Zsurik() {
   return (
-    <div className="min-h-screen bg-black text-white p-10">
-      <h1 className="text-5xl font-bold text-center mb-12">Zsűri</h1>
+    <div className="min-h-screen bg-black text-white px-4 sm:px-10 py-10">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12">
+        Zsűri
+      </h1>
 
       <div className="flex flex-wrap justify-center gap-8">
         {zsurik.map((zsuri, index) => (
@@ -18,7 +20,7 @@ function Zsurik() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <Card className="bg-gray-900 border border-gray-700 shadow-lg overflow-hidden w-[420px]">
+            <Card className="bg-gray-900 border border-gray-700 shadow-lg overflow-hidden w-full max-w-[420px]">
               <CardHeader className="p-0 items-center justify-center">
                 <Image
                   src={zsuri.image}

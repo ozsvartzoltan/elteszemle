@@ -8,7 +8,7 @@ function Sajtokozlemenyegy() {
           Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle
         </h1>
 
-        <div className="space-y-6 text-justify text-lg leading-relaxed">
+        <div className="space-y-6 text-justify leading-relaxed">
           <p className="font-semibold">
             Az első kiadás sikere után visszatér az ELTE hallgatóinak
             filmfesztiválja. A második ELTE Szemle április 29 és május 2 között
@@ -80,9 +80,8 @@ function Sajtokozlemenyegy() {
           </p>
           <p>
             A következő hónapokban fokozatosan érkeznek majd a hírek, újdonságok
-            az ELTE Szemlével kapcsolatban, így érdemes figyelemmel követni az
+            az ELTE Szemlével kapcsolatban, így érdemes figyelemmel követni az{" "}
             <a href="/" className="underline">
-              {" "}
               esemény weboldalát
             </a>
             , illetve a fesztivál{" "}

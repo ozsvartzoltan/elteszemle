@@ -53,7 +53,7 @@ export default function Header() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#cc2d1c] text-white h-[100px] w-full flex-shrink-0 justify-start"
+      className="bg-[#cc2d1c] text-white h-[100px] w-full flex-shrink-0 justify-center"
     >
       <div className="flex w-full items-center">
         {/* Logo and Mobile Toggle Container */}
@@ -72,7 +72,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <NavbarContent className="hidden sm:flex flex-1 items-center justify-center">
+        <NavbarContent className="hidden min-[775px]:flex flex-1 items-center justify-center">
           <Dropdown classNames={{ content: "bg-black" }}>
             <NavbarItem>
               <DropdownTrigger className="text-white hover:opacity-80 transition-opacity ml-3 py-2 text-lg">
@@ -129,13 +129,13 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className="ml-auto sm:hidden">
+      <div className=" items-center min-[775px]:hidden">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden text-white w-12 h-12 p-3 rounded-lg hover:bg-white/10 transition flex justify-end"
+          className=" text-white h-12 p-3 rounded-lg hover:bg-white/10 transition flex justify-end"
         />
       </div>
-      <NavbarMenu className="bg-[#cc2d1c]/95 mt-16 ">
+      <NavbarMenu className="bg-[#cc2d1c]/95 ">
         <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}
