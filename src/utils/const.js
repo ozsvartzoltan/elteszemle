@@ -4,6 +4,9 @@ export const headerImage =
 export const canonImage =
   "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/canon_njvsww.png";
 
+export const mindenkiMozijaImage =
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741365834/mindenli_logo_yw78sx.png";
+
 export const mhaImage =
   "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/mha_logo_hgneh5.png";
 

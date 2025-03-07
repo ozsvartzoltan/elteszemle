@@ -1,6 +1,11 @@
 import { Image } from "@heroui/react";
 import { SocialIcon } from "react-social-icons";
-import { canonImage, elteImage, mhaImage } from "utils/const";
+import {
+  canonImage,
+  elteImage,
+  mhaImage,
+  mindenkiMozijaImage,
+} from "utils/const";
 
 export default function Footer() {
   return (
@@ -15,6 +20,15 @@ export default function Footer() {
             radius="none"
             onClick={() => {
               window.open("https://www.canon.hu/", "_blank");
+            }}
+          />
+          <Image
+            src={mindenkiMozijaImage}
+            alt="Mindenki Mozija"
+            className="w-[200px] h-auto object-contain bg-transparent cursor-pointer flex-shrink-0"
+            radius="none"
+            onClick={() => {
+              window.open("https://mindenkimozija.org/", "_blank");
             }}
           />
         </div>
