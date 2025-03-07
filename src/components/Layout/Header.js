@@ -132,7 +132,7 @@ export default function Header() {
       <div className=" items-center min-[775px]:hidden">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className=" text-white h-12 p-3 rounded-lg hover:bg-white/10 transition flex justify-end"
+          className="text-white w-16 h-16 p-4 rounded-xl hover:bg-white/10 transition flex justify-center items-center"
         />
       </div>
       <NavbarMenu className="bg-[#cc2d1c]/95 pt-16 ">

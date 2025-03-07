@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardHeader, CardBody, Image } from "@heroui/react";
 import { motion } from "framer-motion";
-import { zsurik } from "utils/const";
+import { fixWidows, zsurik } from "utils/const";
 
 function Zsurik() {
   return (
@@ -33,7 +33,9 @@ function Zsurik() {
                   {zsuri.name}
                 </h2>
                 <p className="text-gray-400 mb-4">{zsuri.title}</p>
-                <p className="text-gray-300">{zsuri.description}</p>
+                <p className="text-gray-300 " lang="hu">
+                  {fixWidows(zsuri.description)}
+                </p>
               </CardBody>
             </Card>
           </motion.div>

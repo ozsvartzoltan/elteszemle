@@ -5,7 +5,7 @@ export const canonImage =
   "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/canon_njvsww.png";
 
 export const mindenkiMozijaImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741365834/mindenli_logo_yw78sx.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/t_mindenki_mozija_square/v1741365834/mindenli_logo_yw78sx.png";
 
 export const mhaImage =
   "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/mha_logo_hgneh5.png";
@@ -64,6 +64,20 @@ export const zsurik = [
       "A Velencei Nemzetközi Filmfesztiválon bemutatott, majd komoly nemzetközi sikereket elérő Felkészülés meghatározatlan ideig tartó együttlétre című film főszereplője. 2008-ban végzett a Színház- és Filmművészeti Egyetem színművész szakon. Olyan sikeres filmekben szerepelt továbbá, mint a Veszélyes lehet a fagyi, a Szelíd teremtés - A Frankenstein terv, vagy éppen a Jupiter holdja. Hamarosan Goldberg Emília Tiszavirágok című filmjében látjhatjuk játszani.",
   },
 ];
+
+export const fixWidows = (text) => {
+  return text
+    .replace(/ a /g, " a\u00A0")
+    .replace(/ az /g, " az\u00A0")
+    .replace(/ és /g, " és\u00A0")
+    .replace(/ vagy /g, " vagy\u00A0")
+    .replace(/ is /g, " is\u00A0")
+    .replace(/ de /g, " de\u00A0")
+    .replace(/ ide /g, " ide\u00A0")
+    .replace(/ oda /g, " oda\u00A0")
+    .replace(/ ami /g, " ami\u00A0")
+    .replace(/ aki /g, " aki\u00A0");
+};
 
 export const links = {
   hirek: { href: "#hirek", text: "hírek" },
