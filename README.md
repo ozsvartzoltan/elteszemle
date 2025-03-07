@@ -1,5 +1,4 @@
 Logo valtozik, szin arnyalat is valtozik,
-header kozepre
 
 # Favicon
 

@@ -135,7 +135,7 @@ export default function Header() {
           className=" text-white h-12 p-3 rounded-lg hover:bg-white/10 transition flex justify-end"
         />
       </div>
-      <NavbarMenu className="bg-[#cc2d1c]/95 ">
+      <NavbarMenu className="bg-[#cc2d1c]/95 pt-16 ">
         <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}

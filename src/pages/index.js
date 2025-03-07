@@ -1,13 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  Button,
-  useDisclosure,
-  Modal,
-  ModalContent,
-  ModalBody,
-  Image,
-  Skeleton,
-} from "@heroui/react";
+import { Button, useDisclosure, Image, Skeleton } from "@heroui/react";
 import SVG from "components/svg/SVG";
 import { modalImages, news } from "utils/const";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,53 +11,13 @@ import "swiper/css/navigation";
 import "../styles.css";
 
 function Home() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [showScroll, setShowScroll] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
   const img_num = Math.floor(Math.random() * 6);
   const swiperRef = useRef(null);
 
-  useEffect(() => {
-    onOpen();
-  }, []);
-
   return (
     <div className="px-2 md:px-10 xl:px-16">
-      <Modal
-        isOpen={false} //TODO: isOpen
-        placement="center"
-        onOpenChange={onOpenChange}
-        backdrop="blur"
-        size="full"
-        hideCloseButton
-      >
-        <ModalContent className="bg-black">
-          {(onClose) => (
-            <>
-              <ModalBody
-                className="pt-8 flex justify-center items-center"
-                onClick={onClose}
-              >
-                {!imageLoaded ? (
-                  <Skeleton className="w-full h-[400px] rounded-3xl bg-black" />
-                ) : (
-                  <Image
-                    src={modalImages[img_num]}
-                    alt="Nyitókép"
-                    className="object-contain w-full h-full transition-opacity duration-500 opacity-100"
-                  />
-                )}
-                <Image
-                  src={modalImages[img_num]}
-                  alt=""
-                  className="hidden"
-                  onLoad={() => setImageLoaded(true)}
-                />
-              </ModalBody>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
       <div id="hirek" className=" py-4 text-xl space-y-6 text-justify">
         <div className="font-bold text-4xl">Hírek</div>
 
