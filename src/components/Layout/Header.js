@@ -66,7 +66,10 @@ export default function Header() {
               width={100}
               height={100}
               className="w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent"
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                setIsProgramDropdownOpen(false);
+              }}
             />
           </NavbarBrand>
         </div>
@@ -101,7 +104,7 @@ export default function Header() {
                 {href.startsWith("#") ? (
                   <Link
                     href={href}
-                    onClick={(e) => handleNavigation(e, href.substring(1))}
+                    onPress={(e) => handleNavigation(e, href.substring(1))}
                     className="text-white hover:opacity-80 transition-opacity px-4 py-2 text-lg"
                   >
                     {text}
@@ -135,7 +138,7 @@ export default function Header() {
           className="text-white w-16 h-16 p-4 rounded-xl hover:bg-white/10 transition flex justify-center items-center"
         />
       </div>
-      <NavbarMenu className="bg-[#cc2d1c]/95 pt-16 ">
+      <NavbarMenu className="bg-[#cc2d1c] pt-16 ">
         <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}
@@ -165,7 +168,7 @@ export default function Header() {
             {href.startsWith("#") ? (
               <Link
                 href={href}
-                onClick={(e) => handleNavigation(e, href.substring(1))}
+                onPress={(e) => handleNavigation(e, href.substring(1))}
                 className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
               >
                 {text}
