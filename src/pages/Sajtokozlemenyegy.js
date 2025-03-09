@@ -81,10 +81,7 @@ function Sajtokozlemenyegy() {
           <p>
             A következő hónapokban fokozatosan érkeznek majd a hírek, újdonságok
             az ELTE Szemlével kapcsolatban, így érdemes figyelemmel követni az{" "}
-            <a href="/" className="underline">
-              esemény weboldalát
-            </a>
-            , illetve a fesztivál{" "}
+            esemény weboldalát, illetve a fesztivál{" "}
             <a
               href="https://www.facebook.com/p/ELTE-Szemle-61557156184640/"
               className="underline"

@@ -68,6 +68,7 @@ export default function Footer() {
             <SocialIcon url="https://www.facebook.com/profile.php?id=61557156184640" />
             <SocialIcon url="https://www.instagram.com/elteszemle?igsh=dmVhZ3czMmoyMG5h" />
             <SocialIcon url="https://www.tiktok.com/@elteszemle?_t=ZN-8uQxxr5NfD0&_r=1" />
+            <SocialIcon url="https://letterboxd.com/elteszemle/" />
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const NewsCard = ({ newsItem }) => {
     <Card className="bg-gray-900 border border-gray-700 shadow-lg w-[400px] md:w-[600px] lg:w-[700px] overflow-hidden">
       <CardHeader className="p-0">
         <Image
-          src={newsItem.image || "https://via.placeholder.com/700x400"} //newsItem.image TODO
+          src={newsItem.image}
           alt={newsItem.title}
           className="w-full h-64 object-cover"
         />

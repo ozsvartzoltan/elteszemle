@@ -4,7 +4,7 @@ function Nevezes() {
     <div className=" bg-black text-white px-4 md:px-20 lg:px-40 py-16 ">
       <div className="max-w-5xl mx-auto space-y-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center">
-          Nevezési hír
+          Nevezési információk
         </h1>
         <div className="space-y-6 text-justify leading-relaxed">
           <p className="">
@@ -26,10 +26,14 @@ function Nevezes() {
             tudtok.
           </p>
           <p>
-            A fesztivál ideje alatt egy fotókiállítás is lesz. Az elte.JELEN-re
+            A fesztivál ideje alatt egy{" "}
+            <a href="/fotokiallitas">fotókiállítás</a> is lesz. Az elte.JELEN-re
             a címben szereplő hívószóhoz társítható munkákkal tudtok nevezni,
-            míg az elte.WERK-re behind the scenes képekkel. Részletek az alábbi
-            linken. (a fotókiállítás alfül linkje ide belinkelve)
+            míg az elte.WERK-re behind the scenes képekkel. Részletek az{" "}
+            <a href="/fotokiallitas" className="underline">
+              alábbi linken
+            </a>
+            .
           </p>
           <p>
             A JELEN-re{" "}

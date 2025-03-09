@@ -191,7 +191,7 @@ function Home() {
           </div>{" "}
           <div className=" pt-4">
             <div>
-              <span className="font-bold">Technikusok:</span> Dér Zsolt, Dr.
+              <span className="font-bold">Mozigépészek:</span> Dér Zsolt, dr.
               Kerekes Zoltán
             </div>
             <div>

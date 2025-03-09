@@ -8,7 +8,7 @@ export const canonImage =
   "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/canon_njvsww.png";
 
 export const mindenkiMozijaImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/t_mindenki_mozija_square/v1741365834/mindenli_logo_yw78sx.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741547731/mindenli_logo_vjppvs.png";
 
 export const mhaImage =
   "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/mha_logo_hgneh5.png";
@@ -40,7 +40,7 @@ export const zsurik = [
     image:
       "https://res.cloudinary.com/dhzagayrh/image/upload/v1740845024/So%CC%81s_Ba%CC%81lint_mm0qvk.jpg",
     description:
-      "Nemrég került a magyar mozikba első nagyjátékfilmje a Minden rendben, amit beválogattak az idei Berlinale Perspectives szekciójába is. Ezt megelőző kisfilmjei közül a 2022-es Krémest, valamint a 2017-es Grand Prix-t is vetítették a Friss Húson. Ezentúl társalapítója a Kinopravda rendezői kollektívának, amely 2014 óta a nemzetközi reklámipar egyik meghatározó szereplője. ",
+      "Március 20-tól kerül a magyar mozikba első nagyjátékfilmje a Minden rendben, amit beválogattak az idei Berlinale Perspectives szekciójába is. Ezt megelőző kisfilmjei közül a 2022-es Krémest, valamint a 2017-es Grand Prix-t is vetítették a Friss Húson. Ezentúl társalapítója a Kinopravda rendezői kollektívának, amely 2014 óta a nemzetközi reklámipar egyik meghatározó szereplője. ",
   },
   {
     name: "Dér Asia",
@@ -64,7 +64,7 @@ export const zsurik = [
     image:
       "https://res.cloudinary.com/dhzagayrh/image/upload/v1741209507/Natasa_kjvfsw.jpg",
     description:
-      "A Velencei Nemzetközi Filmfesztiválon bemutatott, majd komoly nemzetközi sikereket elérő Felkészülés meghatározatlan ideig tartó együttlétre című film főszereplője. 2008-ban végzett a Színház- és Filmművészeti Egyetem színművész szakon. Olyan sikeres filmekben szerepelt továbbá, mint a Veszélyes lehet a fagyi, a Szelíd teremtés - A Frankenstein terv, vagy éppen a Jupiter holdja. Hamarosan Goldberg Emília Tiszavirágok című filmjében látjhatjuk játszani.",
+      "A Velencei Nemzetközi Filmfesztiválon bemutatott, majd komoly nemzetközi sikereket elérő Felkészülés meghatározatlan ideig tartó együttlétre című film főszereplője. 2008-ban végzett a Színház- és Filmművészeti Egyetem színművész szakon. Olyan sikeres filmekben szerepelt továbbá, mint a Veszélyes lehet a fagyi, a Szelíd teremtés - A Frankenstein terv, vagy éppen a Jupiter holdja. Hamarosan Goldberg Emília Tiszavirágok című filmjében láthatjuk játszani.",
   },
 ];
 
@@ -105,7 +105,8 @@ export const news = {
   0: {
     title: "Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle",
     date: "2023. március 4.",
-    image: "",
+    image:
+      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/sajtokozlemeny_borito_lgkedf.png",
     link: {
       page: "/1_sajtokozlemeny",
     },
@@ -122,7 +123,8 @@ export const news = {
   1: {
     title: "Nevezési hír",
     date: "2023. március 5.",
-    image: "",
+    image:
+      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/nevezesi_ke%CC%81p_dwtqba.png",
     link: {
       page: "/nevezes",
     },

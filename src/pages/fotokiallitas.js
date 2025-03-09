@@ -3,13 +3,13 @@ import { Image, Button } from "@heroui/react";
 
 function Fotokiallitas() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-white py-12 px-6 sm:px-20 space-y-12 text-justify">
+    <div className="min-h-screen bg-black text-white py-12 px-6 sm:px-20 space-y-12 text-justify">
       {/* Header */}
       <div className="space-y-4 text-justify">
         <h1 className="text-4xl sm:text-6xl font-bold text-center">
           Fotókiállítás
         </h1>
-        <p className="text-lg sm:text-xl max-w-3xl mx-auto text-gray-300">
+        <p className="text-lg sm:text-xl max-w-3xl mx-auto text-white">
           Az idei ELTE Szemle egyik kísérőprogramja lesz egy két részből álló
           fotókiállítás. Az{" "}
           <a href="https://forms.gle/HPTCd1nbTHL7TaRr5">elte.JELEN-re</a> a
@@ -30,7 +30,7 @@ function Fotokiallitas() {
       </div>
 
       {/* Details */}
-      <div className="max-w-4xl mx-auto text-gray-300 space-y-6 text-lg">
+      <div className="max-w-4xl mx-auto text-white space-y-6 text-lg">
         <p>Részletek a nevezési felhívásban:</p>
 
         {/* Buttons */}
@@ -56,7 +56,7 @@ function Fotokiallitas() {
         <p>
           A beválogatott munkák az idei ELTE Szemle alatt, április 29 és május 1
           között lesznek láthatóak a Stúdió K-ban. A fotókiállítás megnyitóját
-          április 29-én 18 órakor tartjuk.
+          április 29-én este tartjuk.
         </p>
 
         <p>A kiállítást Somorjai Máté és Rözge Borisz szervezik.</p>
