@@ -121,7 +121,7 @@ export const news = {
     ],
   },
   1: {
-    title: "Nevezési hír",
+    title: "Nevezési információk",
     date: "2023. március 5.",
     image:
       "https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/nevezesi_ke%CC%81p_dwtqba.png",
