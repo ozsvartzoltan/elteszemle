@@ -104,7 +104,7 @@ export const programLinks = [
 export const news = {
   0: {
     title: "Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle",
-    date: "2023. március 4.",
+    date: "2023. március 10.",
     image:
       "https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/sajtokozlemeny_borito_lgkedf.png",
     link: {
@@ -122,7 +122,7 @@ export const news = {
   },
   1: {
     title: "Nevezési információk",
-    date: "2023. március 5.",
+    date: "2023. március 10.",
     image:
       "https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/nevezesi_ke%CC%81p_dwtqba.png",
     link: {
