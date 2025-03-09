@@ -15,7 +15,7 @@ export default function App() {
   return (
     <HeroUIProvider>
       <Router>
-        <Layout>
+        <Layout className="space-y-6 leading-relaxed">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/zsurik" element={<Zsurik />} />

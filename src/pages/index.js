@@ -124,7 +124,7 @@ function Home() {
         )}
       </div>
 
-      <div id="rolunk" className=" space-y-6 text-justify">
+      <div id="rolunk" className=" space-y-6 text-justify leading-relaxed">
         <div className="font-bold text-4xl mt-10">Rólunk</div>
         <div>
           Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi

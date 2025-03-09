@@ -1,5 +1,8 @@
 export const headerImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/feher_xn20bc.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/feher_logo_jw8mxp.png";
+
+export const headerImageBlack =
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/fekete_logo_ydviih.png";
 
 export const canonImage =
   "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/canon_njvsww.png";
