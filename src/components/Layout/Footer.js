@@ -95,9 +95,8 @@ export default function Footer() {
               alt="Letterbox"
               className="w-[50px] aspect-square hover:cursor-pointer"
               onClick={() =>
-                window.open("https://letterboxd.com/elteszemle/", "_self")
+                window.open("https://letterboxd.com/elteszemle/", "_blank")
               }
-              target="_blank"
             />
           </div>
         </div>
