@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Navbar,
@@ -67,8 +67,8 @@ export default function Header() {
               height={100}
               className="w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent"
               onClick={() => {
+                setIsMenuOpen(false);
                 navigate("/");
-                setIsProgramDropdownOpen(false);
               }}
             />
           </NavbarBrand>

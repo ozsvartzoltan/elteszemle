@@ -1,10 +1,18 @@
 import React from "react";
+import { Image } from "@heroui/react";
 
 function Sajtokozlemenyegy() {
   return (
-    <div className="min-h-screen bg-black text-white px-4 md:px-20 lg:px-40 py-16">
+    <div className="min-h-screen bg-black text-white px-4 md:px-20 lg:px-40 py-2">
       <div className="max-w-5xl mx-auto space-y-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-center">
+        <div className="flex justify-center">
+          <Image
+            src="https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/sajtokozlemeny_borito_lgkedf.png"
+            alt="Sajtóközlemény"
+            className="rounded-xl w-full max-w-4xl"
+          />
+        </div>
+        <h1 className="text-3xl md:text-4xl font-bold text-center">
           Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle
         </h1>
 

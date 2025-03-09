@@ -1,8 +1,17 @@
 import React from "react";
+import { Image } from "@heroui/react";
+
 function Nevezes() {
   return (
-    <div className=" bg-black text-white px-4 md:px-20 lg:px-40 py-16 ">
+    <div className=" bg-black text-white px-4 md:px-20 lg:px-40 pb-2 ">
       <div className="max-w-5xl mx-auto space-y-8">
+        <div className="flex justify-center">
+          <Image
+            src="https://res.cloudinary.com/dhzagayrh/image/upload/t_page/v1741549309/nevezesi_ke%CC%81p_dwtqba.png"
+            alt="Fotókiállítás plakát"
+            className="shadow-lg w-full max-w-4xl"
+          />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold text-center">
           Nevezési információk
         </h1>

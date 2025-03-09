@@ -78,9 +78,18 @@ export default function Footer() {
             SOCIAL MEDIA
           </h3>
           <div className="flex flex-wrap justify-start gap-4">
-            <SocialIcon url="https://www.facebook.com/profile.php?id=61557156184640" />
-            <SocialIcon url="https://www.instagram.com/elteszemle?igsh=dmVhZ3czMmoyMG5h" />
-            <SocialIcon url="https://www.tiktok.com/@elteszemle?_t=ZN-8uQxxr5NfD0&_r=1" />
+            <SocialIcon
+              target="_blank"
+              url="https://www.facebook.com/profile.php?id=61557156184640"
+            />
+            <SocialIcon
+              target="_blank"
+              url="https://www.instagram.com/elteszemle?igsh=dmVhZ3czMmoyMG5h"
+            />
+            <SocialIcon
+              target="_blank"
+              url="https://www.tiktok.com/@elteszemle?_t=ZN-8uQxxr5NfD0&_r=1"
+            />
             <Image
               src="https://res.cloudinary.com/dhzagayrh/image/upload/v1741552061/letterbox_jk7hbd.png"
               alt="Letterbox"
@@ -88,6 +97,7 @@ export default function Footer() {
               onClick={() =>
                 window.open("https://letterboxd.com/elteszemle/", "_self")
               }
+              target="_blank"
             />
           </div>
         </div>
@@ -153,15 +163,24 @@ export default function Footer() {
             SOCIAL MEDIA
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            <SocialIcon url="https://www.facebook.com/profile.php?id=61557156184640" />
-            <SocialIcon url="https://www.instagram.com/elteszemle?igsh=dmVhZ3czMmoyMG5h" />
-            <SocialIcon url="https://www.tiktok.com/@elteszemle?_t=ZN-8uQxxr5NfD0&_r=1" />
+            <SocialIcon
+              target="_blank"
+              url="https://www.facebook.com/profile.php?id=61557156184640"
+            />
+            <SocialIcon
+              target="_blank"
+              url="https://www.instagram.com/elteszemle?igsh=dmVhZ3czMmoyMG5h"
+            />
+            <SocialIcon
+              target="_blank"
+              url="https://www.tiktok.com/@elteszemle?_t=ZN-8uQxxr5NfD0&_r=1"
+            />
             <Image
               src="https://res.cloudinary.com/dhzagayrh/image/upload/v1741552061/letterbox_jk7hbd.png"
               alt="Letterbox"
               className="w-[50px] aspect-square hover:cursor-pointer"
               onClick={() =>
-                window.open("https://letterboxd.com/elteszemle/", "_self")
+                window.open("https://letterboxd.com/elteszemle/", "_blank")
               }
             />
           </div>

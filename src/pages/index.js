@@ -208,7 +208,7 @@ function Home() {
           onPress={() => {
             document.body.scrollTop = 0;
           }}
-          className="fixed bottom-6 right-6 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+          className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
         >
           <SVG type="chevronUp" />
         </Button>
