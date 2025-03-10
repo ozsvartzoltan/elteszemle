@@ -1,45 +1,57 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import "@fontsource/dm-sans";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/700.css";
+
+html,
 body {
-  color: #fff;
-  font-family: "Roboto Condensed", sans-serif;
-  background-image: url(https://images.unsplash.com/photo-1508389377389-b8221c0bcc9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
-  background-position: top top;
-  background-size: cover;
-  margin: 0;
+  @apply overflow-x-hidden;
 }
 
-.App {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  background: rgb(49, 49, 177);
-  background: linear-gradient(0deg, rgba(49, 49, 177, 1) 0%, rgba(49, 49, 177, 1) 50%, rgba(49, 49, 177, 0.6) 100%);
+html {
+  scroll-behavior: smooth;
 }
 
-.container {
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 90px;
+}
+
+.swiper {
   width: 100%;
-  margin: 15% auto;
-}
-.col-4 {
-  width: 25%;
-  float: left;
+  height: 100%;
 }
 
-h1 {
-  font-size: 38px;
-  text-transform: uppercase;
-  line-height: 1;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 1100px;
-  }
-  h1 {
-    font-size: 58px;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 🔥 GLOBAL RESPONSIVE TEXT SIZE */
+@layer base {
+  html {
+    @apply text-xs sm:text-xl;
   }
 }
