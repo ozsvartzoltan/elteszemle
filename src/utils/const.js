@@ -38,7 +38,7 @@ export const zsurik = [
     name: "Sós Bálint Dániel",
     title: "Rendező, forgatókönyvíró",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1740845024/So%CC%81s_Ba%CC%81lint_mm0qvk.jpg",
+      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741797927/IMG_2550-min_nfau8w.jpg",
     description:
       "Március 20-tól kerül a magyar mozikba első nagyjátékfilmje a Minden rendben, amit beválogattak az idei Berlinale Perspectives szekciójába is. Ezt megelőző kisfilmjei közül a 2022-es Krémest, valamint a 2017-es Grand Prix-t is vetítették a Friss Húson. Ezentúl társalapítója a Kinopravda rendezői kollektívának, amely 2014 óta a nemzetközi reklámipar egyik meghatározó szereplője. ",
   },
