@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const { heroui } = require("@heroui/react");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -15,6 +16,10 @@ module.exports = {
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
       },
+    },
+    screens: {
+      custom: "825px",
+      ...defaultTheme.screens,
     },
   },
   plugins: [heroui()],

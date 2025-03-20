@@ -6,24 +6,19 @@
 @import "@fontsource/dm-sans/400.css";
 @import "@fontsource/dm-sans/700.css";
 
-html,
-body {
-  @apply overflow-x-hidden;
-}
+@layer base {
+  html,
+  body {
+    @apply overflow-x-hidden text-xs sm:text-xl;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-html,
-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-}
-
-[id] {
-  scroll-margin-top: 90px;
+  [id] {
+    scroll-margin-top: 90px;
+  }
 }
 
 .swiper {
@@ -47,11 +42,4 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* 🔥 GLOBAL RESPONSIVE TEXT SIZE */
-@layer base {
-  html {
-    @apply text-xs sm:text-xl;
-  }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Navbar,
@@ -40,7 +40,6 @@ export default function Header() {
   };
 
   const handleNavigation = (e, targetId) => {
-    //e.preventDefault();
     if (location.pathname === "/") {
       scrollToSection(targetId);
     } else {
@@ -53,29 +52,27 @@ export default function Header() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#cc2d1c] text-white h-[100px] w-full flex-shrink-0 justify-center"
+      className="bg-[#cc2d1c] text-white h-[100px] w-full flex-shrink-0"
     >
-      <div className="flex w-full items-center">
-        {/* Logo and Mobile Toggle Container */}
-        <div className="flex items-center">
-          <NavbarBrand className="flex-shrink-0 w-[100px] -ml-6 sm:ml-0">
-            <Image
-              src={headerImage}
-              alt="ELTE Szemle Logo"
-              radius="none"
-              width={100}
-              height={100}
-              className="w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent"
-              onClick={() => {
-                setIsMenuOpen(false);
-                navigate("/");
-              }}
-            />
-          </NavbarBrand>
-        </div>
+      <div className="container mx-auto flex items-center justify-between w-full">
+        {/* Logo - Left aligned on mobile, slightly right on desktop */}
+        <NavbarBrand className="flex-shrink-0">
+          <Image
+            src={headerImage || "/placeholder.svg"}
+            alt="ELTE Szemle Logo"
+            radius="none"
+            width={100}
+            height={100}
+            className="w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent -ml-6"
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/");
+            }}
+          />
+        </NavbarBrand>
 
-        {/* Desktop Navigation */}
-        <NavbarContent className="hidden min-[775px]:flex flex-1 items-center justify-center">
+        {/* Desktop Navigation - Always centered */}
+        <NavbarContent className="hidden custom:flex justify-center absolute left-1/2 transform -translate-x-1/2">
           <Dropdown classNames={{ content: "bg-black" }}>
             <NavbarItem>
               <DropdownTrigger className="text-white hover:opacity-80 transition-opacity ml-3 py-2 text-lg">
@@ -91,7 +88,7 @@ export default function Header() {
             </NavbarItem>
             <DropdownMenu className="bg-black text-white rounded-none border-none p-0">
               {programLinks.map(({ key, text, href }) => (
-                <DropdownItem key={key} className="h-14 " href={href}>
+                <DropdownItem key={key} className="h-14" href={href}>
                   {text}
                 </DropdownItem>
               ))}
@@ -127,22 +124,21 @@ export default function Header() {
           ))}
         </NavbarContent>
 
-        {/* Spacer to balance the logo + toggle width */}
-        <div className="flex-shrink-0 w-[140px] sm:w-[100px]" />
+        {/* Mobile Menu Toggle - Right aligned */}
+        <div className="flex custom:hidden">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="text-white w-16 h-16 p-4 rounded-xl hover:bg-white/10 transition flex justify-center items-center"
+          />
+        </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className=" items-center min-[775px]:hidden">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="text-white w-16 h-16 p-4 rounded-xl hover:bg-white/10 transition flex justify-center items-center"
-        />
-      </div>
-      <NavbarMenu className="bg-[#cc2d1c] pt-16 ">
+      <NavbarMenu className="bg-[#cc2d1c] pt-16">
         <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}
-            className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity items-center hover:cursor-pointer"
+            className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity items-center hover:cursor-pointer flex"
           >
             program
             <SVG type={isProgramDropdownOpen ? "chevronUp" : "chevronDown"} />

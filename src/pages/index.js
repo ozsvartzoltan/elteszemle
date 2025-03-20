@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Button, useDisclosure, Image, Skeleton } from "@heroui/react";
+import { Button } from "@heroui/react";
 import SVG from "components/svg/SVG";
-import { modalImages, news } from "utils/const";
+import { news } from "utils/const";
 import { Swiper, SwiperSlide } from "swiper/react";
 import NewsCard from "components/NewsCard/index";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -12,8 +12,6 @@ import "../styles.css";
 
 function Home() {
   const [showScroll, setShowScroll] = useState(true);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const img_num = Math.floor(Math.random() * 6);
   const swiperRef = useRef(null);
 
   return (
