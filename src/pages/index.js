@@ -132,7 +132,7 @@ function Home() {
         </div>
         <div>
           A fesztiválon a Mozgókép alapképzés (MoHa), a Filmtudomány mesterszak,
-          valamint a Szabadbölcsészet Film specializációs hallgatók munkáit
+          valamint a Szabad bölcsészet Film specializációs hallgatók munkáit
           vetítjük. A filmek díjazására egy szakmai zsűrit kérünk fel, amely
           dönt a fesztivál fődíjáról, illetve összeállít egy ún. BEST OF blokkot
           a legmagasabb színvonalú munkákból. A vetítéseken kívül különböző
