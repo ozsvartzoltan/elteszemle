@@ -385,7 +385,7 @@ export const movies = {
         "Pszichiátriai ülések mosódnak össze pornóipari casting-helyzetekkel egy lány fantáziájában, amint próbálja visszafejteni az emlékeit pszicho-szomatikus betegségéről. Csoboth Dorka be- ki- le- fel- szét- meg- át- című egészestés filmjével szerepelt a 44. Magyar Filmszemle kísérleti filmes programjában.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871713/2.4_tgpdcd.png",
+        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743975119/2.4_tgpdcd_p8y5ma.png",
     },
     {
       title: "Hava",
