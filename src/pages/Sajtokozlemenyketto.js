@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button } from "@heroui/react";
+import { Button, Image } from "@heroui/react";
 import SVG from "components/svg/SVG";
 
 function Sajtokozlemenyketto() {
@@ -10,6 +10,13 @@ function Sajtokozlemenyketto() {
   return (
     <div className="bg-black text-white min-h-screen py-16 px-4 sm:px-8">
       <div className="max-w-3xl mx-auto space-y-6 text-white/90 leading-relaxed text-justify">
+        <div className="flex justify-center">
+          <Image
+            src="https://res.cloudinary.com/dhzagayrh/image/upload/v1744042816/jimmy1_gdyiid.png"
+            alt="Jimmy Hard balladája"
+            className="shadow-lg w-full max-w-2xl rounded-3xl"
+          />
+        </div>
         <h1 className="text-4xl font-bold text-center mb-12">
           13 órányi vetítés és sokszínű szakmai programok várják az ELTE Szemle
           látogatóit
