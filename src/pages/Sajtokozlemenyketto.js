@@ -25,8 +25,8 @@ function Sajtokozlemenyketto() {
           </strong>
         </p>
         <p>
-          A szakmai zsűri – Pálos Gergely, Sós Bálint Dániel, Dér Asia, Csuja
-          László, Stork Natasa – a fődíj odaítélésénél idén közel hetven
+          A szakmai zsűri - Pálos Gergely, Sós Bálint Dániel, Dér Asia, Csuja
+          László, Stork Natasa - a fődíj odaítélésénél idén közel hetven
           versenyfilmből válogathat, amelyeket a közönség tizenhárom blokkban
           tekinthet majd meg. A programban szerepelnek a Magyar Filmszemlén is
           sikerrel vetített alkotások. Ilyen többek között Nagy Dániel
@@ -34,13 +34,13 @@ function Sajtokozlemenyketto() {
           szürreális utazáson keresztül beszél a mai Magyarországról, S. Papp
           Mátétól a <em>Jimmy Hard balladája</em>, amiben Liber Ágoston
           karaktere az Ördöggel köt paktumot, valamint Kékes Kiara{" "}
-          <em>Hazug disznók az álmok is</em> című kísérleti filmje, ami azzal a
-          gondolattal játszik el, hogy mi történik, ha betiltják a
-          halfogyasztást.
+          <em>Hazug disznók az álmok is</em>
+          című kísérleti filmje, ami azzal a gondolattal játszik el, hogy mi
+          történik, ha betiltják a halfogyasztást.
         </p>
         <p>
           Számos ígéretes hallgatói film pedig az idei ELTE Szemlén kezdheti meg
-          a sikeres fesztivál körútját. Szabó Dávid András{" "}
+          a sikeres fesztivál körútját. Szabó Dávid András a{" "}
           <em>Csak hogy végre valami (sikerüljön) megtörténjen</em> című
           filmjében Árpád apja nagy becsben tartott csokijának az ellopásával
           próbál lenyűgözni egy lányt, Fárizs Mihály <em>Ide-oda</em> című
@@ -48,35 +48,42 @@ function Sajtokozlemenyketto() {
           kezdődik a szerelem.
         </p>
         <p>
-          Komoly fesztiválszereplések várhatnak az első Mohás diplomafilmekre
-          is. Kapás Tibor szatirikus hangvételű alkotásában, a{" "}
+          Komoly fesztivál szereplések várhatnak az első Mohás (Mozgokép Szak)
+          diplomafilmekre is. Kapás Tibor szatirikus hangvételű alkotásában a{" "}
           <em>Mobil Kisállat Hamvasztásban</em> a kissé mizantróp Tamás
           kényszerül átvenni a családi vállalkozást, amelynek üzemeltetése során
           a nem várt helyzetekben elkezd magára találni. Albert Virág{" "}
           <em>Kétoldali közelítésében</em> a 11 éves Jázmin szüleivel új városba
-          költözik, ahol osztálytársai kiközösítik, így képzeletbeli barátjánál,
-          Rozinál keres vigaszt.
+          költözik, az új osztályában pedig kiközösítik, így a képzeletbeli
+          barátjánál, Rozinál keres vigaszt.
         </p>
         <p>
           Ezentúl látható lesz Ascher Károly <em>Clairvoyance</em> című filmje,
-          amiben feltűnik a <em>Fekete pont</em> főszereplője, Mészöly Anna is,
-          Kisházy Esztertől a <em>Ne nézz a Napba</em>, valamint a{" "}
-          <em>Cordis</em> című pszichológiai dráma is.
+          amiben feltűnik a<em>Fekete pont</em> főszereplője, Mészöly Anna is,
+          Kisházy Esztertől a <em>Ne nézz a Napba</em>, ami két egykori barátnő
+          újbóli találkozását ábrázolja, valamint a <em>Cordis</em> című
+          pszichológiai dráma, amiben egy karrierje csúcsán lévő orvosnak kell
+          szembenéznie sötét múltjával.
         </p>
         <p>
           Az idei fesztivál különlegessége az egri Eszterházy Károly Egyetem
-          vendég blokkja lesz, ahol Kozma Katica <em>Én testem</em> című filmje
-          mellett Kovács Mátyás letaglózó drámája, az <em>Ádám fél</em> is
-          helyet kap.
+          vendég blokkja lesz, amiben Kozma Katica a Filmszemlén vetített{" "}
+          <em>Én testem</em> című filmje mellett Kovács Mátyás letaglózó drámája
+          az <em>Ádám fél</em>
+          is helyet kap.
         </p>
         <p>
-          A szakmai programok idén még hangsúlyosabb szerepet kapnak. A fő
-          támogató, a Canon, izgalmas előadásokkal készül, a Camera Kft és a
-          Fotoplus is kitelepül, a Filmarchívum pedig animációs workshopot tart.
-          Lesz intimitás koordináció workshop Veszelák Bori vezetésével, és
-          érkezik Ruttkay Zsófia és Pálfi György is egy mesterkurzussal. Idén is
-          lesz zsűri kerekasztal, illetve beszélgetés Lichter Péterrel, Kránicz
-          Bencével és Nagy V. Gergővel az elmélet és gyakorlat kapcsolódásáról.
+          A szakmai programok a korábbiaknál is nagyobb szerepet kapnak az idei
+          ELTE Szemlén. Az esemény fő támogatója, a Canon, izgalmas előadásokkal
+          készül, de kitelepül majd a Camera Kft és a Fotoplus, és a
+          Filmarchívum is tart egy animációs workshopot. Az érdeklődők részt
+          vehetnek Veszelák Bori intimitás koordinátor által tartott workshopon,
+          de érkezik Ruttkay Zsófia és Pálfi György is, akik a Nem vagyok a
+          barátod című filmjük kapcsán tartanak egy mesterkurzust. Idén is lesz
+          zsűri kerekasztal, illetve Lichter Péterrel, Kránicz Bencével és Nagy
+          V. Gergővel beszélgetünk majd az elméleti és gyakorlati munkák
+          összefonódásáról, arról, hogy a két szféra hol és hogyan egészítheti
+          ki egymást, mik az előnyei és a hátrányai a kettős identitásnak.
         </p>
         <p>
           Idén egy plakátbörzével is készülnek a szervezők, ahol a{" "}
@@ -116,7 +123,8 @@ function Sajtokozlemenyketto() {
             Cirko Film
           </a>{" "}
           plakátjaiból válogathatnak az érdeklődők. Az ebből befolyt összeggel
-          ELTE-s vizsga- és diplomafilmeket támogat majd a fesztivál.
+          ELTE-s vizsga- és diplomafilmek elkészülését támogatja majd a
+          fesztivál
         </p>
         <p>
           A BEST OF-ba bekerülő filmek előreláthatólag az év végén a{" "}
@@ -128,11 +136,11 @@ function Sajtokozlemenyketto() {
           >
             Cinego
           </a>{" "}
-          streaming felületen is megtekinthetők lesznek, a díjazottak
-          ajándékcsomagot is kapnak.
+          streaming felületén is láthatóak lesznek, valamint a nyertes
+          alkotóknak ajándékcsomaggal is készülnek.
         </p>
         <p>
-          Az ELTE Szemle hosszútávú együttműködést köt a{" "}
+          Az ELTE Szemle hosszútávú együttműködési partnere lesz a jövőben a{" "}
           <a
             href="http://biff.hu"
             target="_blank"
@@ -140,31 +148,16 @@ function Sajtokozlemenyketto() {
             rel="noopener noreferrer"
           >
             Budapest International Film Festival (BIFF)
-          </a>
-          -fel. A közös cél a függetlenség és a fiatal tehetségek támogatása.
+          </a>{" "}
+          A két fesztivál számára egyaránt fontos a függetlenség, valamint a
+          fiatal tehetségek felfedezése és támogatása. A jövőben további
+          részletek jelennek majd meg az együttműködéssel kapcsolatban.
         </p>
         <p>
-          A négynapos fesztivált hagyományosan a BEST OF vetítés zárja május
-          2-án, ezt követi az After buli a Könyvtár Klubban. A fesztivál minden
-          programja ingyenes. A részletes program és további infók:{" "}
-          <a
-            href="http://elteszemle.hu"
-            target="_blank"
-            className="text-[#cc2d1c] underline"
-            rel="noopener noreferrer"
-          >
-            elteszemle.hu
-          </a>{" "}
-          és{" "}
-          <a
-            href="https://www.facebook.com/profile.php?id=61557156184640"
-            target="_blank"
-            className="text-[#cc2d1c] underline"
-            rel="noopener noreferrer"
-          >
-            Facebook oldal
-          </a>
-          .
+          A négynapos fesztivált a hagyományok szerint a BEST OF vetítés zárja
+          május 2-án, amit követően a szervezők mindenkit várnak az ELTE Szemle
+          After bulijára a Könyvtár Klubba. A fesztivál minden programja nyitott
+          és ingyenesen látogatható.
         </p>
       </div>
 

@@ -103,6 +103,20 @@ export const programLinks = [
 
 export const news = {
   0: {
+    title:
+      "13 órányi vetítés és sokszínű szakmai programok várják az ELTE Szemle látogatóit",
+    date: "2025. április 8.",
+    image:
+      "https://res.cloudinary.com/dhzagayrh/image/upload/v1744042816/jimmy1_gdyiid.png",
+    link: {
+      page: "/sajtokozlemeny",
+    },
+    description:
+      "Száznál is több nevezés érkezett az idei ELTE Szemlére, ezekből közel hetvenet a közönség is láthat majd április 29. és május 2. között a Stúdió K-ban. A programban szereplő filmek közül vannak, amik az elmúlt időszakban nagy sikereket arattak a Friss Húson és a Filmszemlén is, de érdemes lesz odafigyelni az első MOHA (ELTE Mozgókép Hallgatók) diplomafilmekre is.",
+    text: [],
+  },
+
+  1: {
     title: "Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle",
     date: "2025. március 10.",
     image:
@@ -120,7 +134,7 @@ export const news = {
       "Az esemény fő támogatója a Canon, kiemelt támogatója és technikai kivitelezője a Mindenki Mozija. Az ELTE filmszakos hallgatói március 17-ig nevezhetik filmjeiket az alábbi linken.",
     ],
   },
-  1: {
+  2: {
     title: "Nevezési információk",
     date: "2025. március 10.",
     image:
@@ -137,26 +151,13 @@ export const news = {
       "A JELEN-re itt, a WERK-re itt tudtok nevezni március 31-ig.",
     ],
   },
-  2: {
-    title:
-      "13 órányi vetítés és sokszínű szakmai programok várják az ELTE Szemle látogatóit",
-    date: "2025. április 8.",
-    image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1744042816/jimmy1_gdyiid.png",
-    link: {
-      page: "/sajtokozlemeny",
-    },
-    description:
-      "Száznál is több nevezés érkezett az idei ELTE Szemlére, ezekből közel hetvenet a közönség is láthat majd április 29. és május 2. között a Stúdió K-ban. A programban szereplő filmek közül vannak, amik az elmúlt időszakban nagy sikereket arattak a Friss Húson és a Filmszemlén is, de érdemes lesz odafigyelni az első MOHA (ELTE Mozgókép Hallgatók) diplomafilmekre is.",
-    text: [],
-  },
 };
 
 export const scheduleData = [
   { name: "I. Blokk", date: "04.29", time: "19:30" },
   { name: "II. Blokk", date: "04.30", time: "10:00" },
   {
-    name: "Canon szakmai előadás",
+    name: "Canon szakmai előadások",
     date: "04.30",
     time: "11:00 - 12:30 (Nagyterem)",
   },
@@ -224,7 +225,8 @@ export const extraPrograms = {
         "Korlátozott erőforrások optimális beosztása minőségi elvárások csökkentése nélkül",
         "Szakmai tapasztalatok megosztása, példákkal, werkfotókkal, filmrészletekkel",
       ],
-      eloadok: "M. Deák Kristóf, Iványi Petra, Viesz Richárd",
+      eloadok:
+        "M. Deák Kristóf operatőr, Iványi Petra producer, Viesz Richárd dokumentumfilmes/operatőr",
     },
     {
       title: "Filmarchívum - Klassz Program animációs workshop",
@@ -232,7 +234,7 @@ export const extraPrograms = {
       description: [
         "A foglalkozás az állóképet először mozgásba lendítő eszközök köré szerveződik. A résztvevők megismerkedhetnek a 19. század legnépszerűbb optikai eszközeivel: taumatróp, zsebmozi, fenakisztoszkóp, zoetróp, praxinoszkóp. Elkészíthetik saját animációs filmjüket a praxinoszkópba, vagy akár 35 mm-es filmszalagra, amit a helyszínen vetítve meg is nézhetnek.",
       ],
-      eloadok: "Erdős Emese, Gátay-Tóth Mirtill",
+      eloadok: "A workshopot Erdős Emese és Gátay-Tóth Mirtill tartják.",
     },
   ],
   "05.01": [
@@ -258,9 +260,8 @@ export const extraPrograms = {
       time: "15:00 - 16:30 (Kisterem)",
       description: [
         "A kerekasztal-beszélgetés résztvevői a filmkészítés és a filmelmélet találkozásával kapcsolatos tapasztalataikat osztják meg. Elsősorban arra keresik a választ, hogy milyen a kritikusi- alkotói kettős identitás, mi lehet a filmelméleti tudás kifutása, valamint hogy a szakma két különböző iránya milyen helyzetekben képes a hétköznapokban párbeszédbe lépni egymással. A meghívott vendégek az filmalkotói- és elméleti szinten is aktívak, így aktuális képet tudnak közvetíteni erről a kettős szerepről. ",
-        "A beszélgetésen részt vesz Kránicz Bence filmkritikus, forgatókönyvíró, az ELTE Filmtanszék oktatója, Lichter Péter kísérleti filmes, a Pécsi Tudományegyetem Filmtanszék oktatója, valamint Nagy V. Gergő forgatókönyvíró, filmkritikus. ",
+        "A beszélgetésen részt vesz Kránicz Bence filmkritikus, forgatókönyvíró, az ELTE Filmtanszék oktatója, Lichter Péter kísérleti filmes, a Pécsi Tudományegyetem Filmtanszék oktatója, valamint Nagy V. Gergő forgatókönyvíró, filmkritikus. A beszélgetést Vigh Martin moderálja.",
       ],
-      speakers: "A beszélgetést Vigh Martin moderálja.",
     },
     {
       title: "Zsűri kerekasztal-beszélgetés",
@@ -616,7 +617,7 @@ export const movies = {
       type: "kisjátékfilm",
       length: "12 perc",
       description:
-        "A karrierje csúcsán járó Maróti doktor orvosi konferenciára érkezik a gáláns Gellért Szállóba, azonban az előadására való felkészülés során szembe kell néznie múltjával, mely alakot ölt az éjszakában.",
+        "A karrierje csúcsán járó Maróti doktor orvosi konferenciára érkezik a gáláns Gellért Szállóba, azonban az előadására való felkészülés során szembe kell néznie múltjával, mely alakot ölt az éjszakában. A film forgatókönyvét Orbán Róza írta, akinek a Cordis volt a felvételi filmje az ELTE Filmtudomány mesterszakára.",
       actors:
         "Bölkény Balázs, Jakab-Aponyi Csenge, Pigler Emília, Vetlényi Lili",
       image:

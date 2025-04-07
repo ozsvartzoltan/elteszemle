@@ -77,9 +77,12 @@ function Filmek() {
                 <h2 className="text-2xl font-bold text-[#cc2d1c]">
                   {movie.title}
                 </h2>
-                <p className="text-sm text-white/90">
-                  <strong>Rendező:</strong> {movie.director}
-                </p>
+                {movie?.director !== "-" && (
+                  <p className="text-sm text-white/90">
+                    <strong>Rendező:</strong> {movie.director}
+                  </p>
+                )}
+
                 <p className="text-sm text-white/90">
                   <strong>Hossz:</strong> {movie.length}
                 </p>

@@ -24,7 +24,8 @@ function SzakmaiProgramok() {
                   className="bg-white/5 p-6 rounded-xl border border-white/10"
                 >
                   <p className="text-lg font-semibold text-white">
-                    {program.title}{" "}
+                    <span className="uppercase">{program.title} </span>
+
                     <span className="text-[#cc2d1c] text-sm font-normal">
                       – {program.time}
                     </span>

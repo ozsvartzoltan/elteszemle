@@ -47,15 +47,27 @@ function NapiBontas() {
                   className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition flex justify-between items-center"
                 >
                   <div>
-                    <span className="font-medium text-lg">{block.name}</span>
+                    <span className=" font-medium text-lg">{block.name}</span>
                   </div>
                   <div>
-                    <span className="text-[#cc2d1c] font-semibold text-lg">
+                    <span className="text-[#cc2d1c] font-semibold text-lg ">
                       {block.time}
                     </span>
                   </div>
                 </button>
               ))}
+              {/* {blocks.map((block) => (
+                <button
+                  key={block.name}
+                  onClick={() => handleBlockClick(block)}
+                  className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition grid grid-cols-[1fr_auto] gap-4 items-center"
+                >
+                  <span className="font-medium text-lg">{block.name}</span>
+                  <span className="text-[#cc2d1c] font-semibold text-lg">
+                    {block.time}
+                  </span>
+                </button>
+              ))} */}
             </div>
           </div>
         ))}
