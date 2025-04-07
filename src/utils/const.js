@@ -137,6 +137,19 @@ export const news = {
       "A JELEN-re itt, a WERK-re itt tudtok nevezni március 31-ig.",
     ],
   },
+  2: {
+    title:
+      "13 órányi vetítés és sokszínű szakmai programok várják az ELTE Szemle látogatóit",
+    date: "2025. április 8.",
+    image:
+      "https://res.cloudinary.com/dhzagayrh/image/upload/v1744042816/jimmy1_gdyiid.png",
+    link: {
+      page: "/sajtokozlemeny",
+    },
+    description:
+      "Száznál is több nevezés érkezett az idei ELTE Szemlére, ezekből közel hetvenet a közönség is láthat majd április 29. és május 2. között a Stúdió K-ban. A programban szereplő filmek közül vannak, amik az elmúlt időszakban nagy sikereket arattak a Friss Húson és a Filmszemlén is, de érdemes lesz odafigyelni az első MOHA (ELTE Mozgókép Hallgatók) diplomafilmekre is.",
+    text: [],
+  },
 };
 
 export const scheduleData = [
@@ -575,6 +588,18 @@ export const movies = {
   ],
   "V. Blokk - 04.30 - 18:00": [
     {
+      title: "A sápadt férfi utolsó kísérlete a napozásra",
+      director: "Csókás Nándor",
+      type: "kisjátékfilm",
+      length: "12 perc",
+      description:
+        "A kilenc éves Rózi épp a nagymamája mellett unatkozik a strandon, amikor hirtelen látomása lesz: segítenie kell a sápadt férfinak meghalni. Csókás Nándor diplomafilmje szerepelt a 2024-es Friss Hús versenyprogramjában is.",
+      actors:
+        "Havlicsek Bori, Szentgáli Piroska, Hajduk Károly, Mészáros Piroska",
+      image:
+        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871027/2_tbgtef.png",
+    },
+    {
       title: "Születésnap",
       director: "Szirmai János",
       type: "kisjátékfilm",
@@ -608,28 +633,7 @@ export const movies = {
       image:
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872243/1_1_n4eane.jpg",
     },
-    {
-      title: "A sápadt férfi utolsó kísérlete a napozásra",
-      director: "Csókás Nándor",
-      type: "kisjátékfilm",
-      length: "12 perc",
-      description:
-        "A kilenc éves Rózi épp a nagymamája mellett unatkozik a strandon, amikor hirtelen látomása lesz: segítenie kell a sápadt férfinak meghalni. Csókás Nándor diplomafilmje szerepelt a 2024-es Friss Hús versenyprogramjában is.",
-      actors:
-        "Havlicsek Bori, Szentgáli Piroska, Hajduk Károly, Mészáros Piroska",
-      image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871027/2_tbgtef.png",
-    },
-    {
-      title: "Galambom, galambom",
-      director: "Szabó Dávid András",
-      type: "kisjátékfilm",
-      length: "9 perc",
-      description:
-        "Gábor szerint valaki egyfolytában megfigyeli, ezért pszichiátere tanácsára kamerát ragad, hogy lencsevégre kapja követőjét. A fotók azonban jóval sokkolóbb titokra döbbentik rá, mint azt elsőre gondolta.",
-      actors: "Juhász Zoltán, Ferenczi Gábor, Rácz Katalin",
-      image: "", // No image link provided
-    },
+
     {
       title: "Szakadás",
       director: "Szabó Levente",
@@ -755,7 +759,8 @@ export const movies = {
       description:
         "Egy kapcsolat véget ér, egy másik elkezdődik? A Rókavadászat rendezője, Sándor Lili Pigler Emília és Bukovszky Orsi főszereplésével készített nemzedéki közérzetfilmet.",
       actors: "Pigler Emília, Bukovszky Orsolya, Forrai Áron",
-      image: "", // No image provided
+      image:
+        "https://res.cloudinary.com/dhzagayrh/image/upload/v1744036360/IMG_9290_yjfziu.jpg",
     },
   ],
   "VIII. Blokk - 04.30 - 22:30": [

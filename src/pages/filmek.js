@@ -23,9 +23,7 @@ function Filmek() {
   };
 
   useEffect(() => {
-    //console.log(localStorage.getItem("name").split(" ")[1]);
     let blokk = localStorage.getItem("name");
-    console.log(selectedTab, blokk, movies[blokk]);
     if (blokk?.split(" ")[1] === "Blokk") {
       setSelectedTab(blokk);
     }
@@ -36,7 +34,6 @@ function Filmek() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Filmek</h1>
 
-        {/* Scrollable Tabs */}
         <div className="relative mb-8">
           <button
             onClick={() => scrollTabs("left")}
@@ -106,7 +103,7 @@ function Filmek() {
                     src={movie.image}
                     alt={movie.title}
                     onLoad={() => handleImageLoad(index)}
-                    className="w-full h-auto object-contain max-h-[400px]"
+                    className="w-full h-auto object-contain max-h-[400px] z-100"
                   />
                 </Skeleton>
               </div>
@@ -118,7 +115,7 @@ function Filmek() {
         onPress={() => {
           document.body.scrollTop = 0;
         }}
-        className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+        className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all z-10000"
       >
         <SVG type="chevronUp" />
       </Button>
@@ -127,112 +124,3 @@ function Filmek() {
 }
 
 export default Filmek;
-
-// import React, { useState, useEffect, useRef } from "react";
-// import { Tabs, Tab, Image, Skeleton } from "@heroui/react";
-// import { movies } from "utils/const";
-// import SVG from "components/svg/SVG";
-
-// function Filmek() {
-//   const [selectedTab, setSelectedTab] = useState(Object.keys(movies)[0]);
-//   const [loadedImages, setLoadedImages] = useState({});
-//   const tabContainerRef = useRef(null);
-
-//   const handleImageLoad = (index) => {
-//     setLoadedImages((prev) => ({ ...prev, [index]: true }));
-//   };
-
-//   const scrollTabs = (direction) => {
-//     if (tabContainerRef.current) {
-//       const scrollAmount = 200;
-//       tabContainerRef.current.scrollBy({
-//         left: direction === "left" ? -scrollAmount : scrollAmount,
-//         behavior: "smooth",
-//       });
-//     }
-//   };
-
-//   return (
-//     <div className="bg-black text-white min-h-screen px-4 py-12">
-//       <div className="max-w-7xl mx-auto">
-//         <h1 className="text-4xl font-bold mb-8 text-center">Filmek</h1>
-
-//         <div className="relative mb-8">
-//           <button
-//             onClick={() => scrollTabs("left")}
-//             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 rounded-full"
-//           >
-//             <SVG type="chevronLeft" />
-//           </button>
-
-//           <div
-//             ref={tabContainerRef}
-//             className="overflow-x-auto scrollbar-hide px-8"
-//           >
-//             <Tabs
-//               selectedKey={selectedTab}
-//               onSelectionChange={setSelectedTab}
-//               color="primary"
-//               variant="underlined"
-//               className="inline-flex min-w-max whitespace-nowrap"
-//             >
-//               {Object.keys(movies).map((block) => (
-//                 <Tab key={block} title={block} />
-//               ))}
-//             </Tabs>
-//           </div>
-
-//           <button
-//             onClick={() => scrollTabs("right")}
-//             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 rounded-full"
-//           >
-//             <SVG type="chevronRight" />
-//           </button>
-//         </div>
-
-//         <div className="space-y-8">
-//           {movies[selectedTab].map((movie, index) => (
-//             <div
-//               key={index}
-//               className="flex flex-col md:flex-row gap-6 bg-gray-900 border border-white/10 rounded-xl p-6 shadow-lg"
-//             >
-//               <div className="w-full md:w-1/3">
-//                 <Skeleton isLoaded={loadedImages[index]}>
-//                   <Image
-//                     src={movie.image}
-//                     alt={movie.title}
-//                     onLoad={() => handleImageLoad(index)}
-//                     className="w-full h-60 object-cover rounded-lg"
-//                   />
-//                 </Skeleton>
-//               </div>
-
-//               <div className="flex-1 space-y-2">
-//                 <h2 className="text-2xl font-semibold text-[#cc2d1c]">
-//                   {movie.title}
-//                 </h2>
-//                 <p className="text-sm text-white/90">
-//                   <strong>Rendező:</strong> {movie.director}
-//                 </p>
-//                 <p className="text-sm text-white/90">
-//                   <strong>Hossz:</strong> {movie.length}
-//                 </p>
-//                 <p className="text-sm text-white/90">
-//                   <strong>Típus:</strong> {movie.type}
-//                 </p>
-//                 <p className="text-sm text-white/90">
-//                   <strong>Szereplők:</strong> {movie.actors}
-//                 </p>
-//                 <p className="text-sm text-white/90 whitespace-pre-line">
-//                   <strong>Leírás:</strong> {movie.description}
-//                 </p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Filmek;
