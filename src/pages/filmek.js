@@ -23,17 +23,13 @@ function Filmek() {
   };
 
   useEffect(() => {
-    console.log(localStorage.getItem("name").split(" ")[1]);
+    //console.log(localStorage.getItem("name").split(" ")[1]);
     let blokk = localStorage.getItem("name");
-    console.log(selectedTab, blokk);
-    // if (blokk?.split(" ")[1] === "Blokk") {
-    //   console.log(blokk);
-    //   setSelectedTab(blokk);
-    // }
+    console.log(selectedTab, blokk, movies[blokk]);
+    if (blokk?.split(" ")[1] === "Blokk") {
+      setSelectedTab(blokk);
+    }
   }, []);
-  useEffect(() => {
-    console.log(selectedTab, "-", typeof selectedTab);
-  }, [selectedTab]);
 
   return (
     <div className="bg-black text-white min-h-screen px-4 py-12">
@@ -93,9 +89,12 @@ function Filmek() {
                 <p className="text-sm text-white/90">
                   <strong>Típus:</strong> {movie.type}
                 </p>
-                <p className="text-sm text-white/90">
-                  <strong>Szereplők:</strong> {movie.actors}
-                </p>
+
+                {movie?.actors !== "-" && (
+                  <p className="text-sm text-white/90">
+                    <strong>Szereplők:</strong> {movie.actors}
+                  </p>
+                )}
                 <p className="text-sm text-white/90">
                   <strong>Leírás:</strong> {movie.description}
                 </p>

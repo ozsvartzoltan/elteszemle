@@ -320,7 +320,7 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871425/egyatlagos_still2_bms8yq.png",
     },
     {
-      title: "Budapest, 10:25",
+      title: "Budapest, 10 óra 25 perc",
       director: "Nagy Dániel",
       type: "kisjátékfilm",
       length: "19 perc",
@@ -400,7 +400,7 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582042/kib7ker3_qsaykt.png",
     },
   ],
-  "III. Blokk - 04:30 - 13:30": [
+  "III. Blokk - 04.30 - 13:30": [
     {
       title: "Adászavar",
       director: "Hegedűs Brúnó",
@@ -589,7 +589,7 @@ export const movies = {
       title: "Cordis",
       director: "Taraczky Mila",
       type: "kisjátékfilm",
-      length: "11 perc",
+      length: "12 perc",
       description:
         "A karrierje csúcsán járó Maróti doktor orvosi konferenciára érkezik a gáláns Gellért Szállóba, azonban az előadására való felkészülés során szembe kell néznie múltjával, mely alakot ölt az éjszakában.",
       actors:
@@ -785,7 +785,7 @@ export const movies = {
       title: "csiga",
       director: "Juhász Maja",
       type: "kisjátékfilm",
-      length: "6 perc",
+      length: "5 perc",
       description:
         'Jánossal szakít a csaja. Úgy gondolja azért történt vele ez, mivel nem volt elég "férfi". Elhatározza, hogy igazi férfivá válik, kérdés sikerül-e ez neki.',
       actors: "Juhász Maja, Kövesi Bálint, Báró Márton",

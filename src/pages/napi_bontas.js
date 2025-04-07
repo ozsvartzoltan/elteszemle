@@ -1,5 +1,5 @@
 import SVG from "components/svg/SVG";
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { dayLabels, scheduleData } from "utils/const";
 import { Button } from "@heroui/react";
@@ -15,13 +15,18 @@ function NapiBontas() {
 
   const handleBlockClick = (block) => {
     console.log(block?.name + " - " + block?.date + " - " + block?.time);
+    console.log(`${block?.name} - ${block?.date} - ${block?.time}`);
     localStorage.setItem(
       "name",
-      block?.name + " - " + block?.date + " - " + block?.time
+      `${block?.name} - ${block?.date} - ${block?.time}`
     );
     let isBlokk = block?.name.split(" ")[1] === "Blokk";
     navigate(isBlokk ? "/filmek" : "/szakmai_programok");
   };
+
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">
