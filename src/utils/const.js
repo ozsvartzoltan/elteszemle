@@ -142,6 +142,16 @@ export const news = {
 export const scheduleData = [
   { name: "I. Blokk", date: "04.29", time: "19:30" },
   { name: "II. Blokk", date: "04.30", time: "10:00" },
+  {
+    name: "Canon szakmai előadás",
+    date: "04.30",
+    time: "11:00 - 12:30 (Nagyterem)",
+  },
+  {
+    name: "Filmarchívum - Klassz Program animációs workshop",
+    date: "04.30",
+    time: "14:00 - 18:00 (Kisterem)",
+  },
   { name: "III. Blokk", date: "04.30", time: "13:30" },
   { name: "IV. Blokk", date: "04.30", time: "15:00" },
   { name: "Egri Blokk", date: "04.30", time: "16:30" },
@@ -151,9 +161,35 @@ export const scheduleData = [
   { name: "VIII. Blokk", date: "04.30", time: "22:30" },
   { name: "IX. Blokk", date: "05.01", time: "10:00" },
   { name: "X. Blokk", date: "05.01", time: "11:30" },
+  {
+    name: "Intimitás koordináció workshop",
+    date: "05.01",
+    time: "11:30 - 13:00 (Kisterem)",
+  },
+  {
+    name: "Pálfi György, Ruttkay Zsófia Mesterkurzus (Nem vagyok a barátod)",
+    date: "05.01",
+    time: "13:00 - 14:30 (Nagyterem)",
+  },
+
   { name: "XI. Blokk", date: "05.01", time: "15:00" },
+  {
+    name: "Filmtudomány és Filmkészítés kerekasztal-beszélgetés",
+    date: "05.01",
+    time: "15:00 - 16:30 (Kisterem)",
+  },
   { name: "XII. Blokk", date: "05.01", time: "16:30" },
   { name: "XIII. Blokk", date: "05.01", time: "18:00" },
+  {
+    name: "Zsűri kerekasztal-beszélgetés",
+    date: "05.01",
+    time: "19:30 - 20:15 (Nagyterem)",
+  },
+  {
+    name: "Kaos Camping performansz",
+    date: "05.01",
+    time: "21:00 - 22:30 (Nagyterem)",
+  },
 ];
 
 export const dayLabels = {

@@ -1,12 +1,27 @@
+import SVG from "components/svg/SVG";
 import React from "react";
-import { dayLabels, extraPrograms, scheduleData } from "utils/const";
+import { useNavigate } from "react-router-dom";
+import { dayLabels, scheduleData } from "utils/const";
+import { Button } from "@heroui/react";
 
 function NapiBontas() {
+  const navigate = useNavigate();
+
   const grouped = scheduleData.reduce((acc, item) => {
     if (!acc[item.date]) acc[item.date] = [];
     acc[item.date].push(item);
     return acc;
   }, {});
+
+  const handleBlockClick = (block) => {
+    console.log(block?.name + " - " + block?.date + " - " + block?.time);
+    localStorage.setItem(
+      "name",
+      block?.name + " - " + block?.date + " - " + block?.time
+    );
+    let isBlokk = block?.name.split(" ")[1] === "Blokk";
+    navigate(isBlokk ? "/filmek" : "/szakmai_programok");
+  };
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">
@@ -21,70 +36,33 @@ function NapiBontas() {
 
             <div className="grid gap-4 sm:grid-cols-2">
               {blocks.map((block) => (
-                <div
+                <button
                   key={block.name}
-                  className="bg-gray-900 rounded-xl px-6 py-4 flex justify-between items-center border border-white/10 hover:bg-white/10 transition"
+                  onClick={() => handleBlockClick(block)}
+                  className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition flex justify-between items-center"
                 >
-                  <span className="font-medium text-lg">{block.name}</span>
-                  <span className="text-[#cc2d1c] font-semibold text-lg">
-                    {block.time}
-                  </span>
-                </div>
+                  <div>
+                    <span className="font-medium text-lg">{block.name}</span>
+                  </div>
+                  <div>
+                    <span className="text-[#cc2d1c] font-semibold text-lg">
+                      {block.time}
+                    </span>
+                  </div>
+                </button>
               ))}
             </div>
-
-            {extraPrograms[date] && (
-              <div className="space-y-6 pt-8">
-                {extraPrograms[date].map((program, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white/5 p-6 rounded-xl border border-white/10"
-                  >
-                    <p className="text-lg font-semibold text-white">
-                      {program.title}{" "}
-                      <span className="text-[#cc2d1c] text-sm font-normal">
-                        – {program.time}
-                      </span>
-                    </p>
-                    {program.subtitle && (
-                      <p className="text-white/90 italic mt-1">
-                        {program.subtitle}
-                      </p>
-                    )}
-                    <ul className="text-white/80 mt-2 list-disc pl-5 space-y-1">
-                      {program.description.map((line, i) => (
-                        <li key={i}>{line}</li>
-                      ))}
-                    </ul>
-                    {program.eloadok && (
-                      <p className="text-sm text-white/70 mt-2">
-                        <strong>Előadók:</strong> {program.eloadok}
-                      </p>
-                    )}
-                    {program.speakers && (
-                      <p className="text-sm text-white/70 mt-2">
-                        {program.speakers}
-                      </p>
-                    )}
-                    {program.link && (
-                      <p className="text-sm mt-2">
-                        <a
-                          href={program.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline text-[#cc2d1c]"
-                        >
-                          Link megnyitása
-                        </a>
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         ))}
       </div>
+      <Button
+        onPress={() => {
+          document.body.scrollTop = 0;
+        }}
+        className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+      >
+        <SVG type="chevronUp" />
+      </Button>
     </div>
   );
 }

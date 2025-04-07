@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Tabs, Tab, Skeleton, Image } from "@heroui/react";
+import { Tabs, Tab, Skeleton, Image, Button } from "@heroui/react";
 import { movies } from "utils/const";
 import SVG from "components/svg/SVG";
 
@@ -21,6 +21,19 @@ function Filmek() {
       });
     }
   };
+
+  useEffect(() => {
+    console.log(localStorage.getItem("name").split(" ")[1]);
+    let blokk = localStorage.getItem("name");
+    console.log(selectedTab, blokk);
+    // if (blokk?.split(" ")[1] === "Blokk") {
+    //   console.log(blokk);
+    //   setSelectedTab(blokk);
+    // }
+  }, []);
+  useEffect(() => {
+    console.log(selectedTab, "-", typeof selectedTab);
+  }, [selectedTab]);
 
   return (
     <div className="bg-black text-white min-h-screen px-4 py-12">
@@ -102,6 +115,14 @@ function Filmek() {
           ))}
         </div>
       </div>
+      <Button
+        onPress={() => {
+          document.body.scrollTop = 0;
+        }}
+        className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+      >
+        <SVG type="chevronUp" />
+      </Button>
     </div>
   );
 }
