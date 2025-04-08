@@ -14,7 +14,10 @@ function Filmek() {
 
   const scrollTabs = (direction) => {
     if (tabContainerRef.current) {
-      const scrollAmount = 200;
+      const isLargeScreen = window.innerWidth >= 850;
+      const isMediumScreen = window.innerWidth >= 650;
+      const scrollAmount = isLargeScreen ? 600 : isMediumScreen ? 500 : 380;
+
       tabContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
