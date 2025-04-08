@@ -867,7 +867,7 @@ export const movies = {
     },
     {
       title: "Térden haraptak álmomban",
-      director: "Bíró Rozi",
+      director: "Biró Rozi",
       type: "kísérleti rövidfilm",
       length: "10 perc",
       description:
