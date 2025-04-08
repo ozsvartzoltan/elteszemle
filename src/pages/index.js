@@ -23,7 +23,6 @@ function Home() {
       <div id="hirek" className=" py-4 text-xl space-y-6 text-justify">
         <div className="font-bold text-4xl">Hírek</div>
 
-        {/* For small screens */}
         <div className="sm:hidden">
           <Swiper
             modules={[Autoplay, Pagination]}
@@ -45,7 +44,6 @@ function Home() {
           </Swiper>
         </div>
 
-        {/* For small screens */}
         <div className=" hidden sm:flex lg:hidden ">
           <Swiper
             modules={[Autoplay, Pagination]}
@@ -70,7 +68,6 @@ function Home() {
           </Swiper>
         </div>
 
-        {/* For larger screens */}
         {Object.keys(news).length > 3 && (
           <div className="hidden lg:flex justify-center items-center">
             <Button

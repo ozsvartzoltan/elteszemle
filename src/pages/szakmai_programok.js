@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { extraPrograms, dayLabels } from "utils/const";
 import { Button } from "@heroui/react";
 import SVG from "components/svg/SVG";

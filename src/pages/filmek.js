@@ -27,6 +27,7 @@ function Filmek() {
     if (blokk?.split(" ")[1] === "Blokk") {
       setSelectedTab(blokk);
     }
+    document.body.scrollTop = 0;
   }, []);
 
   return (
