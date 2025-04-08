@@ -37,7 +37,7 @@ function Sajtokozlemenyketto() {
           versenyfilmből válogathat, amelyeket a közönség tizenhárom blokkban
           tekinthet majd meg. A programban szerepelnek a Magyar Filmszemlén is
           sikerrel vetített alkotások. Ilyen többek között Nagy Dániel
-          diplomafilmje, a <em>Budapest 10 óra 25 perc</em>, amely egy
+          diplomafilmje, a <em>Budapest, 10 óra 25 perc</em>, amely egy
           szürreális utazáson keresztül beszél a mai Magyarországról, S. Papp
           Mátétól a <em>Jimmy Hard balladája</em>, amiben Vízi Dávid karaktere
           az Ördöggel köt paktumot, valamint Kékes Kiara{" "}
@@ -56,7 +56,7 @@ function Sajtokozlemenyketto() {
         </p>
         <p>
           Komoly fesztivál szereplések várhatnak az első Mohás (Mozgokép Szak)
-          diplomafilmekre is. Kapás Tibor szatirikus hangvételű alkotásában a{" "}
+          diplomafilmekre is. Kapás Tibor szatirikus hangvételű alkotásában, a{" "}
           <em>Mobil Kisállat Hamvasztásban</em> a kissé mizantróp Tamás
           kényszerül átvenni a családi vállalkozást, amelynek üzemeltetése során
           a nem várt helyzetekben elkezd magára találni. Albert Virág{" "}
@@ -66,7 +66,7 @@ function Sajtokozlemenyketto() {
         </p>
         <p>
           Ezentúl látható lesz Ascher Károly <em>Clairvoyance</em> című filmje,
-          amiben feltűnik a<em>Fekete pont</em> főszereplője, Mészöly Anna is,
+          amiben feltűnik a<em> Fekete pont</em> főszereplője, Mészöly Anna is,
           Kisházy Esztertől a <em>Ne nézz a Napba</em>, ami két egykori barátnő
           újbóli találkozását ábrázolja, valamint a <em>Cordis</em> című
           pszichológiai dráma, amiben egy karrierje csúcsán lévő orvosnak kell
