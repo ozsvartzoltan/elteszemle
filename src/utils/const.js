@@ -518,7 +518,7 @@ export const movies = {
       type: "rövid dokumentumfilm",
       length: "14 perc",
       description:
-        "Egy sorsszerű megismerkedés története: beiratkozol orosz tanfolyamra, összebarátkozol egy kedves lánnyal, aki rávesz, hogy menjetek ki Bécsbe vásárolni, és a báttya, aki kivisz titeket kocsival lesz később a férjed.",
+        "“Anyu, hogyan találkoztatok Apuval?” - első és egyben utolsó interjú édesanyámmal. Rom-com, ahogy 2 fiatal találkozik a rendszerváltások időszakában, megnyílnak a nyugati határok, lebomlanak a falak. Új élet, új remények, új célok.",
       actors: "-",
       image:
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872034/image0_1_jgqvll.jpg",
@@ -695,7 +695,7 @@ export const movies = {
       type: "kisjátékfilm",
       length: "3 perc",
       description:
-        'Nem egyszerű manapság randizni. Erről főhősünk tudna mesélni. Van, aki kicsit túl komolyan veszi a "te is szülj egy magyar" programot, más pedig hosszasan meséli, hogy a kakóscsigától mindig rájön a foshatnék... Mindez egyetlen snittben!',
+        "Az idő telik, körbemegy, lassan, folyamatosan. Emberek jönnek-mennek, álmok, vágyak, érzések, ígéretek. Vajon huszonéves férfi főhősünk megtalálja az igazit.",
       actors: "Somorjai Máté, Tóth Bogi, Palkovits Eszter, Nagy Izabella",
       image:
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872340/Screenshot_2025-04-05_at_9.08.39_pc276g.png",
@@ -1011,7 +1011,7 @@ export const movies = {
       type: "kisjátékfilm",
       length: "8 perc",
       description:
-        "A gimnazista Levi épp akkor ér haza, amikor szülei veszekednek. Feltűnésmentesen próbál elosonni a hűtőig és elrakni pár Breezert. Ezután barátaival találkozik, akikkel egy háztetőn iszogatnak, azonban egy váratlan összeszólalkozásnak súlyos következményei lesznek.",
+        "Mit csinálnak a kamaszok iskola után? Egy 13 éves kisfiú szokásosnak induló délutánja maradandó károkat okoz. Hogyan reagálnak erre a szülők? Nem esett messze az alma a fájától. Megtörtént események alapján.",
       actors:
         "Kövécs Barnabás, Kiss Diána Magdolna, Mészáros András, Ékes Olivér, Terék Simon",
       image:
