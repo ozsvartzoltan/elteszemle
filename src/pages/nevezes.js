@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image } from "@heroui/react";
 
 function Nevezes() {
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
   return (
     <div className=" bg-black text-white px-4 md:px-20 lg:px-40 pb-2 ">
       <div className="max-w-5xl mx-auto space-y-8">

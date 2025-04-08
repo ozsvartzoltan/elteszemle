@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image, Button } from "@heroui/react";
 
 function Fotokiallitas() {
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white py-12 px-6 sm:px-20 space-y-12 text-justify">
       {/* Header */}

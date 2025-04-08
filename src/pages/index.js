@@ -14,6 +14,10 @@ function Home() {
   const [showScroll, setShowScroll] = useState(true);
   const swiperRef = useRef(null);
 
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
+
   return (
     <div className="px-2 md:px-10 xl:px-16">
       <div id="hirek" className=" py-4 text-xl space-y-6 text-justify">
