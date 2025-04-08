@@ -789,7 +789,7 @@ export const movies = {
       length: "8 perc",
       description:
         "A Filmszemlét is megjáró, Edgar Allen Poe-t idéző jazzballada Jimmy Hard-ról, a magányos new york-i buszsofőrről, akinek szívét egy éjszaka elrabolja az Ördög.",
-      actors: "Liber Ágoston, Sas Zoltán, Vízi Dávid, Iván Flóra",
+      actors: "Vizi Dávid, Sas Zoltán, Vízi Dávid, Iván Flóra",
       image:
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582140/jimmy1_astjvs.png",
     },
