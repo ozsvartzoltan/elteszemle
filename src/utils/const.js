@@ -161,12 +161,12 @@ export const scheduleData = [
     date: "04.30",
     time: "11:00 - 12:30 (Nagyterem)",
   },
+  { name: "III. Blokk", date: "04.30", time: "13:30" },
   {
     name: "Filmarchívum - Klassz Program animációs workshop",
     date: "04.30",
     time: "14:00 - 18:00 (Kisterem)",
   },
-  { name: "III. Blokk", date: "04.30", time: "13:30" },
   { name: "IV. Blokk", date: "04.30", time: "15:00" },
   { name: "Egri Blokk", date: "04.30", time: "16:30" },
   { name: "V. Blokk", date: "04.30", time: "18:00" },
