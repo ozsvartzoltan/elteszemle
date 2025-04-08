@@ -995,7 +995,7 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872966/1_3_fzonss.png",
     },
     {
-      title: "Barátságunkról ennyit mondanék",
+      title: "Barátságunkról ennyit mondhatok",
       director: "Gál András",
       type: "kisjátékfilm",
       length: "5 perc",
