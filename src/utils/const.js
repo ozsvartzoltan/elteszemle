@@ -207,9 +207,9 @@ export const scheduleData = [
 ];
 
 export const dayLabels = {
-  "04.29": "Április 29. (Hétfő)",
-  "04.30": "Április 30. (Kedd)",
-  "05.01": "Május 1. (Szerda)",
+  "04.29": "Április 29. (Kedd)",
+  "04.30": "Április 30. (Szerda)",
+  "05.01": "Május 1. (Csütörtök)",
 };
 
 export const extraPrograms = {
@@ -613,7 +613,8 @@ export const movies = {
       length: "4 perc",
       description:
         "A film egy diktátor születésnapját meséli el. Harmadik körös felvételi film, egy hét állt rendelkezésre az elkészítésére. A feladat az volt, hogy legyen benne lufi, illetve hűtő. A méltán híres Születésnap című dogmafilm inspirálta, és ehhez mérten itt is az összes dogma szabály szigorúan be lett tartva.",
-      actors: "Hajdu Lujza, Garamvölgyi Vince, Kepe Marcell",
+      actors:
+        "Hajdu Lujza, Garamvölgyi Vince, Kepe Marcell, Szirmai Péter, Baló Jakab, Varga Zétény",
       image:
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743879247/szulistill6_kckduy.jpg",
     },
