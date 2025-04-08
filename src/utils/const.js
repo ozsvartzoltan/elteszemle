@@ -1011,7 +1011,7 @@ export const movies = {
       type: "kisjátékfilm",
       length: "8 perc",
       description:
-        "Mit csinálnak a kamaszok iskola után? Egy 13 éves kisfiú szokásosnak induló délutánja maradandó károkat okoz. Hogyan reagálnak erre a szülők? Nem esett messze az alma a fájától. Megtörtént események alapján.",
+        "Mit csinálnak a kamaszok iskola után? Egy 13 éves kisfiú szokásosnak induló délutánja egyetlen mozdulattal tragédiába fordul. Hogyan reagálnak erre a szülők? Nem esett messze az alma a fájától. Megtörtént események alapján.",
       actors:
         "Kövécs Barnabás, Kiss Diána Magdolna, Mészáros András, Ékes Olivér, Terék Simon",
       image:
