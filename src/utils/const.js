@@ -330,7 +330,7 @@ export const movies = {
     },
     {
       title: "Egy Átlagos Magyar Nő A Teljes Idegösszeomlás Szélén",
-      director: "Bíró Rozi és MoHa-ös alkotótársai",
+      director: "Bíró Rozi és MoHa5-ös alkotótársai",
       type: "kisjátékfilm",
       length: "6 perc",
       description:
@@ -355,7 +355,7 @@ export const movies = {
   "II. Blokk - 04.30 - 10:00": [
     {
       title: "Gyógyfürdő",
-      director: "Jó Kristóf és MoHa-ös alkotótársai",
+      director: "Jó Kristóf és MoHa5-ös alkotótársai",
       type: "kisjátékfilm",
       length: "5 perc",
       description:
@@ -468,7 +468,7 @@ export const movies = {
     },
     {
       title: "Salut ca va",
-      director: "Gát Mihály és MoHa-ös alkotótársai",
+      director: "Gát Mihály és MoHa5-ös alkotótársai",
       type: "kisjátékfilm",
       length: "5 perc",
       description:
@@ -728,7 +728,7 @@ export const movies = {
     },
     {
       title: "Moszkva tér",
-      director: "Alicia Lara és MoHa-ös alkotótársai",
+      director: "Alicia Lara és MoHa5-ös alkotótársai",
       type: "kisjátékfilm",
       length: "6 perc",
       description:
@@ -796,7 +796,7 @@ export const movies = {
     },
     {
       title: "csiga",
-      director: "Juhász Maja és MoHa-ös alkotótársai",
+      director: "Juhász Maja és MoHa5-ös alkotótársai",
       type: "kisjátékfilm",
       length: "5 perc",
       description:
