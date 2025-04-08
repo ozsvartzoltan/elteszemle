@@ -39,8 +39,8 @@ function Sajtokozlemenyketto() {
           sikerrel vetített alkotások. Ilyen többek között Nagy Dániel
           diplomafilmje, a <em>Budapest 10 óra 25 perc</em>, amely egy
           szürreális utazáson keresztül beszél a mai Magyarországról, S. Papp
-          Mátétól a <em>Jimmy Hard balladája</em>, amiben Liber Ágoston
-          karaktere az Ördöggel köt paktumot, valamint Kékes Kiara{" "}
+          Mátétól a <em>Jimmy Hard balladája</em>, amiben Vízi Dávid karaktere
+          az Ördöggel köt paktumot, valamint Kékes Kiara{" "}
           <em>Hazug disznók az álmok is</em> című kísérleti filmje, ami azzal a
           gondolattal játszik el, hogy mi történik, ha betiltják a
           halfogyasztást.
