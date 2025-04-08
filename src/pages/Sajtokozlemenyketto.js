@@ -41,9 +41,9 @@ function Sajtokozlemenyketto() {
           szürreális utazáson keresztül beszél a mai Magyarországról, S. Papp
           Mátétól a <em>Jimmy Hard balladája</em>, amiben Liber Ágoston
           karaktere az Ördöggel köt paktumot, valamint Kékes Kiara{" "}
-          <em>Hazug disznók az álmok is</em>
-          című kísérleti filmje, ami azzal a gondolattal játszik el, hogy mi
-          történik, ha betiltják a halfogyasztást.
+          <em>Hazug disznók az álmok is</em> című kísérleti filmje, ami azzal a
+          gondolattal játszik el, hogy mi történik, ha betiltják a
+          halfogyasztást.
         </p>
         <p>
           Számos ígéretes hallgatói film pedig az idei ELTE Szemlén kezdheti meg
@@ -76,8 +76,7 @@ function Sajtokozlemenyketto() {
           Az idei fesztivál különlegessége az egri Eszterházy Károly Egyetem
           vendég blokkja lesz, amiben Kozma Katica a Filmszemlén vetített{" "}
           <em>Én testem</em> című filmje mellett Kovács Mátyás letaglózó drámája
-          az <em>Ádám fél</em>
-          is helyet kap.
+          az <em>Ádám fél</em> is helyet kap.
         </p>
         <p>
           A szakmai programok a korábbiaknál is nagyobb szerepet kapnak az idei
