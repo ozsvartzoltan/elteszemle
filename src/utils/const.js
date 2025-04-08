@@ -253,7 +253,10 @@ export const extraPrograms = {
         "Vendégeink Pálfi György forgatókönyvíró-filmrendező, és felesége-alkotótársa Ruttkay Zsófia forgatókönyvíró-dramaturg, akik olyan filmeket készítettek közösen, mint a Taxidermia, a Hukkle, vagy éppen a Final Cut: hölgyeim és uraim. A mesterkurzus témája a 2009-ben készült Nem vagyok a barátod című filmjük lesz, amelynek történetét kilenc amatőr szereplővel közösen hozták létre. Beszélgetni fogunk színészvezetésről, castingról, alkotói rugalmasságról, ötletek elengedéséről, vagy az azokhoz való ragaszkodásról.",
       ],
       speakers: "A beszélgetést Szirmai János moderálja.",
-      link: "https://youtu.be/ZdXwAPjfLvM",
+      link: {
+        url: "https://youtu.be/ZdXwAPjfLvM",
+        text: "A Nem vagy a barátod című film az alabbi linkre kattintva érhető el.",
+      },
     },
     {
       title: "Filmtudomány és Filmkészítés kerekasztal-beszélgetés",
@@ -280,7 +283,10 @@ export const extraPrograms = {
       ],
       speakers:
         "A Kaos camping tagjai: Szeredi Csaba, Szilágyi Kornél, Szolnoki József, Vándor Csaba",
-      link: "https://kaoscamping.com/",
+      link: {
+        url: "https://kaoscamping.com/",
+        text: "A Kaos Camping hivatalos weboldala",
+      },
     },
   ],
 };

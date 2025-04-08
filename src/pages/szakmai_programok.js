@@ -81,12 +81,12 @@ function SzakmaiProgramok() {
                     {program.link && (
                       <p className="text-sm mt-2">
                         <a
-                          href={program.link}
+                          href={program.link.url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="underline text-[#cc2d1c]"
                         >
-                          Link megnyitása
+                          {program.link.text}
                         </a>
                       </p>
                     )}
