@@ -9,7 +9,7 @@
 @layer base {
   html,
   body {
-    @apply overflow-x-hidden text-xs sm:text-xl;
+    @apply overflow-x-hidden text-base sm:text-xl;
   }
 
   html {

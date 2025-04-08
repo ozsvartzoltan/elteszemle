@@ -169,7 +169,9 @@ function Sajtokozlemenyketto() {
       </div>
 
       <Button
-        onPress={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onPress={() => {
+          document.body.scrollTop = 0;
+        }}
         className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
       >
         <SVG type="chevronUp" />
