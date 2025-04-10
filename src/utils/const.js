@@ -1,20 +1,20 @@
 export const headerImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/feher_logo_jw8mxp.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/feher_logo_jw8mxp.png"
 
 export const headerImageBlack =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/fekete_logo_ydviih.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/fekete_logo_ydviih.png"
 
 export const canonImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/canon_njvsww.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/canon_njvsww.png"
 
 export const mindenkiMozijaImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741547731/mindenli_logo_vjppvs.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741547731/mindenli_logo_vjppvs.png"
 
 export const mhaImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/mha_logo_hgneh5.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/mha_logo_hgneh5.png"
 
 export const elteImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817663/filmtansz_logo_ktl0r1.png";
+  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817663/filmtansz_logo_ktl0r1.png"
 
 export const modalImages = {
   0: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817662/IMG_1_qlf9fc.jpg",
@@ -23,7 +23,7 @@ export const modalImages = {
   3: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817662/IMG_4_xj468y.jpg",
   4: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817663/IMG_5_qai96g.jpg",
   5: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/IMG_6_ciw7vo.jpg",
-};
+}
 
 export const zsurik = [
   {
@@ -66,7 +66,7 @@ export const zsurik = [
     description:
       "A Velencei Nemzetközi Filmfesztiválon bemutatott, majd komoly nemzetközi sikereket elérő Felkészülés meghatározatlan ideig tartó együttlétre című film főszereplője. 2008-ban végzett a Színház- és Filmművészeti Egyetem színművész szakon. Olyan sikeres filmekben szerepelt továbbá, mint a Veszélyes lehet a fagyi, a Szelíd teremtés - A Frankenstein terv, vagy éppen a Jupiter holdja. Hamarosan Goldberg Emília Tiszavirágok című filmjében láthatjuk játszani.",
   },
-];
+]
 
 export const fixWidows = (text) => {
   return text
@@ -79,15 +79,15 @@ export const fixWidows = (text) => {
     .replace(/ ide /g, " ide\u00A0")
     .replace(/ oda /g, " oda\u00A0")
     .replace(/ ami /g, " ami\u00A0")
-    .replace(/ aki /g, " aki\u00A0");
-};
+    .replace(/ aki /g, " aki\u00A0")
+}
 
 export const links = {
   hirek: { href: "#hirek", text: "hírek" },
   rolunk: { href: "#rolunk", text: "rólunk" },
   stab: { href: "#stab", text: "stáb" },
   galeria: { href: "/zsurik", text: "zsűri" },
-};
+}
 
 export const programLinks = [
   { key: "napi_bontas", text: "napi bontás", href: "/napi_bontas" },
@@ -99,7 +99,7 @@ export const programLinks = [
   },
 
   { key: "fotokiallitas", text: "fotókiállítás", href: "/fotokiallitas" },
-];
+]
 
 export const news = {
   0: {
@@ -151,7 +151,7 @@ export const news = {
       "A JELEN-re itt, a WERK-re itt tudtok nevezni március 31-ig.",
     ],
   },
-};
+}
 
 export const scheduleData = [
   { name: "I. Blokk", date: "04.29", time: "19:30" },
@@ -204,13 +204,13 @@ export const scheduleData = [
     date: "05.01",
     time: "21:00 - 22:30 (Nagyterem)",
   },
-];
+]
 
 export const dayLabels = {
   "04.29": "Április 29. (Kedd)",
   "04.30": "Április 30. (Szerda)",
   "05.01": "Május 1. (Csütörtök)",
-};
+}
 
 export const extraPrograms = {
   "04.30": [
@@ -289,7 +289,7 @@ export const extraPrograms = {
       },
     },
   ],
-};
+}
 
 export const movies = {
   "I. Blokk - 04.29 - 19:30": [
@@ -1050,7 +1050,7 @@ export const movies = {
       type: "rövid dokumentumfilm",
       length: "6 perc",
       description:
-        "Totyi bácsi és a szőlőszemek játéka egy szüreten. A must és a verejték képi összemosásából megszületik a modern kistermelő portréja.",
+        "A gép zajos, az idő meleg, a hordók nehezek, sok a darázs. Totyi és a szőlőszemek játéka egy szüreten.",
       actors: "-",
       image:
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743873104/3Totyistill_1.11.1._best_gq5gtg.jpg",
@@ -1138,7 +1138,13 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743583488/still_1.1.3_fh6mn2.jpg",
     },
     {
-      title: "Csak hogy végre valami megtörténjen",
+      titleJSX: (
+        <>
+          Csak hogy végre valami{" ("}
+          <span className="line-through">sikerüljön</span>
+          {") "}történjen
+        </>
+      ),
       director: "Szabó Dávid András",
       type: "kisjátékfilm",
       length: "22 perc",
@@ -1150,4 +1156,4 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743873557/473534632_122195753642169015_7150033435158431515_n_roa5ld.jpg",
     },
   ],
-};
+}

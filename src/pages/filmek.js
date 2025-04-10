@@ -1,37 +1,37 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Tabs, Tab, Skeleton, Image, Button } from "@heroui/react";
-import { movies } from "utils/const";
-import SVG from "components/svg/SVG";
+import React, { useState, useEffect, useRef } from "react"
+import { Tabs, Tab, Skeleton, Image, Button } from "@heroui/react"
+import { movies } from "utils/const"
+import SVG from "components/svg/SVG"
 
 function Filmek() {
-  const [selectedTab, setSelectedTab] = useState(Object.keys(movies)[0]);
-  const [loadedImages, setLoadedImages] = useState({});
-  const tabContainerRef = useRef(null);
+  const [selectedTab, setSelectedTab] = useState(Object.keys(movies)[0])
+  const [loadedImages, setLoadedImages] = useState({})
+  const tabContainerRef = useRef(null)
 
   const handleImageLoad = (index) => {
-    setLoadedImages((prev) => ({ ...prev, [index]: true }));
-  };
+    setLoadedImages((prev) => ({ ...prev, [index]: true }))
+  }
 
   const scrollTabs = (direction) => {
     if (tabContainerRef.current) {
-      const isLargeScreen = window.innerWidth >= 850;
-      const isMediumScreen = window.innerWidth >= 650;
-      const scrollAmount = isLargeScreen ? 600 : isMediumScreen ? 500 : 380;
+      const isLargeScreen = window.innerWidth >= 850
+      const isMediumScreen = window.innerWidth >= 650
+      const scrollAmount = isLargeScreen ? 600 : isMediumScreen ? 500 : 380
 
       tabContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
-      });
+      })
     }
-  };
+  }
 
   useEffect(() => {
-    let blokk = localStorage.getItem("name");
+    let blokk = localStorage.getItem("name")
     if (blokk?.split(" ")[1] === "Blokk") {
-      setSelectedTab(blokk);
+      setSelectedTab(blokk)
     }
-    document.body.scrollTop = 0;
-  }, []);
+    document.body.scrollTop = 0
+  }, [])
 
   return (
     <div className="bg-black text-white min-h-screen px-4 py-12">
@@ -79,7 +79,7 @@ function Filmek() {
             >
               <div className="md:w-2/3 w-full p-6 space-y-2">
                 <h2 className="text-2xl font-bold text-[#cc2d1c]">
-                  {movie.title}
+                  {movie?.titleJSX ?? movie?.title}
                 </h2>
                 {movie?.director !== "-" && (
                   <p className="text-sm text-white/90">
@@ -120,14 +120,14 @@ function Filmek() {
       </div>
       <Button
         onPress={() => {
-          document.body.scrollTop = 0;
+          document.body.scrollTop = 0
         }}
         className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all z-10000"
       >
         <SVG type="chevronUp" />
       </Button>
     </div>
-  );
+  )
 }
 
-export default Filmek;
+export default Filmek
