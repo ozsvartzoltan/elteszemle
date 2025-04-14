@@ -204,12 +204,25 @@ export const scheduleData = [
     date: "05.01",
     time: "21:00 - 22:30 (Nagyterem)",
   },
+  {
+    name: "BEST OF vetítés",
+    date: "05.02",
+    time: "18:00 - 20:00 (Puskin Mozi)",
+    redirect: false,
+  },
+  {
+    name: "AFTER",
+    date: "05.02",
+    time: "20:00-tól (Könyvtár klub)",
+    redirect: false,
+  },
 ]
 
 export const dayLabels = {
   "04.29": "Április 29. (Kedd)",
   "04.30": "Április 30. (Szerda)",
   "05.01": "Május 1. (Csütörtök)",
+  "05.02": "Május 2. (Péntek)",
 }
 
 export const extraPrograms = {

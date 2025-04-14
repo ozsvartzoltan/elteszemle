@@ -1,32 +1,32 @@
-import SVG from "components/svg/SVG";
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { dayLabels, scheduleData } from "utils/const";
-import { Button } from "@heroui/react";
+import SVG from "components/svg/SVG"
+import React, { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import { dayLabels, scheduleData } from "utils/const"
+import { Button } from "@heroui/react"
 
 function NapiBontas() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const grouped = scheduleData.reduce((acc, item) => {
-    if (!acc[item.date]) acc[item.date] = [];
-    acc[item.date].push(item);
-    return acc;
-  }, {});
+    if (!acc[item.date]) acc[item.date] = []
+    acc[item.date].push(item)
+    return acc
+  }, {})
 
   const handleBlockClick = (block) => {
-    console.log(block?.name + " - " + block?.date + " - " + block?.time);
-    console.log(`${block?.name} - ${block?.date} - ${block?.time}`);
+    console.log(block?.name + " - " + block?.date + " - " + block?.time)
+    console.log(`${block?.name} - ${block?.date} - ${block?.time}`)
     localStorage.setItem(
       "name",
       `${block?.name} - ${block?.date} - ${block?.time}`
-    );
-    let isBlokk = block?.name.split(" ")[1] === "Blokk";
-    navigate(isBlokk ? "/filmek" : "/szakmai_programok");
-  };
+    )
+    let isBlokk = block?.name.split(" ")[1] === "Blokk"
+    navigate(isBlokk ? "/filmek" : "/szakmai_programok")
+  }
 
   useEffect(() => {
-    localStorage.clear();
-  }, []);
+    localStorage.clear()
+  }, [])
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">
@@ -43,7 +43,11 @@ function NapiBontas() {
               {blocks.map((block) => (
                 <button
                   key={block.name}
-                  onClick={() => handleBlockClick(block)}
+                  onClick={() => {
+                    if (block?.redirect !== false) {
+                      handleBlockClick(block)
+                    }
+                  }}
                   className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition flex justify-between items-center"
                 >
                   <div>
@@ -56,32 +60,20 @@ function NapiBontas() {
                   </div>
                 </button>
               ))}
-              {/* {blocks.map((block) => (
-                <button
-                  key={block.name}
-                  onClick={() => handleBlockClick(block)}
-                  className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition grid grid-cols-[1fr_auto] gap-4 items-center"
-                >
-                  <span className="font-medium text-lg">{block.name}</span>
-                  <span className="text-[#cc2d1c] font-semibold text-lg">
-                    {block.time}
-                  </span>
-                </button>
-              ))} */}
             </div>
           </div>
         ))}
       </div>
       <Button
         onPress={() => {
-          document.body.scrollTop = 0;
+          document.body.scrollTop = 0
         }}
         className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
       >
         <SVG type="chevronUp" />
       </Button>
     </div>
-  );
+  )
 }
 
-export default NapiBontas;
+export default NapiBontas

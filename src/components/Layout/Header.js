@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import React, { useState } from "react"
+import { useNavigate, useLocation } from "react-router-dom"
 import {
   Navbar,
   NavbarBrand,
@@ -17,36 +17,36 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
-} from "@heroui/react";
-import SVG from "components/svg/SVG";
-import { headerImage, links, programLinks } from "utils/const";
+} from "@heroui/react"
+import SVG from "components/svg/SVG"
+import { headerImage, links, programLinks } from "utils/const"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const scrollToSection = (targetId) => {
-    setIsMenuOpen(false);
+    setIsMenuOpen(false)
     setTimeout(() => {
-      const target = document.getElementById(targetId);
+      const target = document.getElementById(targetId)
       if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        target.scrollIntoView({ behavior: "smooth", block: "start" })
       } else {
-        console.error("Target not found:", targetId);
+        console.error("Target not found:", targetId)
       }
-    }, 100);
-  };
+    }, 100)
+  }
 
   const handleNavigation = (e, targetId) => {
     if (location.pathname === "/") {
-      scrollToSection(targetId);
+      scrollToSection(targetId)
     } else {
-      navigate("/");
-      setTimeout(() => scrollToSection(targetId), 500);
+      navigate("/")
+      setTimeout(() => scrollToSection(targetId), 500)
     }
-  };
+  }
 
   return (
     <Navbar
@@ -55,7 +55,6 @@ export default function Header() {
       className="bg-[#cc2d1c] text-white h-[100px] w-full flex-shrink-0"
     >
       <div className="container mx-auto flex items-center justify-between w-full">
-        {/* Logo - Left aligned on mobile, slightly right on desktop */}
         <NavbarBrand className="flex-shrink-0">
           <Image
             src={headerImage || "/placeholder.svg"}
@@ -65,13 +64,12 @@ export default function Header() {
             height={100}
             className="w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent -ml-6"
             onClick={() => {
-              setIsMenuOpen(false);
-              navigate("/");
+              setIsMenuOpen(false)
+              navigate("/")
             }}
           />
         </NavbarBrand>
 
-        {/* Desktop Navigation - Always centered */}
         <NavbarContent className="hidden custom:flex justify-center absolute left-1/2 transform -translate-x-1/2">
           <Dropdown classNames={{ content: "bg-black" }}>
             <NavbarItem>
@@ -124,7 +122,6 @@ export default function Header() {
           ))}
         </NavbarContent>
 
-        {/* Mobile Menu Toggle - Right aligned */}
         <div className="flex custom:hidden">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -133,7 +130,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <NavbarMenu className="bg-[#cc2d1c] pt-16">
         <NavbarMenuItem>
           <Link
@@ -151,8 +147,8 @@ export default function Header() {
                 href={href}
                 className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
                 onPress={() => {
-                  setIsMenuOpen(false);
-                  setIsProgramDropdownOpen(false);
+                  setIsMenuOpen(false)
+                  setIsProgramDropdownOpen(false)
                 }}
               >
                 {text}
@@ -181,5 +177,5 @@ export default function Header() {
         ))}
       </NavbarMenu>
     </Navbar>
-  );
+  )
 }

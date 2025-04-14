@@ -1,24 +1,24 @@
-import React, { useEffect, useRef } from "react";
-import { extraPrograms, dayLabels } from "utils/const";
-import { Button } from "@heroui/react";
-import SVG from "components/svg/SVG";
+import React, { useEffect, useRef } from "react"
+import { extraPrograms, dayLabels } from "utils/const"
+import { Button } from "@heroui/react"
+import SVG from "components/svg/SVG"
 
 function SzakmaiProgramok() {
-  const blockRefs = useRef({});
+  const blockRefs = useRef({})
 
   useEffect(() => {
-    const stored = localStorage.getItem("name");
+    const stored = localStorage.getItem("name")
     if (stored) {
-      const [title] = stored.split(" - ");
+      const [title] = stored.split(" - ")
       const match = Object.values(blockRefs.current).find((ref) =>
         ref?.dataset?.title?.toLowerCase().includes(title.toLowerCase())
-      );
+      )
       if (match) {
-        match.scrollIntoView({ behavior: "smooth", block: "start" });
+        match.scrollIntoView({ behavior: "smooth", block: "start" })
       }
     }
-    localStorage.clear();
-  }, []);
+    localStorage.clear()
+  }, [])
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">
@@ -35,12 +35,12 @@ function SzakmaiProgramok() {
 
             <div className="space-y-6">
               {programs.map((program, idx) => {
-                const refKey = `${program.title}-${date}-${idx}`;
+                const refKey = `${program.title}-${date}-${idx}`
                 return (
                   <div
                     key={idx}
                     ref={(el) => {
-                      if (el) blockRefs.current[refKey] = el;
+                      if (el) blockRefs.current[refKey] = el
                     }}
                     data-title={program.title}
                     className="bg-white/5 p-6 rounded-xl border border-white/10"
@@ -91,7 +91,7 @@ function SzakmaiProgramok() {
                       </p>
                     )}
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -100,14 +100,14 @@ function SzakmaiProgramok() {
 
       <Button
         onPress={() => {
-          document.body.scrollTop = 0;
+          document.body.scrollTop = 0
         }}
         className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
       >
         <SVG type="chevronUp" />
       </Button>
     </div>
-  );
+  )
 }
 
-export default SzakmaiProgramok;
+export default SzakmaiProgramok
