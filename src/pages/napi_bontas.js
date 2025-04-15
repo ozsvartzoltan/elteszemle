@@ -54,7 +54,7 @@ function NapiBontas() {
                     <span className=" font-medium text-lg">{block.name}</span>
                   </div>
                   <div>
-                    <span className="text-[#cc2d1c] font-semibold text-lg ">
+                    <span className="text-[#cc2d1c] font-semibold flex text-right">
                       {block.time}
                     </span>
                   </div>
