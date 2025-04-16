@@ -154,7 +154,7 @@ export const news = {
 }
 
 export const scheduleData = [
-  { name: "I. Blokk", date: "04.29", time: "19:30" },
+  { name: "I. Blokk", date: "04.29", time: "19:00" },
   { name: "II. Blokk", date: "04.30", time: "10:00" },
   {
     name: "Canon szakmai előadások",
