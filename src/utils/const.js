@@ -305,7 +305,7 @@ export const extraPrograms = {
 }
 
 export const movies = {
-  "I. Blokk - 04.29 - 19:30": [
+  "I. Blokk - 04.29 - 19:00": [
     {
       title: "Kétoldali közelítés",
       director: "Albert Virág",
