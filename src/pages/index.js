@@ -1,22 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Button } from "@heroui/react";
-import SVG from "components/svg/SVG";
-import { news } from "utils/const";
-import { Swiper, SwiperSlide } from "swiper/react";
-import NewsCard from "components/NewsCard/index";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "../styles.css";
+import React, { useEffect, useRef, useState } from "react"
+import { Button } from "@heroui/react"
+import SVG from "components/svg/SVG"
+import { news } from "utils/const"
+import { Swiper, SwiperSlide } from "swiper/react"
+import NewsCard from "components/NewsCard/index"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import "../styles.css"
 
 function Home() {
-  const [showScroll, setShowScroll] = useState(true);
-  const swiperRef = useRef(null);
+  const [showScroll, setShowScroll] = useState(true)
+  const swiperRef = useRef(null)
 
   useEffect(() => {
-    localStorage.clear();
-  }, []);
+    localStorage.clear()
+  }, [])
 
   return (
     <div className="px-2 md:px-10 xl:px-16">
@@ -164,17 +164,6 @@ function Home() {
         <div>
           Az ELTE Szemle összes programja nyitott és ingyenesen látogatható.
         </div>
-        <div className="pb-4">
-          Az ELTE filmszakos diákjai{" "}
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScHt5MEKUovXFPOUiP9uKdk0kkgaaueTRiyAZUvhaCKMka63A/viewform"
-            className="underline"
-            target="_blank"
-          >
-            itt
-          </a>{" "}
-          tudnak nevezni március 17-ig.
-        </div>
       </div>
       <div id="stab" className="space-y-6 text-justify">
         <div className="font-bold text-4xl mt-10">Stáb</div>
@@ -205,7 +194,7 @@ function Home() {
       {showScroll && (
         <Button
           onPress={() => {
-            document.body.scrollTop = 0;
+            document.body.scrollTop = 0
           }}
           className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
         >
@@ -213,7 +202,7 @@ function Home() {
         </Button>
       )}
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

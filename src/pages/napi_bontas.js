@@ -47,6 +47,9 @@ function NapiBontas() {
                     if (block?.redirect !== false) {
                       handleBlockClick(block)
                     }
+                    if (block?.link !== undefined) {
+                      window.open(block?.link, "_blank")
+                    }
                   }}
                   className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition flex justify-between items-center"
                 >

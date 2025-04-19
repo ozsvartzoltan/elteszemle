@@ -205,6 +205,13 @@ export const scheduleData = [
     time: "21:00 - 22:30 (Nagyterem)",
   },
   {
+    name: "Majális",
+    date: "05.02",
+    time: "15:00-től (Könyvtár klub)",
+    redirect: false,
+    link: "https://facebook.com/events/s/elte-szemle-majalis-after/700810885623060/",
+  },
+  {
     name: "BEST OF vetítés",
     date: "05.02",
     time: "18:00 - 20:00 (Puskin Mozi)",
@@ -215,6 +222,7 @@ export const scheduleData = [
     date: "05.02",
     time: "20:00-tól (Könyvtár klub)",
     redirect: false,
+    link: "https://facebook.com/events/s/elte-szemle-majalis-after/700810885623060/",
   },
 ]
 
