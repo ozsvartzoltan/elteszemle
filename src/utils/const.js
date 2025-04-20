@@ -154,6 +154,13 @@ export const news = {
 }
 
 export const scheduleData = [
+  {
+    name: "Fotókiállítás megnyitó",
+    date: "04.29",
+    time: "18:00",
+    redirect: false,
+  },
+
   { name: "I. Blokk", date: "04.29", time: "19:00" },
   { name: "II. Blokk", date: "04.30", time: "10:00" },
   {
@@ -207,7 +214,7 @@ export const scheduleData = [
   {
     name: "Majális",
     date: "05.02",
-    time: "15:00-től (Könyvtár klub)",
+    time: "15:00-től (Trefort-kert)",
     redirect: false,
     link: "https://facebook.com/events/s/elte-szemle-majalis-after/700810885623060/",
   },
@@ -220,7 +227,7 @@ export const scheduleData = [
   {
     name: "AFTER",
     date: "05.02",
-    time: "20:00-tól (Könyvtár klub)",
+    time: "20:00-tól (Trefort-kert)",
     redirect: false,
     link: "https://facebook.com/events/s/elte-szemle-majalis-after/700810885623060/",
   },
