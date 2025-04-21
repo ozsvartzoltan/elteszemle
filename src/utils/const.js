@@ -159,22 +159,23 @@ export const scheduleData = [
     date: "04.29",
     time: "18:00",
     redirect: false,
+    link: "https://facebook.com/events/s/ii-elte-szemle-fotokiallitas/1655795578403038/",
   },
 
   { name: "I. Blokk", date: "04.29", time: "19:00" },
   { name: "II. Blokk", date: "04.30", time: "10:00" },
-  {
-    name: "Canon szakmai előadások",
-    date: "04.30",
-    time: "11:00 - 12:30 (Nagyterem)",
-  },
-  { name: "III. Blokk", date: "04.30", time: "13:30" },
+  { name: "III. Blokk", date: "04.30", time: "11:30" },
+  { name: "IV. Blokk", date: "04.30", time: "13:00" },
   {
     name: "Filmarchívum - Klassz Program animációs workshop",
     date: "04.30",
     time: "14:00 - 18:00 (Kisterem)",
   },
-  { name: "IV. Blokk", date: "04.30", time: "15:00" },
+  {
+    name: "Canon szakmai előadások",
+    date: "04.30",
+    time: "15:00 - 16:30 (Nagyterem)",
+  },
   { name: "Egri Blokk", date: "04.30", time: "16:30" },
   { name: "V. Blokk", date: "04.30", time: "18:00" },
   { name: "VI. Blokk", date: "04.30", time: "19:30" },
@@ -298,7 +299,7 @@ export const extraPrograms = {
       title: "Zsűri kerekasztal-beszélgetés",
       time: "19:30 - 20:15 (Nagyterem)",
       description: [
-        "A 2025-ös ELTE Szemle szakmai zsűrijének tagjai elsőként bejelentik az idei BEST OF-ba bekerülő filmeket, valamint azt is, hogy melyik film nyerte a fesztivál fődíját, és az azzal járó 500 000 forintos gyártási támogatást következő filmjére a Canon jóvoltából. Ezt követően pedig megosztják tapasztalataikat, észrevételeiket a filmekről és a zsűrizés folyamatáról.",
+        "A 2025-ös ELTE Szemle szakmai zsűrijének tagjai bejelentik az idei BEST OF-ba bekerülő filmeket, ezt követően pedig megosztják tapasztalataikat, észrevételeiket a filmekről és a zsűrizés folyamatáról. A fesztivál fődíjának nyertesét május 2-án a Puskin Moziban esedékes BEST OF vetítés során jelenti be a zsűri. A díj egy 500 000 forintos gyártási támogatás a győztes film rendezőjének a következő filmjére a Canon jóvoltából.",
       ],
       speakers:
         "A beszélgetésen részt vesz Pálos Gergely, Dér Asia, Stork Natasa, Sós Bálint Dániel és Csuja László.",
@@ -788,13 +789,13 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743879176/jonapot_2_iw4w8l.jpg",
     },
     {
-      title: "Lehetne (valami) jó is",
+      title: "Most ez van",
       director: "Sándor Lili",
       type: "kisjátékfilm",
       length: "20 perc",
       description:
-        "Egy kapcsolat véget ér, egy másik elkezdődik? A Rókavadászat rendezője, Sándor Lili Pigler Emília és Bukovszky Orsi főszereplésével készített nemzedéki közérzetfilmet.",
-      actors: "Pigler Emília, Bukovszky Orsolya, Forrai Áron",
+        "Fiatalok evickélnek a hétköznapjaikban. Keresgélik magukat, egymást. A film magja a Toldi előtti álldogálás: ide jut, innen megy tovább a három főszereplő, Bodza (Pigler Emília), Janó (Forrai Áron) és Mari (Bukovszky Orsolya). Őket figyeljük, mintha képeslapokat fűznénk egy nap idővonalára és elidőznénk felettük pár percre.",
+      actors: "Pigler Emília, Forrai Áron, Bukovszky Orsolya",
       image:
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1744036360/IMG_9290_yjfziu.jpg",
     },
