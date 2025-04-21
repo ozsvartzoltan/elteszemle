@@ -518,7 +518,7 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743880202/Still_2025-04-04_190031_1.42.3_nnqcjv.jpg",
     },
   ],
-  "IV. Blokk - 04.30 - 13:00": [
+  "IV. Blokk - 04.30 - 13:30": [
     {
       title: "Gáspár Márton Gáspár",
       director: "Szirmai János",
