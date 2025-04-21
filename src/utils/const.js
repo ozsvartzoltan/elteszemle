@@ -165,7 +165,7 @@ export const scheduleData = [
   { name: "I. Blokk", date: "04.29", time: "19:00" },
   { name: "II. Blokk", date: "04.30", time: "10:00" },
   { name: "III. Blokk", date: "04.30", time: "11:30" },
-  { name: "IV. Blokk", date: "04.30", time: "13:00" },
+  { name: "IV. Blokk", date: "04.30", time: "13:30" },
   {
     name: "Filmarchívum - Klassz Program animációs workshop",
     date: "04.30",
@@ -449,7 +449,7 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582042/kib7ker3_qsaykt.png",
     },
   ],
-  "III. Blokk - 04.30 - 13:30": [
+  "III. Blokk - 04.30 - 11:30": [
     {
       title: "Adászavar",
       director: "Hegedűs Brúnó",
@@ -518,7 +518,7 @@ export const movies = {
         "https://res.cloudinary.com/dhzagayrh/image/upload/v1743880202/Still_2025-04-04_190031_1.42.3_nnqcjv.jpg",
     },
   ],
-  "IV. Blokk - 04.30 - 15:00": [
+  "IV. Blokk - 04.30 - 13:00": [
     {
       title: "Gáspár Márton Gáspár",
       director: "Szirmai János",
