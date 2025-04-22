@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import { Image } from "@heroui/react";
+import React, { useEffect } from "react"
+import { Image } from "@heroui/react"
 
 function Nevezes() {
   useEffect(() => {
-    localStorage.clear();
-  }, []);
+    localStorage.clear()
+  }, [])
   return (
     <div className=" bg-black text-white px-4 md:px-20 lg:px-40 pb-2 ">
       <div className="max-w-5xl mx-auto space-y-8">
         <div className="flex justify-center">
           <Image
-            src="https://res.cloudinary.com/dhzagayrh/image/upload/t_page/v1741549309/nevezesi_ke%CC%81p_dwtqba.png"
+            src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/nevezesi_k%C3%A9p_dwtqba.png"
             alt="Fotókiállítás plakát"
             className="shadow-lg w-full max-w-4xl"
           />
@@ -61,7 +61,7 @@ function Nevezes() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Nevezes;
+export default Nevezes

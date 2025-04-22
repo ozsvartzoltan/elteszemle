@@ -1,36 +1,22 @@
 export const headerImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/feher_logo_jw8mxp.png"
-
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/feher_logo_jw8mxp.png"
 export const headerImageBlack =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741545099/fekete_logo_ydviih.png"
-
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/fekete_logo_ydviih.png"
 export const canonImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817660/canon_njvsww.png"
-
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/canon_njvsww.png"
 export const mindenkiMozijaImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1741547731/mindenli_logo_vjppvs.png"
-
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/mindenli_logo_viola.png"
 export const mhaImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/mha_logo_hgneh5.png"
-
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/mha_logo_hgneh5.png"
 export const elteImage =
-  "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817663/filmtansz_logo_ktl0r1.png"
-
-export const modalImages = {
-  0: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817662/IMG_1_qlf9fc.jpg",
-  2: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817662/IMG_2_kv3jlo.jpg",
-  1: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817663/IMG_3_iwcgkt.jpg",
-  3: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817662/IMG_4_xj468y.jpg",
-  4: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817663/IMG_5_qai96g.jpg",
-  5: "https://res.cloudinary.com/dhzagayrh/image/upload/v1740817661/IMG_6_ciw7vo.jpg",
-}
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/filmtansz_logo_ktl0r1.png"
 
 export const zsurik = [
   {
     name: "Pálos Gergő",
     title: "Operatőr",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1740845025/Pa%CC%81los_Gergely_zwbjpg.jpg",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/zsuri/P%C3%A1los_Gergely_zwbjpg.jpg",
     description:
       "A legtöbben a legendás svéd rendezővel, Roy Anderssonnal való közös munkáiról ismerik (Egy galamb leült az ágra, hogy tűnődjön a létezésről, Történetek a végtelenségről). 2011-ben végzett a Színház- és Filmművészeti Egyetem operatőr képzésén, ugyanebben az évben beválogatták a Berlinale Talents programba is. Olyan magyar filmeket fényképezett, mint a Jövő nyár, a Saját Erdő, vagy éppen a Zenith. Legújabb munkája Enyedi Ildikó új filmje, a Csendes barát, ami idén kerül a mozikba.",
   },
@@ -38,7 +24,7 @@ export const zsurik = [
     name: "Sós Bálint Dániel",
     title: "Rendező, forgatókönyvíró",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741797927/IMG_2550-min_nfau8w.jpg",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/zsuri/IMG_2550-min_nfau8w.jpg",
     description:
       "Március 20-tól kerül a magyar mozikba első nagyjátékfilmje a Minden rendben, amit beválogattak az idei Berlinale Perspectives szekciójába is. Ezt megelőző kisfilmjei közül a 2022-es Krémest, valamint a 2017-es Grand Prix-t is vetítették a Friss Húson. Ezentúl társalapítója a Kinopravda rendezői kollektívának, amely 2014 óta a nemzetközi reklámipar egyik meghatározó szereplője. ",
   },
@@ -54,7 +40,7 @@ export const zsurik = [
     name: "Csuja László",
     title: "Rendező, forgatókönyvíró",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1740845026/Csuja_La%CC%81szlo%CC%81_ayflb8.jpg",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/zsuri/Csuja_L%C3%A1szl%C3%B3.jpg",
     description:
       "Alkotótársával, Nemes Annával közös filmje, a Szelíd a 2022-es Sundance Filmfesztiválon versenyzett, de megfordult Kolozsváron, Triesztben, és Brüsszelben is. A 2018-ban készült Virágvölgy című alkotásuk világpremierjét a Karlovy Vary Nemzetközi Filmfesztiválon tartották. Első egészestés dokumentumfilmjét a Kilenc hónap háborút pedig vetítették a szarajevói- és a lipcsei filmfesztiválon is.",
   },
@@ -62,7 +48,7 @@ export const zsurik = [
     name: "Stork Natasa",
     title: "Színésznő",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741209507/Natasa_kjvfsw.jpg",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/zsuri/Natasa_kjvfsw.jpg",
     description:
       "A Velencei Nemzetközi Filmfesztiválon bemutatott, majd komoly nemzetközi sikereket elérő Felkészülés meghatározatlan ideig tartó együttlétre című film főszereplője. 2008-ban végzett a Színház- és Filmművészeti Egyetem színművész szakon. Olyan sikeres filmekben szerepelt továbbá, mint a Veszélyes lehet a fagyi, a Szelíd teremtés - A Frankenstein terv, vagy éppen a Jupiter holdja. Hamarosan Goldberg Emília Tiszavirágok című filmjében láthatjuk játszani.",
   },
@@ -107,7 +93,7 @@ export const news = {
       "13 órányi vetítés és sokszínű szakmai programok várják az ELTE Szemle látogatóit",
     date: "2025. április 8.",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1744042816/jimmy1_gdyiid.png",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/jimmy1_astjvs.png",
     link: {
       page: "/sajtokozlemeny",
     },
@@ -120,7 +106,7 @@ export const news = {
     title: "Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle",
     date: "2025. március 10.",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/sajtokozlemeny_borito_lgkedf.png",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/sajtokozlemeny_borito_lgkedf.png",
     link: {
       page: "/1_sajtokozlemeny",
     },
@@ -138,7 +124,7 @@ export const news = {
     title: "Nevezési információk",
     date: "2025. március 10.",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/nevezesi_ke%CC%81p_dwtqba.png",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/nevezesi_k%C3%A9p_dwtqba.png",
     link: {
       page: "/nevezes",
     },
@@ -332,7 +318,7 @@ export const movies = {
       actors:
         "Mátyássy Kála, Demeter Villő, Kovács Hanga, Farkas Ádám, Pálos Hanna, Mátyássy Bence",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743583443/vlcsnap-2025-04-01-23h11m09s022_mkqxxz.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/vlcsnap-2025-04-01-23h11m09s022_mkqxxz.png",
     },
     {
       title: "Csekk",
@@ -343,7 +329,7 @@ export const movies = {
         '"Te mondd, a te hangod mélyebb!" Két hanyag lakótárs nem tudja kifizetni a havi albérletüket, és úgy döntenek átmennek a tulajhoz, hogy elmondják neki a helyzetüket...',
       actors: "Major Irma, Jánosi Botond",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871314/Csekk3_g82umk.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Csekk3_g82umk.png",
     },
     {
       title: "Ide-oda",
@@ -355,7 +341,7 @@ export const movies = {
       actors:
         "Babai Dénes, Klausz Veronika, Juniki Noémi, Meszléry Judit, Veress Kámen",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581978/IDEODA_2.13.1_jxhep8.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IDEODA_2.13.1_jxhep8.png",
     },
     {
       title: "Egy Átlagos Magyar Nő A Teljes Idegösszeomlás Szélén",
@@ -366,7 +352,7 @@ export const movies = {
         "Groteszk kisrealista szenvedésepizód a mindennapok súlyának elviselhetetlen könnyűségéről, párkapcsolati feszültséggel és a túllocsolástól szenvedő cserepesnövényekkel súlyosbítva.",
       actors: "Udvari-Kardos Tímea, Wéber Simon",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871425/egyatlagos_still2_bms8yq.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/egyatlagos_still2_bms8yq.png",
     },
     {
       title: "Budapest, 10 óra 25 perc",
@@ -378,7 +364,7 @@ export const movies = {
       actors:
         "Erős Mara, Csernák Norbert, Márton Dorottya, Baranyi Emma, Kukovecz Ákos, Kozáry Ferenc",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582392/bp1025_still3_nzxnnc.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/bp1025_still3_nzxnnc.jpg",
     },
   ],
   "II. Blokk - 04.30 - 10:00": [
@@ -391,7 +377,7 @@ export const movies = {
         "Miklós a túlbuzgó dolgozó fürdőbe megy, de nehezen találja meg a megnyugvást. Vajon a forró gőz képes ellazítani őt?",
       actors: "Nagy Miklós, Mezei Barbara",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871500/2_seijrr.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/2_seijrr.jpg",
     },
     {
       title: "Lepkék",
@@ -402,7 +388,7 @@ export const movies = {
         "Négy lány vidáman, felszabadultan beszélget, de valami nincs rendben, egyesével elkezdenek eltűnni. Végül a negyedik lány egyedül kénytelen szembenézni keserű tükörképével.",
       actors: "Juhász Maja, Bíró Rozi, Alicia Lara",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581665/Lepk%C3%A9k_still01_hujxfr.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Lepk%C3%A9k_still01_hujxfr.png",
     },
     {
       title: "Portré",
@@ -413,7 +399,7 @@ export const movies = {
         "Julinak portrét kell rajzolnia az egyik órájára, de sehogy sem akar összejönni a tökéletes rajz, így egyre frusztráltabbá válik és drasztikus lépésre szánja el magát...",
       actors: "Csaplár Júlia, Kicsák Blanka",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743764799/portre_4_1.8.1_tlfsyo.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/portre_4_1.8.1_tlfsyo.jpg",
     },
     {
       title: "Tudod ez egy ilyen érzés",
@@ -424,7 +410,7 @@ export const movies = {
         '"Nem mondanám, hogy az esetem volt, de az esetem lett." A rendező szülei elmesélik, hogyan ismerték meg egymást egy farkasréti házibuliban.',
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871565/3MamaPapastill_2.2.1_ehzipx.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/3MamaPapastill_2.2.1_ehzipx.jpg",
     },
     {
       title: "A Teszt",
@@ -435,7 +421,7 @@ export const movies = {
         "A Teszt egy dráma három nő közötti titkokról és feszültségről. Lívia úgy gondolja, hogy terhes, és a terhességi teszt elvégzése közben meghívja barátnőit, Dalmát és Annát, hogy támogassák őt. A helyzet kínossá válik egy váratlan személy érkezésének hatására.",
       actors: "Násztor Eszter, Csizma Blanka, Bozsó Eszter Alma",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743583946/17_haog6a.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/17_haog6a.png",
     },
     {
       title: "A kibxszott hetedik kerületben?!?!",
@@ -446,7 +432,7 @@ export const movies = {
         "Egy baráti társaság iszogat és beszélget egy átlagos péntek estén. Egyszer csak a szomszéd átkopog, és elszabadul a pokol...",
       actors: "Durugy Tamás, Kicsák Blanka, Csaplár Júlia, Varga Péter",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582042/kib7ker3_qsaykt.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/kib7ker3_qsaykt.png",
     },
   ],
   "III. Blokk - 04.30 - 11:30": [
@@ -459,7 +445,7 @@ export const movies = {
         "Egy fiatalember elégedetlen tévéje működésével, ezért szerelőt hív, hogy közösen megoldást találjanak a problémára.",
       actors: "Kovács Márk, Lapos Imola",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582338/still02_dwgkex.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/still02_dwgkex.png",
     },
     {
       title: "Hot girl syndrome",
@@ -470,7 +456,7 @@ export const movies = {
         "Pszichiátriai ülések mosódnak össze pornóipari casting-helyzetekkel egy lány fantáziájában, amint próbálja visszafejteni az emlékeit pszicho-szomatikus betegségéről. Csoboth Dorka be- ki- le- fel- szét- meg- át- című egészestés filmjével szerepelt a 44. Magyar Filmszemle kísérleti filmes programjában.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743975119/2.4_tgpdcd_p8y5ma.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/2.4_tgpdcd_p8y5ma.png",
     },
     {
       title: "Hava",
@@ -481,7 +467,7 @@ export const movies = {
         "A film egy Budapesten élő török lányról szól, aki megpróbál megszabadulni egy kellemetlen szagtól, amit a körülötte élők nem éreznek, miközben folyamatosan szakad el a világtól, az otthonától, a családjától, a barátaitól és korábbi szerelmétől is.",
       actors: "Berfin Kutlag, Leman Zeynepcan Aydogan, Arda Bingül",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582208/hava_still_1_crnfqm.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/hava_still_1_crnfqm.png",
     },
     {
       title: "Se veled, se velem",
@@ -493,7 +479,7 @@ export const movies = {
       actors:
         "Kovács Korinna, Durugy Tamás, Csaplár Júlia, Varga Péter, Kistamás Naomi, Jovánovics Eszter",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581780/se_veled_se_velem1_mogbu2.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/se_veled_se_velem1_mogbu2.jpg",
     },
     {
       title: "Salut ca va",
@@ -504,7 +490,7 @@ export const movies = {
         "A városban egy hely van, ahol nincs térerő, így a pihenni vágyó biciklis futárok itt gyűlnek össze nap, mint nap és beszélgetnek.",
       actors: "Zhao Sute, Morch Ilona, Szirmai János",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871814/SalutCaVa_3_lgmnya.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/SalutCaVa_3_lgmnya.png",
     },
     {
       title: "Last Call",
@@ -515,7 +501,7 @@ export const movies = {
         "Gabriela és Joseph nyári románca rövid, de erőteljes volt. Mivel Joseph akkoriban filmes iskolába járt, nem tudott elköteleződni, Gabriela pedig úgy döntött, hogy külföldre költözik, hogy munkát vállaljon. A nő hat hónappal később felhívja Josephet, és egy utolsó találkozót kér, hogy megbeszéljék a dolgaikat és elbúcsúzzanak egymástól. Gabriela el akarja mondani Joseph-nek egy titkát, ami bonyodalmak sorát eredményezi.",
       actors: "Nadine Tavares, Bergendi Barnabás",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743880202/Still_2025-04-04_190031_1.42.3_nnqcjv.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Still_2025-04-04_190031_1.42.3_nnqcjv.jpg",
     },
   ],
   "IV. Blokk - 04.30 - 13:30": [
@@ -539,7 +525,7 @@ export const movies = {
         "Az ember-telenség szó szerint vehető ábrázolása egy tejüzem mindennapjain keresztül, melyben a dokumentarista és az experimentális jelleg megrendítő kompozíciókban vegyül, csendes monotonitásával figyelmeztetve a robotikus jövő kísérteties hatására.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871918/robot4_1.1.6_bghuu6.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/robot4_1.1.6_bghuu6.jpg",
     },
     {
       title: "Anyu",
@@ -550,7 +536,7 @@ export const movies = {
         "“Anyu, hogyan találkoztatok Apuval?” - első és egyben utolsó interjú édesanyámmal. Rom-com, ahogy 2 fiatal találkozik a rendszerváltások időszakában, megnyílnak a nyugati határok, lebomlanak a falak. Új élet, új remények, új célok.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872034/image0_1_jgqvll.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/image0_1_jgqvll.jpg",
     },
     {
       title: "Üres székek",
@@ -561,7 +547,7 @@ export const movies = {
         "Egy idős férfi reggeli rutinja a szenvedélye és a hiány társaságában. Felvételi film.",
       actors: "Hordós Csaba",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872146/%C3%9CresSz%C3%A9kekStill3_qopybd.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/%C3%9CresSz%C3%A9kekStill3_qopybd.jpg",
     },
     {
       title: "Az Istenek alkonya",
@@ -572,7 +558,7 @@ export const movies = {
         "Éva, egy kendőzetlenül őszinte nyolcvankét éves asszony, aki életének legintimebb pillanataiba kalauzol el bennünket, ahol a szerelem, a hűtlenség és a fájdalmas veszteségek összefonódnak. Szenvedélyes őszinteséggel mesél, miközben kitartóan ápolja párját annak élete utolsó óráiban.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743771254/vlcsnap-2023-09-03-13h07m33s812_mkwbsx.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/vlcsnap-2023-09-03-13h07m33s812_mkwbsx.png",
     },
   ],
   "Egri Blokk - 04.30 - 16:30": [
@@ -585,7 +571,7 @@ export const movies = {
         "Az Egri Eszterházy Katolikus Egyetem filmszakos hallgatói animációs filmjében fiatalok és idősek beszélnek a generációk közti szakadékról, a múltjukról, a jelenükről és persze a jövőjükről.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743870864/Riportr%C3%A9_3_ncwj1j.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Riportr%C3%A9_3_ncwj1j.png",
     },
     {
       title: "Ádám Fél",
@@ -597,7 +583,7 @@ export const movies = {
       actors:
         "Szatmári Alíz, Georgita Máté Dezső, Tóth Sándor, Nemesházi Beatrix, Kuhár Róbert, Gere Dénes",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743870946/441900989_485548710464556_3923848048805191584_n_x3sil2.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/441900989_485548710464556_3923848048805191584_n_x3sil2.jpg",
     },
     {
       title: "Mari mókatára",
@@ -608,7 +594,7 @@ export const movies = {
         "Márton Sándorné Marika több mint 20 éve árul babaruhákat. A piac a második otthona. Mária-nap alkalmával megvendégeli az árusokat.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743870908/K%C3%A9perny%C5%91k%C3%A9p_2024-12-07_132324_nwhses.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/K%C3%A9perny%C5%91k%C3%A9p_2024-12-07_132324_nwhses.png",
     },
     {
       title: "Én testem",
@@ -619,7 +605,7 @@ export const movies = {
         "Laci életét behálózták az anorexiás rutinok és hazugságok, ám egy váratlan találkozás hatására felszínre törnek a betegség valódi mélységei. Kozma Katica diplomafilmje szerepelt a 44. Magyar Filmszemle rövidfilmes programjában.",
       actors: "Jakab Balázs, Kozma Veronika, Berki Szofi",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743870979/EN_TESTEM_FILMKEP_2_n3r7m3.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/EN_TESTEM_FILMKEP_2_n3r7m3.png",
     },
   ],
   "V. Blokk - 04.30 - 18:00": [
@@ -633,7 +619,7 @@ export const movies = {
       actors:
         "Havlicsek Bori, Szentgáli Piroska, Hajduk Károly, Mészáros Piroska",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871027/2_tbgtef.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/2_tbgtef.png",
     },
     {
       title: "Születésnap",
@@ -645,7 +631,7 @@ export const movies = {
       actors:
         "Hajdu Lujza, Garamvölgyi Vince, Kepe Marcell, Szirmai Péter, Baló Jakab, Varga Zétény",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743879247/szulistill6_kckduy.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/szulistill6_kckduy.jpg",
     },
     {
       title: "Cordis",
@@ -657,7 +643,7 @@ export const movies = {
       actors:
         "Bölkény Balázs, Jakab-Aponyi Csenge, Pigler Emília, Vetlényi Lili",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743583465/cordis_still_01_pdkmby.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/cordis_still_01_pdkmby.jpg",
     },
     {
       title: "Tremor",
@@ -668,7 +654,7 @@ export const movies = {
         "Egy fiú menekül a háborúból, majd könyveket keres a homokban. Ezután minden átfordul egy furcsa David Lynch-szerű világba...",
       actors: "Szmejkal Zsombor, Mezei Barbara, Juhász Maja",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872243/1_1_n4eane.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/1_1_n4eane.jpg",
     },
 
     {
@@ -680,7 +666,7 @@ export const movies = {
         "A heves természetű, piti bűnöző Miki egy balul sikerült pénzbehajtás után testvére, a sokkal megfontoltabb Áron segítségét kéri a probléma megoldásában. A két testvér durván összekap a feszült helyzetben, és Miki már nemcsak magát, de Áront is halálos veszélybe sodorja.",
       actors: "Dóra Béla, Nyomárkay Zsigmond",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743580977/szakadas_still_best_aysozs.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/szakadas_still_best_aysozs.jpg",
     },
   ],
   "VI. Blokk - 04.30 - 19:30": [
@@ -693,7 +679,7 @@ export const movies = {
         "Hosszú amerikai útja után az elkényesztetett Timi a reptérről tart hazafelé az udvariasan kimért Péterrel, a család sofőrjével. Ebédre haza kell érniük, de Timi több kitérőt is tervez.",
       actors: "Füzi Tímea, Marosi Péter",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582088/jetlag_best_wm0vga.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/jetlag_best_wm0vga.jpg",
     },
     {
       title: "Üvegek",
@@ -705,7 +691,7 @@ export const movies = {
       actors:
         "Ékes Olivér, Kovács Izabella, Kövécs Barnabás, Terék Simon, Bujdosó Flóra",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743764882/%C3%BCvegek_2_ge81mk.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/%C3%BCvegek_2_ge81mk.png",
     },
     {
       title: "Bátyám, Dodó",
@@ -717,7 +703,7 @@ export const movies = {
       actors:
         "Kunert Mici, Bánhidi-Rózsa Bence, Szamosi Zsófia, Czutor Meri, Rajó Zita",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743945148/IMG_1392_mx7irp.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IMG_1392_mx7irp.jpg",
     },
     {
       title: "Időmúlás",
@@ -728,7 +714,7 @@ export const movies = {
         "Az idő telik, körbemegy, lassan, folyamatosan. Emberek jönnek-mennek, álmok, vágyak, érzések, ígéretek. Vajon huszonéves férfi főhősünk megtalálja az igazit.",
       actors: "Somorjai Máté, Tóth Bogi, Palkovits Eszter, Nagy Izabella",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872340/Screenshot_2025-04-05_at_9.08.39_pc276g.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Screenshot_2025-04-05_at_9.08.39_pc276g.png",
     },
     {
       title: "Mobil Kisállat Hamvasztás",
@@ -740,7 +726,7 @@ export const movies = {
       actors:
         "Csizmadia Gergő, Pipacs, Miklós Marcell, Gombos Judit, Sétáló Imola",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872400/ashes_still_1_wuk6gx.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/ashes_still_1_wuk6gx.jpg",
     },
   ],
   "VII. Blokk - 04.30 - 21:00": [
@@ -753,7 +739,7 @@ export const movies = {
         "Liza és Emma legjobb barátnők, évek óta járnak a Balatonhoz az egyetemi társaságukkal. Idén először velük tart Emma új barátja is, ám a fiú jelenléte Lizában féltékenységet vált ki, zavarja, hogy kevesebb időt tölt vele Emma. A fülledt nyár, az érzelmileg felfokozott légkör irracionális viselkedést vált ki belőle, amivel Emmával való barátságát veszélyezteti.",
       actors: "Pigler Emília, Bukovszky Orsolya, Juhász Vince, Atlasz Barnabás",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743765130/Keystill_1.1.2_g57ia1.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Keystill_1.1.2_g57ia1.png",
     },
     {
       title: "Moszkva tér",
@@ -764,7 +750,7 @@ export const movies = {
         "Egy pulcsi gazdát cserél, egy régi barát visszatér, Lili pedig fontos dolgot tanul az emberi kapcsolatokról. Hol máshol, mint a Moszka téren.",
       actors: "Erdős Lili, Rözge Maxim, Csizmadia Gergő, Birta Marci",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872476/moszkvastill2_j%C3%B3_i3t5de.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/moszkvastill2_j%C3%B3_i3t5de.jpg",
     },
     {
       title: "Hazug disznók az álmok is",
@@ -775,7 +761,7 @@ export const movies = {
         "25 éve tiltott a hal fogyasztása Magyarországon. A társadalmon kívüliek halra és szerelemre vadásznak a barátságtalan városon és diktatúrán kívül. A természetben megtalálják mindkettőt. A Hazug disznók az álmok is című filmet beválogatták a 44. Magyar Filmszemle kísérleti filmes szekciójába is.",
       actors: "Fukui Ryu, Korom Sára",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872560/hazugdisznok-kkn-4319_g0nmvf.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/hazugdisznok-kkn-4319_g0nmvf.jpg",
     },
     {
       title: "Jó napot!",
@@ -786,7 +772,7 @@ export const movies = {
         "Budapest, 1919. Egy vegyeskereskedés tulajdonosa “hírlap” fedőnév alatt illegális árut ad el pult alatt, mígnem egy nap egy gyanút fogó pandúr téved az üzletbe.",
       actors: "Kunert Zsolt, Aczél Tulián, Mandula Lujza",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743879176/jonapot_2_iw4w8l.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/jonapot_2_iw4w8l.jpg",
     },
     {
       title: "Most ez van",
@@ -797,7 +783,7 @@ export const movies = {
         "Fiatalok evickélnek a hétköznapjaikban. Keresgélik magukat, egymást. A film magja a Toldi előtti álldogálás: ide jut, innen megy tovább a három főszereplő, Bodza (Pigler Emília), Janó (Forrai Áron) és Mari (Bukovszky Orsolya). Őket figyeljük, mintha képeslapokat fűznénk egy nap idővonalára és elidőznénk felettük pár percre.",
       actors: "Pigler Emília, Forrai Áron, Bukovszky Orsolya",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1744036360/IMG_9290_yjfziu.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IMG_9290_yjfziu.jpg",
     },
   ],
   "VIII. Blokk - 04.30 - 22:30": [
@@ -810,7 +796,7 @@ export const movies = {
         "Szerelmesnek lenni könnyű, de nem-szerelmesnek lenni végtelenül nehéz. A Másik hiányának játékos fájdalmát költői képekben sűríti össze Nagy Kornél kisfilmje.",
       actors: "Adonyi-Walsh Gáspár, Nagy Kornél",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872650/doglott3_1.1.3_ancsij%C3%B3_c6brq6.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/doglott3_1.1.3_ancsij%C3%B3_c6brq6.jpg",
     },
     {
       title: "Jimmy Hard balladája",
@@ -821,7 +807,7 @@ export const movies = {
         "A Filmszemlét is megjáró, Edgar Allen Poe-t idéző jazzballada Jimmy Hard-ról, a magányos new york-i buszsofőrről, akinek szívét egy éjszaka elrabolja az Ördög.",
       actors: "Liber Ágoston, Sas Zoltán, Vízi Dávid, Iván Flóra",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582140/jimmy1_astjvs.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/jimmy1_astjvs.png",
     },
     {
       title: "csiga",
@@ -832,7 +818,7 @@ export const movies = {
         'Jánossal szakít a csaja. Úgy gondolja azért történt vele ez, mivel nem volt elég "férfi". Elhatározza, hogy igazi férfivá válik, kérdés sikerül-e ez neki.',
       actors: "Juhász Maja, Kövesi Bálint, Báró Márton",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872723/IMG_6678_Ancsij%C3%B3_vmkh7w.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IMG_6678_Ancsij%C3%B3_vmkh7w.jpg",
     },
     {
       title: "Nem fogok fizetni",
@@ -844,7 +830,7 @@ export const movies = {
       actors:
         'Major "Hugó Kálodzséró" Imre, Zhao Shute, Ross Leó, Neuman Félix, Béres Miklós "Minky", Bob Zé',
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581432/NemFogokFizetni_ASSY_0112_01_07_45_05_xllegu.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/NemFogokFizetni_ASSY_0112_01_07_45_05_xllegu.jpg",
     },
     {
       title: "TV néző ember",
@@ -856,7 +842,7 @@ export const movies = {
       actors:
         "Kövesi Bálint, Rözge Borisz, Kriza Áron, Horváth Barbara, Szmejkál Zsombor",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581810/tvstill2_siqjgx.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/tvstill2_siqjgx.jpg",
     },
     {
       title: "Házibuli Karaoki",
@@ -868,7 +854,7 @@ export const movies = {
       actors:
         "Adonyi-Walsh Gáspár, Lapos Imola, Mandula Lujza, Béres Péter, Halasi Sára, Szarvas Réka",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743583510/Still_2025-04-01_111554_1.54.1_hpfjsh.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Still_2025-04-01_111554_1.54.1_hpfjsh.png",
     },
   ],
   "IX. Blokk - 05.01 - 10:00": [
@@ -882,7 +868,7 @@ export const movies = {
       actors:
         "Mihályi Sári, Juhász Maja, Lukács Andrea, Horváth Barbara, Rözge Borisz",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582363/MVI_0666.00_01_24_42.Still013_cpzkcr.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/MVI_0666.00_01_24_42.Still013_cpzkcr.jpg",
     },
     {
       title: "Mese",
@@ -893,7 +879,7 @@ export const movies = {
         "Ha a Szentivánéji álom Pukk-ja megjelenne és azt mondaná elvisz a szerelmedhez, követnéd?",
       actors: "Béres Péter, Bujdosó Flóra, Nagy Izabella",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743879315/palk%C3%B3tal%C3%A1l_b29m1v.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/palk%C3%B3tal%C3%A1l_b29m1v.png",
     },
     {
       title: "Térden haraptak álmomban",
@@ -904,7 +890,7 @@ export const movies = {
         "Miután a játszótéren magányosan érezte magát, benézett egy buliba. A rémálmok kényelmetlen bolyongásába húz magával Bíró Rozi első féléves vizsgafilmje.",
       actors: "Galambos Vera, Kecskés Ábrahám, Németh Mirkó, Farkas András",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872812/terdenstill6_ouxs7v.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/terdenstill6_ouxs7v.jpg",
     },
     {
       title: "Váltott bőr",
@@ -915,7 +901,7 @@ export const movies = {
         "Ipi-apacs! Misu egy szép tavaszi napon megpillant egy hintázó lányt, majd másnap a lány testében ébred. Hogyan töri meg a varázst?",
       actors: "Kékes Kiara, Fárizs Mihály",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743765386/v%C3%A1ltottb%C5%91r_2_lc7waq.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/v%C3%A1ltottb%C5%91r_2_lc7waq.png",
     },
     {
       title: "Kacifánt",
@@ -927,7 +913,7 @@ export const movies = {
       actors:
         "Papp Győző Benedek, Kovács Zsófia, Budavári-Dudla Zsolt Krisztián, Harmati Márton, Fülöp Kristóf, Székhelyi Dániel",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743765313/k%C3%A9p_pfidjl.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/k%C3%A9p_pfidjl.png",
     },
   ],
   "X. Blokk - 05.01 - 11:30": [
@@ -940,7 +926,7 @@ export const movies = {
         "A film középpontjában egy családi veszekedés áll, ami érzékletesen bemutatja hol tud félre siklani a kommunikáció. Te hogy reagálnál, ha a gyereked kést fogna rád?",
       actors: "Petrik Andrea, Mészáros Béla, Petrányi Panna",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582004/t%C3%B6red%C3%A9kek2_ej3uoh.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/t%C3%B6red%C3%A9kek2_ej3uoh.jpg",
     },
     {
       title: "Nem?",
@@ -963,7 +949,7 @@ export const movies = {
         "Első látásra szerelem egy amerikai férfi és egy magyar nő között. Lehet ez több egy közösen eltöltött szép nap emlékénél?",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581612/IMG_2950_iblkkm.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IMG_2950_iblkkm.png",
     },
     {
       title: "Onirológia",
@@ -975,7 +961,7 @@ export const movies = {
       actors:
         "Zelda Attard, Rözge Borisz, Szirmai János, Várhegyi Dávid, Alicia Lara, Kovács Janka",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743765264/final1_copy_hcaxs6.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/final1_copy_hcaxs6.jpg",
     },
     {
       title: "Krumplibaba",
@@ -986,7 +972,7 @@ export const movies = {
         "Adél együtt lakik barátjával, Jakabbal. Elhanyagolt a kapcsolatuk, és elhanyagolt a lakásuk is, mindenhol kosz, szemét és rendetlenség. Adél egyik este szakít Jakabbal, aki elfogadja Adél döntését. Másnap azonban Jakab meggondolja magát, és egy érdekes gesztussal próbálja visszacsábítani szerelmét.",
       actors: "Csaplár Júlia, Porogi Milán",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582304/kb_stills_5_br4ydf.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/kb_stills_5_br4ydf.jpg",
     },
     {
       title: "Egy sikeres nap",
@@ -997,7 +983,7 @@ export const movies = {
         "A fiatal asztalos segéd, Huba, mesterével, Istvánnal ellátogat a gazdag Fuchs házaspárhoz, hogy beszereljenek egy szekrényt. Huba filmrendező szeretne lenni, ezért mindent megtesz, hogy jó benyomást tegyen Fuchs úrra, aki történetesen filmproducer.",
       actors: "Forrai Áron, Hannus Zoltán, Balogh Orsolya, Kiskádár Tamás",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743945207/1_4_pnzmhm.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/1_4_pnzmhm.png",
     },
   ],
   "XI. Blokk - 05.01 - 15:00": [
@@ -1010,7 +996,7 @@ export const movies = {
         "Két barátnő egy üveg bor fölött próbál újra kapcsolódni, avagy milyen a nem NER-es vitorlásgatya és bírható-e a nápolyi meleg.",
       actors: "Csaplár Júlia, Kicsák Blanka",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743765005/image_2_goublg.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/image_2_goublg.png",
     },
     {
       title: "Állatkert",
@@ -1022,7 +1008,7 @@ export const movies = {
       actors:
         "Farkas Ádám, Kovács S. József, Domján Kata, Óvári Luca, Dióssy Gábor",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872966/1_3_fzonss.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/1_3_fzonss.png",
     },
     {
       title: "Barátságunkról ennyit mondhatok",
@@ -1033,7 +1019,7 @@ export const movies = {
         "Panna és Atus az időtlenségben élnek. De vajon kitarthat ez legalább az allergiaszezon végéig?",
       actors: "Gálhidy Gizella, Laskai Csaba",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743765185/GA_Barats_Still1_bgsq6x.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IDEODA_2.13.1_jxhep8.png",
     },
     {
       title: "Tetőpont",
@@ -1045,7 +1031,7 @@ export const movies = {
       actors:
         "Kövécs Barnabás, Kiss Diána Magdolna, Mészáros András, Ékes Olivér, Terék Simon",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871225/Screenshot_2025-04-05_at_9.40.15_vvgsxi.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Screenshot_2025-04-05_at_9.40.15_vvgsxi.png",
     },
     {
       title: "Majdnem",
@@ -1057,7 +1043,7 @@ export const movies = {
       actors:
         "Nyomárkay Zsigmond, Erdős Lili, Gál Oxána, Szabó Dávid András, Taraczky Mila, Dezső Bálint",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743945336/default_1.126.1_vnicyc.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/default_1.126.1_vnicyc.jpg",
     },
   ],
   "XII. Blokk - 05.01 - 16:30": [
@@ -1071,7 +1057,7 @@ export const movies = {
       actors:
         "Raoul Ionescu, Kelemen Péter Bence, Bede-Fazekas Szabolcs, Rezes Judit",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581544/Apam_fia_2_nna0tj.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Apam_fia_2_nna0tj.png",
     },
     {
       title: "Totyi",
@@ -1082,7 +1068,7 @@ export const movies = {
         "A gép zajos, az idő meleg, a hordók nehezek, sok a darázs. Totyi és a szőlőszemek játéka egy szüreten.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743873104/3Totyistill_1.11.1._best_gq5gtg.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/3Totyistill_1.11.1._best_gq5gtg.jpg",
     },
     {
       title: "Mélyen megvetett ágy",
@@ -1093,7 +1079,7 @@ export const movies = {
         "Janka véletlen összefut volt barátnőjével, aki felajánl neki egy fuvart. A hétköznapi szívesség elfogadása azonban nem várt érzelmi hullámvasúthoz vezet. Ahogy közelednek a célpont felé, egyre nehezebbé válik az elválás.",
       actors: "Büki Flóra, Kicsák Blanka, Kovács Korinna, Meszléry Judit",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743873246/Still_2025-04-05_141708_1.12.2_gi2dfp.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Still_2025-04-05_141708_1.12.2_gi2dfp.jpg",
     },
     {
       title: "Ragacs",
@@ -1104,7 +1090,7 @@ export const movies = {
         "Kelenföldön futnak össze a szálak és az érzelmek. A lány megtanulja, hogy kell valakit elengedni, a fiú pedig, hogy néha el kell dobni a tányért.",
       actors: "Kicsák Blanka, Varga Péter",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581873/ragacs_still_3.1.1_ichlmo.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/ragacs_still_3.1.1_ichlmo.png",
     },
     {
       title: "Várjuk meg apát",
@@ -1116,7 +1102,7 @@ export const movies = {
       actors:
         "Paizs Vanda, Pion István, Kelemen Olga, Krasznahorkai Ágnes, Bíró Eszter, Bántó Barnabás",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743871182/IMG_5842_auysxg.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IMG_5842_auysxg.png",
     },
   ],
   "XIII. Blokk - 05.01 - 18:00": [
@@ -1129,7 +1115,7 @@ export const movies = {
         "A film Várkonyi csibészek zenekar életébe enged be egy picit, ahol nehézségekkel és örömökkel egyaránt találkozhatunk.",
       actors: "-",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743873314/Still_2025-04-05_105851_1.27.1_pvcy0s.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Still_2025-04-05_105851_1.27.1_pvcy0s.png",
     },
     {
       title: "Szavalóverseny",
@@ -1141,7 +1127,7 @@ export const movies = {
       actors:
         'Havlicsek Bori, Antal Olga, Kiss Eszter, Bencze Sándor "Qpa", Jámbor József',
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743582441/k%C3%A1poszta3_zk6ksg.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/k%C3%A1poszta3_zk6ksg.jpg",
     },
     {
       title: "Clairvoyance",
@@ -1152,7 +1138,7 @@ export const movies = {
         "Balázs megismerkedik Sárával, ami ráébreszti régót tartó kapcsolatának ártalmasságára. Hirtelen jött tisztánlátása önmagában nem elég, a cselekvéshez össze kell szednie minden bátorságát.",
       actors: "Bölkény Balázs, Mészöly Anna, Mosolygó Sára",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743873423/cv_stills_21_best_sncrty.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/cv_stills_21_best_sncrty.jpg",
     },
     {
       title: "Kocsmasztori",
@@ -1164,7 +1150,7 @@ export const movies = {
       actors:
         "Mrena Dorka, Lapos Imola, Demeter Zsuzsa, Blahó Tas, Molnár Panna",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743583488/still_1.1.3_fh6mn2.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/still_1.1.3_fh6mn2.jpg",
     },
     {
       titleJSX: (
@@ -1182,7 +1168,7 @@ export const movies = {
       actors:
         "Tatai Bulcsú, Herbály Blanka, Hajduk Károly, Forgács Péter, Gazdag-Kötél Orsi, Vatamány Atanáz",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743873557/473534632_122195753642169015_7150033435158431515_n_roa5ld.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/473534632_122195753642169015_7150033435158431515_n_roa5ld.jpg",
     },
   ],
 }

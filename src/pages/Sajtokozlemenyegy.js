@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import { Image } from "@heroui/react";
+import React, { useEffect } from "react"
+import { Image } from "@heroui/react"
 
 function Sajtokozlemenyegy() {
   useEffect(() => {
-    localStorage.clear();
-  }, []);
+    localStorage.clear()
+  }, [])
   return (
     <div className="min-h-screen bg-black text-white px-4 md:px-20 lg:px-40 py-2">
       <div className="max-w-5xl mx-auto space-y-8">
         <div className="flex justify-center">
           <Image
-            src="https://res.cloudinary.com/dhzagayrh/image/upload/v1741549309/sajtokozlemeny_borito_lgkedf.png"
+            src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/sajtokozlemeny_borito_lgkedf.png"
             alt="Sajtóközlemény"
             className="rounded-xl w-full max-w-4xl"
           />
@@ -118,7 +118,7 @@ function Sajtokozlemenyegy() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Sajtokozlemenyegy;
+export default Sajtokozlemenyegy

@@ -1,11 +1,11 @@
-import { Image } from "@heroui/react";
-import { SocialIcon } from "react-social-icons";
+import { Image } from "@heroui/react"
+import { SocialIcon } from "react-social-icons"
 import {
   canonImage,
   elteImage,
   mhaImage,
   mindenkiMozijaImage,
-} from "utils/const";
+} from "utils/const"
 
 export default function Footer() {
   return (
@@ -91,7 +91,7 @@ export default function Footer() {
               url="https://www.tiktok.com/@elteszemle?_t=ZN-8uQxxr5NfD0&_r=1"
             />
             <Image
-              src="https://res.cloudinary.com/dhzagayrh/image/upload/v1741552061/letterbox_jk7hbd.png"
+              src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/letterbox_jk7hbd.png"
               alt="Letterbox"
               className="w-[50px] aspect-square hover:cursor-pointer"
               onClick={() =>
@@ -175,7 +175,7 @@ export default function Footer() {
               url="https://www.tiktok.com/@elteszemle?_t=ZN-8uQxxr5NfD0&_r=1"
             />
             <Image
-              src="https://res.cloudinary.com/dhzagayrh/image/upload/v1741552061/letterbox_jk7hbd.png"
+              src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/letterbox_jk7hbd.png"
               alt="Letterbox"
               className="w-[50px] aspect-square hover:cursor-pointer"
               onClick={() =>
@@ -186,5 +186,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

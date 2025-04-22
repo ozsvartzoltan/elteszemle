@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { Button, Image } from "@heroui/react";
-import SVG from "components/svg/SVG";
+import React, { useEffect } from "react"
+import { Button, Image } from "@heroui/react"
+import SVG from "components/svg/SVG"
 
 function Sajtokozlemenyketto() {
   useEffect(() => {
-    localStorage.clear();
-  }, []);
+    localStorage.clear()
+  }, [])
 
   return (
     <div className="bg-black text-white min-h-screen py-16 px-4 sm:px-8">
       <div className="max-w-3xl mx-auto space-y-6 text-white/90 leading-relaxed text-justify">
         <div className="flex justify-center">
           <Image
-            src="https://res.cloudinary.com/dhzagayrh/image/upload/v1744042816/jimmy1_gdyiid.png"
+            src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/jimmy1_astjvs.png"
             alt="Jimmy Hard balladája"
             className="shadow-lg w-full max-w-2xl rounded-3xl"
           />
@@ -169,14 +169,14 @@ function Sajtokozlemenyketto() {
 
       <Button
         onPress={() => {
-          document.body.scrollTop = 0;
+          document.body.scrollTop = 0
         }}
         className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
       >
         <SVG type="chevronUp" />
       </Button>
     </div>
-  );
+  )
 }
 
-export default Sajtokozlemenyketto;
+export default Sajtokozlemenyketto

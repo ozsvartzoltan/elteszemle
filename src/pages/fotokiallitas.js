@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { Image, Button } from "@heroui/react";
+import React, { useEffect } from "react"
+import { Image, Button } from "@heroui/react"
 
 function Fotokiallitas() {
   useEffect(() => {
-    localStorage.clear();
-  }, []);
+    localStorage.clear()
+  }, [])
   return (
     <div className="min-h-screen bg-black text-white py-12 px-6 sm:px-20 space-y-12 text-justify">
       {/* Header */}
@@ -26,7 +26,7 @@ function Fotokiallitas() {
       {/* Image */}
       <div className="flex justify-center">
         <Image
-          src="https://res.cloudinary.com/dhzagayrh/image/upload/v1741364586/elte.jelen.werk2_kbdzke.png"
+          src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/oldal_kepek/elte.jelen.werk2_kbdzke.png"
           alt="Fotókiállítás plakát"
           className="rounded-xl shadow-lg w-full max-w-4xl"
         />
@@ -65,7 +65,7 @@ function Fotokiallitas() {
         <p>A kiállítást Somorjai Máté és Rözge Borisz szervezik.</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default Fotokiallitas;
+export default Fotokiallitas
