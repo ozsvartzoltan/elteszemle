@@ -32,7 +32,7 @@ export const zsurik = [
     name: "Dér Asia",
     title: "Dokumentumfilm-rendező",
     image:
-      "https://res.cloudinary.com/dhzagayrh/image/upload/v1741209420/Asia_rfdlel.jpg",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/zsuri/Asia_rfdlel.jpg",
     description:
       "Legutóbbbi egészestés dokumentumfilmje, a Nem halok meg, a 2023-as Varsói Nemzetközi Filmfesztiválon debütált, de bekerült többek között a Verzióra és a 44. Magyar Filmszemle programjába is. Haragonics Sárival közösen rendezett filmje, az Anyáim története több mint 30 ország nemzetközi filmfesztiválján szerepelt. A Magyar Dokumentumfilmesek Egyesülete (MADOKE) és a Filmművész Szövetség elnökségi tagja.",
   },
@@ -514,7 +514,7 @@ export const movies = {
         "A narratív történet kitalált, de a helyzetek nagyon is valóságosak. Egy édesapját Görögországban kereső fiúról szól a film. A fiú valószínűleg még sosem találkozott az apjával, és sose látott olyan furcsa dolgokat, amelyeket az apjával tapasztal meg. Szituációs, fikciós-dokumentumfilm.",
       actors: "Márton Csaba, Szirmai Sándor, Horváth Eszter",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743581491/3_tcb7yq.jpg",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/3_tcb7yq.jpg",
     },
     {
       title: "robot",
@@ -938,7 +938,7 @@ export const movies = {
       actors:
         "Csabai Gabriella, Szabó Piroska, Kistamás László, Ferenczi Gábor, Hegedűs Botond, Kécza András",
       image:
-        "https://res.cloudinary.com/dhzagayrh/image/upload/v1743872897/ancsij%C3%B3Screenshot_2025-04-04_at_20.16.15_hfrfz0.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/ancsij%C3%B3Screenshot_2025-04-04_at_20.16.15_hfrfz0.png",
     },
     {
       title: "anyuapu",
