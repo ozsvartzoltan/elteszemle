@@ -28,7 +28,7 @@ function Home() {
             modules={[Autoplay, Pagination]}
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 2500,
+              delay: 4000,
               disableOnInteraction: false,
             }}
             spaceBetween={20}
@@ -49,7 +49,7 @@ function Home() {
             modules={[Autoplay, Pagination]}
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 2500,
+              delay: 4000,
               disableOnInteraction: false,
             }}
             spaceBetween={20}
@@ -82,7 +82,7 @@ function Home() {
               ref={swiperRef}
               modules={[Autoplay, Pagination, Navigation]}
               autoplay={{
-                delay: 2500,
+                delay: 4000,
                 disableOnInteraction: false,
               }}
               spaceBetween={30}
