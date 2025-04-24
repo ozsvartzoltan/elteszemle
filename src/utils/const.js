@@ -89,6 +89,17 @@ export const programLinks = [
 
 export const news = {
   0: {
+    title: "Regisztráció a BEST OF vetítésre",
+    date: "2025. április 24.",
+    image:
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/oldal_kepek/news_4.jpg",
+    link: {
+      page: "/best_of_regisztracio",
+    },
+    description:
+      "A fesztivál zárónapján, május 2-án 18:00-kor tekinthetitek meg a zsűri által legjobbnak ítélt filmeket a Puskin Mozi nagytermében, ahol kiderül, melyik film nyeri a fesztivál fődíját, ami egy 500 000 forintos gyártási támogatás a fesztivál fő támogatója, a Canon jóvoltából.",
+  },
+  1: {
     title:
       "13 órányi vetítés és sokszínű szakmai programok várják az ELTE Szemle látogatóit",
     date: "2025. április 8.",
@@ -102,7 +113,7 @@ export const news = {
     text: [],
   },
 
-  1: {
+  2: {
     title: "Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle",
     date: "2025. március 10.",
     image:
@@ -120,7 +131,7 @@ export const news = {
       "Az esemény fő támogatója a Canon, kiemelt támogatója és technikai kivitelezője a Mindenki Mozija. Az ELTE filmszakos hallgatói március 17-ig nevezhetik filmjeiket az alábbi linken.",
     ],
   },
-  2: {
+  3: {
     title: "Nevezési információk",
     date: "2025. március 10.",
     image:
@@ -210,6 +221,7 @@ export const scheduleData = [
     date: "05.02",
     time: "18:00 - 20:00 (Puskin Mozi)",
     redirect: false,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSeMov3nYCHQi5p7Khi1tnQ0ATJBcbwQaou3eVnFI0kNLoCGzA/viewform",
   },
   {
     name: "AFTER",
