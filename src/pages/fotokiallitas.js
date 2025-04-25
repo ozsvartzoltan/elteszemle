@@ -1,69 +1,227 @@
 import React, { useEffect } from "react"
-import { Image, Button } from "@heroui/react"
+import { Button, Image } from "@heroui/react"
+import SVG from "components/svg/SVG"
 
 function Fotokiallitas() {
   useEffect(() => {
     localStorage.clear()
   }, [])
+
   return (
     <div className="min-h-screen bg-black text-white py-12 px-6 sm:px-20 space-y-12 text-justify">
       {/* Header */}
       <div className="space-y-4 text-justify">
-        <h1 className="text-4xl sm:text-6xl font-bold text-center">
-          Fotókiállítás
-        </h1>
-        <p className="text-lg sm:text-xl max-w-3xl mx-auto text-white">
-          Az idei ELTE Szemle egyik kísérőprogramja lesz egy két részből álló
-          fotókiállítás. Az{" "}
-          <a href="https://forms.gle/HPTCd1nbTHL7TaRr5">elte.JELEN-re</a> a
-          címben szereplő hívószóhoz társítható munkákkal nevezhetnek a
-          hallgatók, míg az{" "}
-          <a href="https://forms.gle/5euN1BMHbN44v2wK9">elte.WERK-re</a> behind
-          the scenes fotókkal.
-        </p>
+        <div className="flex justify-center">
+          <Image
+            src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/oldal_kepek/fotokiallitas.jpg"
+            alt="Fotókiállítás"
+            className="shadow-lg w-full max-w-4xl rounded-3xl"
+          />
+        </div>
       </div>
 
       {/* Image */}
-      <div className="flex justify-center">
-        <Image
-          src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/oldal_kepek/elte.jelen.werk2_kbdzke.png"
-          alt="Fotókiállítás plakát"
-          className="rounded-xl shadow-lg w-full max-w-4xl"
-        />
-      </div>
 
-      {/* Details */}
+      {/* Fotók list */}
       <div className="max-w-4xl mx-auto text-white space-y-6 text-lg">
-        <p>Részletek a nevezési felhívásban:</p>
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button
-            as="a"
-            href="https://forms.gle/HPTCd1nbTHL7TaRr5"
-            target="_blank"
-            className="bg-[#cc2d1c] text-white w-full sm:w-auto"
-          >
-            elte.JELEN nevezési űrlap
-          </Button>
-          <Button
-            as="a"
-            href="https://forms.gle/5euN1BMHbN44v2wK9"
-            target="_blank"
-            className="bg-[#cc2d1c] text-white w-full sm:w-auto"
-          >
-            elte.WERK nevezési űrlap
-          </Button>
-        </div>
-
         <p>
-          A beválogatott munkák az idei ELTE Szemle alatt, április 29 és május 1
-          között lesznek láthatóak a Stúdió K-ban. A fotókiállítás megnyitóját
-          április 29-én este tartjuk.
+          <strong>
+            Az elte.WERK részeként az alábbi munkák lesznek kiállítva:
+          </strong>
         </p>
 
-        <p>A kiállítást Somorjai Máté és Rözge Borisz szervezik.</p>
+        <ul className="space-y-4">
+          <li>
+            <strong>
+              <em>Halak hűlt helye</em>
+            </strong>
+            <br />
+            Rendező: Adonyi-Walsh Gáspár
+            <br />
+            Werk fotók: Gálhidy Zoltán, Bujnovszky Vanda
+          </li>
+          <li>
+            <strong>
+              <em>Kétoldali közelítés</em>
+            </strong>
+            <br />
+            Rendező: Albert Virág
+            <br />
+            Werk fotók: Eloy Rodriguez, Komlós Ábel, Szentpétery Vanda Léda
+          </li>
+          <li>
+            <strong>
+              <em>Térden haraptak álmomban</em>
+            </strong>
+            <br />
+            Rendező: Bíró Rozi
+            <br />
+            Werk fotók: Rácz Olivér
+          </li>
+          <li>
+            <strong>
+              <em>Zsigereim</em>
+            </strong>
+            <br />
+            Rendező: Fárizs Mihály
+            <br />
+            Werk fotók: Somorjai Máté, Bagossy Bálint
+          </li>
+          <li>
+            <strong>
+              <em>Ide-oda</em>
+            </strong>
+            <br />
+            Rendező: Fárizs Mihály
+            <br />
+            Werk fotók: Czeglédi Mátyás
+          </li>
+          <li>
+            <strong>
+              <em>Kacifánt</em>
+            </strong>
+            <br />
+            Rendező: Farkas Zsigmond
+            <br />
+            Werk fotók: Major Bence és Farkas Zsigmond
+          </li>
+          <li>
+            <strong>
+              <em>Apám fia</em>
+            </strong>
+            <br />
+            Rendező: Heim Vilmos
+            <br />
+            Werk fotók: Kisházy Eszter
+          </li>
+          <li>
+            <strong>
+              <em>Last Call</em>
+            </strong>
+            <br />
+            Rendező: Ivandro Cabral
+            <br />
+            Werk fotók: Noor Hanania
+          </li>
+          <li>
+            <strong>
+              <em>Hava</em>
+            </strong>
+            <br />
+            Rendező: Joonyoung Kim
+            <br />
+            Werk fotók: Solongo Soninbayar
+          </li>
+          <li>
+            <strong>
+              <em>Házibuli Karaoki</em>
+            </strong>
+            <br />
+            Rendező: Mrena Dorka
+            <br />
+            Werk fotók: Klenovszky Anna
+          </li>
+          <li>
+            <strong>
+              <em>Magda</em>
+            </strong>
+            <br />
+            Rendező: Mrena Dorka
+            <br />
+            Werk fotók: Mészáros Áron
+          </li>
+          <li>
+            <strong>
+              <em>Töredékek</em>
+            </strong>
+            <br />
+            Rendező: Petrányi Levente
+            <br />
+            Werk fotók: Kelcz Lilla
+          </li>
+          <li>
+            <strong>
+              <em>Jimmy Hard balladája</em>
+            </strong>
+            <br />
+            Rendező: S. Papp Máté
+            <br />
+            Werk fotók: a stáb tagjai
+          </li>
+          <li>
+            <strong>
+              <em>Szakadás</em>
+            </strong>
+            <br />
+            Rendező: Szabó Levente
+            <br />
+            Werk fotók: Kulcz Lilla
+          </li>
+          <li>
+            <strong>
+              <em>Nem fogok fizetni</em>
+            </strong>
+            <br />
+            Rendező: Szirmai János
+            <br />
+            Werk fotók: Czeglédi Mátyás
+          </li>
+          <li>
+            <strong>
+              <em>Kopaszok</em>
+            </strong>
+            <br />
+            Rendező: Mandula Lujza
+            <br />
+            Werk fotók: Klucsik Franci
+          </li>
+          <li>
+            <strong>
+              <em>Negyed szlovák, nyolcad szerb</em>
+            </strong>
+            <br />
+            Rendező: Taraczky Mila
+            <br />
+            Werk fotók: Farkas Szandra
+          </li>
+          <li>
+            <strong>
+              <em>Bölcsesség és tej</em>
+            </strong>
+            <br />
+            Rendező: Vajdai Liza Vera
+            <br />
+            Werk fotók: Mészáros Áron
+          </li>
+        </ul>
+
+        <p>
+          Az elte.JELEN részeként az alábbi hallgatók munkái tekinthetők meg:
+          Mandula Lujza, Rözge Borisz, Palkovits Eszter, Fárizs Mihály, Reuter
+          Réka, Orbán Róza, Juhász Maja, Kövesi Bálint, Szabó Sipos Tamás, Bíró
+          Rozi, Adonyi-Walsh Gáspár, Béres Péter, Mrena Dorka, Nagy Kornél
+        </p>
+
+        <p>
+          A fotókiállítás megnyitóját <strong>április 29-én 18 órakkor</strong>{" "}
+          tartjuk. A képek április 29. és május 1. között lesznek kiállítva a
+          Stúdió K-ban.
+        </p>
+
+        <p>
+          A kiállítást Somorjai Máté szervezi. A képeket két kurátor, Mucsi
+          Ágota és Balázs Gáspár válogatta.
+        </p>
       </div>
+
+      <Button
+        onPress={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" })
+        }}
+        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+      >
+        <SVG type="chevronUp" />
+      </Button>
     </div>
   )
 }
