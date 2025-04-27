@@ -1031,7 +1031,7 @@ export const movies = {
         "Panna és Atus az időtlenségben élnek. De vajon kitarthat ez legalább az allergiaszezon végéig?",
       actors: "Gálhidy Gizella, Laskai Csaba",
       image:
-        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/IDEODA_2.13.1_jxhep8.png",
+        "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/filmek/Baratsagunkrol_ennyit_mondhatok.jpg",
     },
     {
       title: "Tetőpont",

@@ -37,6 +37,9 @@ function NapiBontas() {
           <div key={date} className="space-y-8">
             <h2 className="text-2xl font-semibold text-[#cc2d1c]">
               {dayLabels[date] || date}
+              {(date === "04.29" || date === "04.30" || date === "05.01") && (
+                <span className="text-[#f7f2e3]"> - Stúdió K</span>
+              )}
             </h2>
 
             <div className="grid gap-4 sm:grid-cols-2">

@@ -155,7 +155,7 @@ function Fotokiallitas() {
             <br />
             Rendező: Szabó Levente
             <br />
-            Werk fotók: Kulcz Lilla
+            Werk fotók: Kelcz Lilla
           </li>
           <li>
             <strong>
@@ -168,7 +168,7 @@ function Fotokiallitas() {
           </li>
           <li>
             <strong>
-              <em>Kopaszok</em>
+              <em>Bőrfejű</em>
             </strong>
             <br />
             Rendező: Mandula Lujza
