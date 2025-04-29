@@ -242,8 +242,16 @@ export const dayLabels = {
 export const extraPrograms = {
   "04.30": [
     {
+      title: "Filmarchívum - Klassz Program animációs workshop",
+      time: "14:00 - 18:00 (Kisterem)",
+      description: [
+        "A foglalkozás az állóképet először mozgásba lendítő eszközök köré szerveződik. A résztvevők megismerkedhetnek a 19. század legnépszerűbb optikai eszközeivel: taumatróp, zsebmozi, fenakisztoszkóp, zoetróp, praxinoszkóp. Elkészíthetik saját animációs filmjüket a praxinoszkópba, vagy akár 35 mm-es filmszalagra, amit a helyszínen vetítve meg is nézhetnek.",
+      ],
+      eloadok: "A workshopot Erdős Emese és Gátay-Tóth Mirtill tartják.",
+    },
+    {
       title: "Canon szakmai előadások",
-      time: "11:00 - 12:30 (Nagyterem)",
+      time: "15:00 - 16:20 (Nagyterem)",
       subtitle:
         "Filmes alkímia: Vízióból valóság, a kamera és objektív választás folyamata",
       description: [
@@ -254,14 +262,6 @@ export const extraPrograms = {
       ],
       eloadok:
         "M. Deák Kristóf operatőr, Iványi Petra producer, Viesz Richárd dokumentumfilmes/operatőr",
-    },
-    {
-      title: "Filmarchívum - Klassz Program animációs workshop",
-      time: "14:00 - 18:00 (Kisterem)",
-      description: [
-        "A foglalkozás az állóképet először mozgásba lendítő eszközök köré szerveződik. A résztvevők megismerkedhetnek a 19. század legnépszerűbb optikai eszközeivel: taumatróp, zsebmozi, fenakisztoszkóp, zoetróp, praxinoszkóp. Elkészíthetik saját animációs filmjüket a praxinoszkópba, vagy akár 35 mm-es filmszalagra, amit a helyszínen vetítve meg is nézhetnek.",
-      ],
-      eloadok: "A workshopot Erdős Emese és Gátay-Tóth Mirtill tartják.",
     },
   ],
   "05.01": [
