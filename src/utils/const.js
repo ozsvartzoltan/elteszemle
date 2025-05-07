@@ -97,7 +97,7 @@ export const news = {
       page: "/best_of",
     },
     description:
-      "A 2025-ös ELTE Szemle szakmai zsűrije (Pálos Gergely, Dér Asia, Sós Bálint Dániel, Stork Natasa, Csuja László) az alábbi filmeket ítélték a legjobbaknak",
+      "A 2025-ös ELTE Szemle szakmai zsűrije (Pálos Gergely, Dér Asia, Sós Bálint Dániel, Stork Natasa, Csuja László) az alábbi filmeket ítélték a legjobbaknak.",
   },
   1: {
     title: "Regisztráció a BEST OF vetítésre",
