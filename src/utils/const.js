@@ -89,6 +89,17 @@ export const programLinks = [
 
 export const news = {
   0: {
+    title: "A II. ELTE Szemle BEST OF válogatása",
+    date: "2025. május 07.",
+    image:
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/oldal_kepek/best_of.jpg",
+    link: {
+      page: "/best_of",
+    },
+    description:
+      "A 2025-ös ELTE Szemle szakmai zsűrije (Pálos Gergely, Dér Asia, Sós Bálint Dániel, Stork Natasa, Csuja László) az alábbi filmeket ítélték a legjobbaknak",
+  },
+  1: {
     title: "Regisztráció a BEST OF vetítésre",
     date: "2025. április 24.",
     image:
@@ -99,7 +110,7 @@ export const news = {
     description:
       "A fesztivál zárónapján, május 2-án 18:00-kor tekinthetitek meg a zsűri által legjobbnak ítélt filmeket a Puskin Mozi nagytermében, ahol kiderül, melyik film nyeri a fesztivál fődíját, ami egy 500 000 forintos gyártási támogatás a fesztivál fő támogatója, a Canon jóvoltából.",
   },
-  1: {
+  2: {
     title:
       "13 órányi vetítés és sokszínű szakmai programok várják az ELTE Szemle látogatóit",
     date: "2025. április 8.",
@@ -113,7 +124,7 @@ export const news = {
     text: [],
   },
 
-  2: {
+  3: {
     title: "Új helyszínen, sokszínűbb programmal tér vissza az ELTE Szemle",
     date: "2025. március 10.",
     image:
@@ -131,7 +142,7 @@ export const news = {
       "Az esemény fő támogatója a Canon, kiemelt támogatója és technikai kivitelezője a Mindenki Mozija. Az ELTE filmszakos hallgatói március 17-ig nevezhetik filmjeiket az alábbi linken.",
     ],
   },
-  3: {
+  4: {
     title: "Nevezési információk",
     date: "2025. március 10.",
     image:
