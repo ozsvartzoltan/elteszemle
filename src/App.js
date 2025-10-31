@@ -13,31 +13,38 @@ import Nevezes from "pages/nevezes"
 import Sajtokozlemenyketto from "pages/Sajtokozlemenyketto"
 import BestOfRegisztracio from "pages/BestOfRegisztracio"
 import Bestof from "pages/Bestof"
+import { ConsentProvider } from "./contexts/ConsentContext"
+import CookieConsentBanner from "./components/CookieConsent"
+import ConsentDebugger from "./components/ConsentDebugger"
 
 export default function App() {
   return (
-    <HeroUIProvider>
-      <Router>
-        <Layout className="space-y-6 leading-relaxed">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/zsurik" element={<Zsurik />} />
-            <Route path="/napi_bontas" element={<NapiBontas />} />
-            <Route path="/fotokiallitas" element={<Fotokiallitas />} />
-            <Route path="/szakmai_programok" element={<SzakmaiProgramok />} />
-            <Route path="/filmek" element={<Filmek />} />
-            <Route path="/1_sajtokozlemeny" element={<Sajtokozlemenyegy />} />
-            <Route path="/nevezes" element={<Nevezes />} />
-            <Route path="/sajtokozlemeny" element={<Sajtokozlemenyketto />} />
-            <Route path="/best_of" element={<Bestof />} />
-            <Route
-              path="/best_of_regisztracio"
-              element={<BestOfRegisztracio />}
-            />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </Layout>
-      </Router>
-    </HeroUIProvider>
+    <ConsentProvider>
+      <HeroUIProvider>
+        <Router>
+          <Layout className="space-y-6 leading-relaxed">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/zsurik" element={<Zsurik />} />
+              <Route path="/napi_bontas" element={<NapiBontas />} />
+              <Route path="/fotokiallitas" element={<Fotokiallitas />} />
+              <Route path="/szakmai_programok" element={<SzakmaiProgramok />} />
+              <Route path="/filmek" element={<Filmek />} />
+              <Route path="/1_sajtokozlemeny" element={<Sajtokozlemenyegy />} />
+              <Route path="/nevezes" element={<Nevezes />} />
+              <Route path="/sajtokozlemeny" element={<Sajtokozlemenyketto />} />
+              <Route path="/best_of" element={<Bestof />} />
+              <Route
+                path="/best_of_regisztracio"
+                element={<BestOfRegisztracio />}
+              />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Layout>
+          <CookieConsentBanner />
+          <ConsentDebugger />
+        </Router>
+      </HeroUIProvider>
+    </ConsentProvider>
   )
 }

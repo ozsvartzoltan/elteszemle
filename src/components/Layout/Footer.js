@@ -6,6 +6,7 @@ import {
   mhaImage,
   mindenkiMozijaImage,
 } from "utils/const"
+import CookieSettings from "../CookieConsent/CookieSettings"
 
 export default function Footer() {
   return (
@@ -102,6 +103,15 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Copyright and Cookie Settings */}
+      <div className="hidden sm:block border-t border-red-400 mt-8 pt-6 text-center">
+        <div className="flex justify-center items-center gap-4 text-sm text-red-100">
+          <span>© 2025 ELTE Szemle. Minden jog fenntartva.</span>
+          <span>|</span>
+          <CookieSettings />
+        </div>
+      </div>
+
       {/*Mobile Layout */}
       <div className="sm:hidden flex flex-col items-center gap-8 text-2xl">
         {/* FŐ TÁMOGATÓ */}
@@ -183,6 +193,15 @@ export default function Footer() {
               }
             />
           </div>
+        </div>
+      </div>
+
+      {/* Copyright and Cookie Settings - Mobile */}
+      <div className="sm:hidden border-t border-red-400 mt-8 pt-6 text-center">
+        <div className="flex flex-col items-center gap-2 text-sm text-red-100">
+          <span>© 2025 ELTE Szemle</span>
+          <span>Minden jog fenntartva.</span>
+          <CookieSettings />
         </div>
       </div>
     </footer>
