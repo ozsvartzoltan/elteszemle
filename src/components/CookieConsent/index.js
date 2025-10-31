@@ -55,11 +55,11 @@ const CookieConsentBanner = () => {
                 </ModalBody>
 
                 <ModalFooter>
-                    <div className="flex flex-col sm:flex-row gap-3 w-full">
+                    <div className="flex flex-col sm:flex-row sm:justify-center gap-3 w-full">
                         <Button
                             color="primary"
                             onPress={handleAcceptAnalytics}
-                            className=""
+                            className="sm:flex-1"
                             size="md"
                         >
                             Sütik elfogadása
@@ -67,7 +67,7 @@ const CookieConsentBanner = () => {
                         <Button
                             variant="flat"
                             onPress={handleRejectAnalytics}
-                            className=""
+                            className="sm:flex-1"
                             size="md"
                         >
                             Sütik elutasítása
