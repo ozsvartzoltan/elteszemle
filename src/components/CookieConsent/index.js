@@ -30,25 +30,25 @@ const CookieConsentBanner = () => {
             }}
         >
             <ModalContent>
-                <ModalHeader className="flex flex-col gap-1">
+                <ModalHeader className="py-0 pt-4">
                     <h2 className="text-xl font-bold text-gray-900">
                         🍪 Cookie beállítások
                     </h2>
                 </ModalHeader>
 
                 <ModalBody>
-                    <div className="space-y-4">
+                    <div className="">
                         <p className="text-gray-700 text-sm leading-relaxed">
                             Ez a weboldal sütiket használ a jobb felhasználói élmény biztosítása érdekében.
                         </p>
                         {/* Analytics cookies info */}
                         <Card>
-                            <CardBody className="bg-blue-50">
-                                <h3 className="font-semibold text-gray-900 mb-1">Analitikai sütik</h3>
-                                <p className="text-sm text-gray-600">
+                            <CardBody className="bg-blue-50 py-2">
+                                <h3 className="font-semibold text-gray-900">Analitikai sütik</h3>
+                                {/* <p className="text-sm text-gray-600">
                                     Segítenek megérteni, hogyan használják a látogatók a weboldalt.
                                     Anonim statisztikákat gyűjtenek a weboldal fejlesztése érdekében.
-                                </p>
+                                </p> */}
                             </CardBody>
                         </Card>
                     </div>
@@ -59,16 +59,16 @@ const CookieConsentBanner = () => {
                         <Button
                             color="primary"
                             onPress={handleAcceptAnalytics}
-                            className="flex-1"
-                            size="lg"
+                            className=""
+                            size="md"
                         >
                             Sütik elfogadása
                         </Button>
                         <Button
                             variant="flat"
                             onPress={handleRejectAnalytics}
-                            className="flex-1"
-                            size="lg"
+                            className=""
+                            size="md"
                         >
                             Sütik elutasítása
                         </Button>
