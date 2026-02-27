@@ -106,7 +106,7 @@ export default function Footer() {
       {/* Copyright and Cookie Settings */}
       <div className="hidden sm:block border-t border-red-400 mt-8 pt-6 text-center">
         <div className="flex justify-center items-center gap-4 text-sm text-red-100">
-          <span>© 2025 ELTE Szemle. Minden jog fenntartva.</span>
+          <span>© 2026 ELTE Szemle. Minden jog fenntartva.</span>
           <span>|</span>
           <CookieSettings />
         </div>
@@ -199,7 +199,7 @@ export default function Footer() {
       {/* Copyright and Cookie Settings - Mobile */}
       <div className="sm:hidden border-t border-red-400 mt-8 pt-6 text-center">
         <div className="flex flex-col items-center gap-2 text-sm text-red-100">
-          <span>© 2025 ELTE Szemle</span>
+          <span>© 2026 ELTE Szemle</span>
           <span>Minden jog fenntartva.</span>
           <CookieSettings />
         </div>
