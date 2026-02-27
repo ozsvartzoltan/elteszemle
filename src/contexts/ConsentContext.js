@@ -22,9 +22,9 @@ export const useConsent = () => {
     return context
 }
 
-// Default consent preferences
+// Default consent preferences - Analytics accepted by default
 const defaultPreferences = {
-    analytics_Storage: CONSENT_STATES.DENIED,
+    analytics_Storage: CONSENT_STATES.GRANTED,
     timestamp: null
 }
 
@@ -38,20 +38,32 @@ export const ConsentProvider = ({ children }) => {
         const loadSavedPreferences = () => {
             try {
                 const saved = localStorage.getItem(CONSENT_STORAGE_KEY)
-                const hasShown = localStorage.getItem(CONSENT_SHOWN_KEY)
-
+                
                 if (saved) {
+                    // User has previously set preferences, use those
                     const parsed = JSON.parse(saved)
                     setConsentPreferences(parsed)
-                    // Apply consent to Clarity
                     applyConsentToClarity(parsed)
-                } else if (!hasShown) {
-                    // Show banner if no preferences saved and banner hasn't been shown
-                    setShowConsentBanner(true)
+                } else {
+                    // First visit - accept analytics by default without showing banner
+                    const defaultConsent = {
+                        analytics_Storage: CONSENT_STATES.GRANTED,
+                        timestamp: Date.now()
+                    }
+                    setConsentPreferences(defaultConsent)
+                    savePreferences(defaultConsent)
+                    applyConsentToClarity(defaultConsent)
                 }
             } catch (error) {
                 console.error('Error loading consent preferences:', error)
-                setShowConsentBanner(true)
+                // On error, accept analytics by default
+                const defaultConsent = {
+                    analytics_Storage: CONSENT_STATES.GRANTED,
+                    timestamp: Date.now()
+                }
+                setConsentPreferences(defaultConsent)
+                savePreferences(defaultConsent)
+                applyConsentToClarity(defaultConsent)
             } finally {
                 setIsInitialized(true)
             }
