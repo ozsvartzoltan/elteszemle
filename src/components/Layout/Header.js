@@ -2,30 +2,17 @@
 
 import React, { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Image,
-  Button,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@heroui/react"
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Image, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/react"
 import SVG from "components/svg/SVG"
 import { headerImage, links, programLinks } from "utils/const"
+import { useData } from "../../contexts/DataContext"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
+  const { year, changeYear } = useData()
 
   const scrollToSection = (targetId) => {
     setIsMenuOpen(false)
@@ -120,6 +107,41 @@ export default function Header() {
               )}
             </React.Fragment>
           ))}
+
+          {/* Year Selector Dropdown */}
+          <NavbarItem>
+            <Dropdown classNames={{ content: "bg-black" }}>
+              <DropdownTrigger className="text-white hover:opacity-80 transition-opacity px-4 py-2 text-lg cursor-pointer">
+                <Button
+                  disableRipple
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white text-lg"
+                  variant="light"
+                >
+                  {year}
+                </Button>
+              </DropdownTrigger>
+              <DropdownMenu
+                aria-label="Year selection"
+                className="bg-black text-white rounded-none border-none p-0"
+                selectedKeys={[year.toString()]}
+              >
+                <DropdownItem
+                  key="2025"
+                  onPress={() => changeYear(2025)}
+                  className="h-14"
+                >
+                  2025
+                </DropdownItem>
+                <DropdownItem
+                  key="2026"
+                  onPress={() => changeYear(2026)}
+                  className="h-14"
+                >
+                  2026
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </NavbarItem>
         </NavbarContent>
 
         <div className="flex custom:hidden">
@@ -175,6 +197,47 @@ export default function Header() {
             )}
           </NavbarMenuItem>
         ))}
+
+        {/* Mobile Year Selector Dropdown */}
+        <NavbarMenuItem className="mt-4 pt-4 border-t border-white/20">
+          <Dropdown classNames={{ content: "bg-black" }}>
+            <DropdownTrigger className="text-white hover:opacity-80 transition-opacity text-lg cursor-pointer w-full">
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white text-lg w-full justify-start"
+                variant="light"
+              >
+                {year}
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              aria-label="Year selection"
+              className="bg-black text-white rounded-none border-none p-0"
+              selectedKeys={[year.toString()]}
+            >
+              <DropdownItem
+                key="2025"
+                onPress={() => {
+                  changeYear(2025)
+                  setIsMenuOpen(false)
+                }}
+                className="h-14"
+              >
+                2025
+              </DropdownItem>
+              <DropdownItem
+                key="2026"
+                onPress={() => {
+                  changeYear(2026)
+                  setIsMenuOpen(false)
+                }}
+                className="h-14"
+              >
+                2026
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   )

@@ -14,15 +14,24 @@ import Sajtokozlemenyketto from "pages/Sajtokozlemenyketto"
 import BestOfRegisztracio from "pages/BestOfRegisztracio"
 import Bestof from "pages/Bestof"
 import { ConsentProvider } from "./contexts/ConsentContext"
+import { DataProvider } from "./contexts/DataContext"
 import CookieConsentBanner from "./components/CookieConsent"
 import ConsentDebugger from "./components/ConsentDebugger"
+import AdminPanel from "./components/AdminPanel/AdminPanel"
+import YearSelector from "./components/YearSelector"
+import FirebaseTest from "./components/FirebaseTest"
 
 export default function App() {
   return (
     <ConsentProvider>
-      <HeroUIProvider>
-        <Router>
-          <Layout className="space-y-6 leading-relaxed">
+      <DataProvider>
+        <HeroUIProvider>
+          <Router>
+            <Routes>
+              <Route path="/admin" element={<AdminPanel />} />
+              <Route path="/firebase-test" element={<FirebaseTest />} />
+              <Route path="*" element={
+                <Layout className="space-y-6 leading-relaxed">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/zsurik" element={<Zsurik />} />
@@ -40,11 +49,14 @@ export default function App() {
               />
               <Route path="*" element={<Home />} />
             </Routes>
-          </Layout>
-          <CookieConsentBanner />
-          <ConsentDebugger />
-        </Router>
-      </HeroUIProvider>
+                </Layout>
+              } />
+            </Routes>
+            <CookieConsentBanner />
+            {/* <ConsentDebugger /> */}
+          </Router>
+        </HeroUIProvider>
+      </DataProvider>
     </ConsentProvider>
   )
 }
