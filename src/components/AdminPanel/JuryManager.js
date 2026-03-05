@@ -9,7 +9,8 @@ const JuryManager = ({ year }) => {
   const [formData, setFormData] = useState({
     name: '',
     work: '',
-    desc: ''
+    desc: '',
+    img: ''
   })
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
@@ -35,7 +36,8 @@ const JuryManager = ({ year }) => {
     setFormData({
       name: '',
       work: '',
-      desc: ''
+      desc: '',
+      img: ''
     })
     onOpen()
   }
@@ -45,7 +47,8 @@ const JuryManager = ({ year }) => {
     setFormData({
       name: jury.name || '',
       work: jury.work || '',
-      desc: jury.desc || ''
+      desc: jury.desc || '',
+      img: jury.img || ''
     })
     onOpen()
   }
@@ -148,6 +151,12 @@ const JuryManager = ({ year }) => {
               placeholder="Zsűri tag leírása, biográfiája"
               value={formData.desc}
               onChange={(e) => setFormData({...formData, desc: e.target.value})}
+            />
+            <Input
+              label="Profilkép URL"
+              placeholder="https://example.com/image.jpg"
+              value={formData.img}
+              onChange={(e) => setFormData({...formData, img: e.target.value})}
             />
           </ModalBody>
           <ModalFooter>

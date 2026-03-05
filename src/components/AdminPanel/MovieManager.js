@@ -12,7 +12,8 @@ const MovieManager = ({ year }) => {
     director: '',
     actors: '',
     synopsis: '',
-    genre: ''
+    genre: '',
+    img: ''
   })
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
@@ -45,7 +46,8 @@ const MovieManager = ({ year }) => {
       director: '',
       actors: '',
       synopsis: '',
-      genre: ''
+      genre: '',
+      img: ''
     })
     onOpen()
   }
@@ -58,7 +60,8 @@ const MovieManager = ({ year }) => {
       director: movie.director || '',
       actors: movie.actors || '',
       synopsis: movie.synopsis || '',
-      genre: movie.genre || ''
+      genre: movie.genre || '',
+      img: movie.img || ''
     })
     onOpen()
   }
@@ -183,6 +186,12 @@ const MovieManager = ({ year }) => {
               placeholder="Film műfaja"
               value={formData.genre}
               onChange={(e) => setFormData({...formData, genre: e.target.value})}
+            />
+            <Input
+              label="Kép URL"
+              placeholder="https://example.com/image.jpg"
+              value={formData.img}
+              onChange={(e) => setFormData({...formData, img: e.target.value})}
             />
           </ModalBody>
           <ModalFooter>
