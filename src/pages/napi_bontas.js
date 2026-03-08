@@ -3,8 +3,11 @@ import React, { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { dayLabels, scheduleData } from "utils/const"
 import { Button } from "@heroui/react"
+import { useData } from "../contexts/DataContext"
+import ComingSoon from "../components/ComingSoon"
 
 function NapiBontas() {
+  const { year } = useData()
   const navigate = useNavigate()
 
   const grouped = scheduleData.reduce((acc, item) => {
@@ -25,8 +28,12 @@ function NapiBontas() {
   }
 
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
+
+  if (year === 2026) {
+    return <ComingSoon />
+  }
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">

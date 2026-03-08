@@ -163,6 +163,25 @@ export const news = {
   },
 }
 
+export const news2026 = {
+  0: {
+    title: "Érkezik a III. ELTE Szemle, hivatalos a zsűri névsora",
+    date: "2026. március 08.",
+    image:
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/sajtokozlemeny_borito_lgkedf.png",
+    link: {
+      page: "/erkezik_a_harmadik_elte_szemle",
+    },
+    description:
+      "A tavalyi évhez hasonlóan idén is április 29. és május 2. között rendezik meg az ELTE filmes képzésein készülő hallgatói filmek fesztiválját, az ELTE Szemlét.",
+  },
+}
+
+export const newsByYear = {
+  2025: news,
+  2026: news2026,
+}
+
 export const scheduleData = [
   {
     name: "Fotókiállítás megnyitó",

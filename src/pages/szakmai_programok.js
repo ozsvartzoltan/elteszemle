@@ -2,8 +2,11 @@ import React, { useEffect, useRef } from "react"
 import { extraPrograms, dayLabels } from "utils/const"
 import { Button } from "@heroui/react"
 import SVG from "components/svg/SVG"
+import { useData } from "../contexts/DataContext"
+import ComingSoon from "../components/ComingSoon"
 
 function SzakmaiProgramok() {
+  const { year } = useData()
   const blockRefs = useRef({})
 
   useEffect(() => {
@@ -17,8 +20,12 @@ function SzakmaiProgramok() {
         match.scrollIntoView({ behavior: "smooth", block: "start" })
       }
     }
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
+
+  if (year === 2026) {
+    return <ComingSoon />
+  }
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">

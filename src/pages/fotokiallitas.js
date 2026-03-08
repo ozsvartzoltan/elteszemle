@@ -1,11 +1,19 @@
 import React, { useEffect } from "react"
 import { Button, Image } from "@heroui/react"
 import SVG from "components/svg/SVG"
+import { useData } from "../contexts/DataContext"
+import ComingSoon from "../components/ComingSoon"
 
 function Fotokiallitas() {
+  const { year } = useData()
+
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
+
+  if (year === 2026) {
+    return <ComingSoon />
+  }
 
   return (
     <div className="min-h-screen bg-black text-white py-12 px-6 sm:px-20 space-y-12 text-justify">

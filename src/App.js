@@ -13,6 +13,7 @@ import Nevezes from "pages/nevezes"
 import Sajtokozlemenyketto from "pages/Sajtokozlemenyketto"
 import BestOfRegisztracio from "pages/BestOfRegisztracio"
 import Bestof from "pages/Bestof"
+import ErkezikAHarmadikElteSzemle from "pages/ErkezikAHarmadikElteSzemle"
 import { ConsentProvider } from "./contexts/ConsentContext"
 import { DataProvider } from "./contexts/DataContext"
 import CookieConsentBanner from "./components/CookieConsent"
@@ -42,6 +43,10 @@ export default function App() {
               <Route path="/1_sajtokozlemeny" element={<Sajtokozlemenyegy />} />
               <Route path="/nevezes" element={<Nevezes />} />
               <Route path="/sajtokozlemeny" element={<Sajtokozlemenyketto />} />
+              <Route
+                path="/erkezik_a_harmadik_elte_szemle"
+                element={<ErkezikAHarmadikElteSzemle />}
+              />
               <Route path="/best_of" element={<Bestof />} />
               <Route
                 path="/best_of_regisztracio"

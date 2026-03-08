@@ -72,11 +72,13 @@ export default function Header() {
               </DropdownTrigger>
             </NavbarItem>
             <DropdownMenu className="bg-black text-white rounded-none border-none p-0">
-              {programLinks.map(({ key, text, href }) => (
-                <DropdownItem key={key} className="h-14" href={href}>
-                  {text}
-                </DropdownItem>
-              ))}
+              {programLinks
+                .filter(({ key }) => !(key === 'fotokiallitas' && year === 2026))
+                .map(({ key, text, href }) => (
+                  <DropdownItem key={key} className="h-14" href={href}>
+                    {text}
+                  </DropdownItem>
+                ))}
             </DropdownMenu>
           </Dropdown>
 
@@ -163,20 +165,22 @@ export default function Header() {
           </Link>
         </NavbarMenuItem>
         {isProgramDropdownOpen &&
-          programLinks.map(({ key, href, text }) => (
-            <NavbarMenuItem key={key} className="ml-4">
-              <Link
-                href={href}
-                className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
-                onPress={() => {
-                  setIsMenuOpen(false)
-                  setIsProgramDropdownOpen(false)
-                }}
-              >
-                {text}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+          programLinks
+            .filter(({ key }) => !(key === 'fotokiallitas' && year === 2026))
+            .map(({ key, href, text }) => (
+              <NavbarMenuItem key={key} className="ml-4">
+                <Link
+                  href={href}
+                  className="w-full text-white text-lg py-2 hover:opacity-80 transition-opacity"
+                  onPress={() => {
+                    setIsMenuOpen(false)
+                    setIsProgramDropdownOpen(false)
+                  }}
+                >
+                  {text}
+                </Link>
+              </NavbarMenuItem>
+            ))}
         {Object.entries(links).map(([key, { href, text }]) => (
           <NavbarMenuItem key={key}>
             {href.startsWith("#") ? (

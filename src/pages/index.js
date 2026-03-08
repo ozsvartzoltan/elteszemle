@@ -1,21 +1,24 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Button } from "@heroui/react"
 import SVG from "components/svg/SVG"
-import { news } from "utils/const"
+import { newsByYear } from "utils/const"
 import { Swiper, SwiperSlide } from "swiper/react"
 import NewsCard from "components/NewsCard/index"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
+import { useData } from "../contexts/DataContext"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "../styles.css"
 
 function Home() {
-  const [showScroll, setShowScroll] = useState(true)
+  const { year } = useData()
+  const [showScroll] = useState(true)
   const swiperRef = useRef(null)
+  const currentNews = newsByYear[year] || newsByYear[2026]
 
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
 
   return (
@@ -36,7 +39,7 @@ function Home() {
             loop
             className="w-full h-auto"
           >
-            {Object.entries(news).map(([key, newsItem]) => (
+            {Object.entries(currentNews).map(([key, newsItem]) => (
               <SwiperSlide key={key} className="!bg-black">
                 <NewsCard newsItem={{ id: key, ...newsItem }} />
               </SwiperSlide>
@@ -57,7 +60,7 @@ function Home() {
             loop
             className="w-full h-auto"
           >
-            {Object.entries(news).map(([key, newsItem]) => (
+            {Object.entries(currentNews).map(([key, newsItem]) => (
               <SwiperSlide key={key} className="!bg-black ">
                 <NewsCard
                   newsItem={{ id: key, ...newsItem }}
@@ -68,7 +71,7 @@ function Home() {
           </Swiper>
         </div>
 
-        {Object.keys(news).length > 3 && (
+        {Object.keys(currentNews).length > 3 && (
           <div className="hidden lg:flex justify-center items-center">
             <Button
               id="prev-button"
@@ -98,7 +101,7 @@ function Home() {
               }}
               className="w-full h-auto rounded-none"
             >
-              {Object.entries(news).map(([key, newsItem]) => (
+              {Object.entries(currentNews).map(([key, newsItem]) => (
                 <SwiperSlide key={key} className="!bg-black">
                   <NewsCard newsItem={{ id: key, ...newsItem }} />
                 </SwiperSlide>
@@ -114,9 +117,9 @@ function Home() {
           </div>
         )}
 
-        {Object.keys(news).length <= 3 && (
+        {Object.keys(currentNews).length <= 3 && (
           <div className="hidden lg:flex flex-row gap-8 pb-5">
-            {Object.entries(news).map(([key, newsItem], index) => (
+            {Object.entries(currentNews).map(([key, newsItem], index) => (
               <NewsCard key={index} newsItem={{ id: key, ...newsItem }} />
             ))}
           </div>

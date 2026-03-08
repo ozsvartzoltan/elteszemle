@@ -3,7 +3,7 @@ import { Image, Button } from "@heroui/react"
 
 export default function Bestof() {
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
 
   return (

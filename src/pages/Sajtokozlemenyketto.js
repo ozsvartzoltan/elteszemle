@@ -4,7 +4,7 @@ import SVG from "components/svg/SVG"
 
 function Sajtokozlemenyketto() {
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
 
   return (

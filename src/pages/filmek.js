@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from "react"
 import { Tabs, Tab, Skeleton, Image, Button } from "@heroui/react"
 import { movies } from "utils/const"
 import SVG from "components/svg/SVG"
+import { useData } from "../contexts/DataContext"
+import ComingSoon from "../components/ComingSoon"
 
 function Filmek() {
+  const { year } = useData()
   const [selectedTab, setSelectedTab] = useState(Object.keys(movies)[0])
   const [loadedImages, setLoadedImages] = useState({})
   const tabContainerRef = useRef(null)
@@ -32,6 +35,10 @@ function Filmek() {
     }
     document.body.scrollTop = 0
   }, [])
+
+  if (year === 2026) {
+    return <ComingSoon />
+  }
 
   return (
     <div className="bg-black text-white min-h-screen px-4 py-12">

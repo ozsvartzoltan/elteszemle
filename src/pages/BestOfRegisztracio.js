@@ -4,7 +4,7 @@ import SVG from "components/svg/SVG"
 
 export default function BestOfRegisztracio() {
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
 
   return (
@@ -69,6 +69,7 @@ export default function BestOfRegisztracio() {
       <Button
         onPress={() => {
           window.scrollTo({ top: 0, behavior: "smooth" })
+          localStorage.removeItem("name")
         }}
         className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
       >

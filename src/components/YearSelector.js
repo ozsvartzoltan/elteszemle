@@ -4,7 +4,7 @@ import { useData } from '../contexts/DataContext'
 
 const YearSelector = () => {
   const { year, changeYear } = useData()
-  const availableYears = [2025, 2026]
+  const availableYears = [2026, 2025]
 
   return (
     <div className="flex justify-center gap-2 my-4">
