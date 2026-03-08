@@ -10,6 +10,8 @@ export const mhaImage =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/mha_logo_hgneh5.png"
 export const elteImage =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/filmtansz_logo_ktl0r1.png"
+export const muziZug =
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/Mozizug_logo_vilagos.png"
 
 export const zsurik = [
   {

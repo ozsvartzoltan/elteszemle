@@ -5,6 +5,7 @@ import {
   elteImage,
   mhaImage,
   mindenkiMozijaImage,
+  muziZug,
 } from "utils/const"
 import CookieSettings from "../CookieConsent/CookieSettings"
 
@@ -59,6 +60,17 @@ export default function Footer() {
               onClick={() =>
                 window.open(
                   "https://www.instagram.com/elte_film/?utm_source=qr",
+                  "_blank"
+                )
+              }
+            />
+            <Image
+              src={muziZug}
+              alt="MuziZug"
+              className="w-[150px] min-w-[120px] max-w-full h-auto object-contain bg-transparent cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://mozizug.hu/",
                   "_blank"
                 )
               }
@@ -156,6 +168,17 @@ export default function Footer() {
               onClick={() =>
                 window.open(
                   "https://www.instagram.com/elte_film/?utm_source=qr",
+                  "_blank"
+                )
+              }
+            />
+            <Image
+              src={muziZug}
+              alt="MuziZug"
+              className="w-[140px] min-w-[120px] max-w-full h-auto object-contain bg-transparent cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://mozizug.hu/",
                   "_blank"
                 )
               }
