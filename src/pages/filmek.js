@@ -3,10 +3,12 @@ import { Tabs, Tab, Skeleton, Image, Button } from "@heroui/react"
 import { movies } from "utils/const"
 import SVG from "components/svg/SVG"
 import { useData } from "../contexts/DataContext"
+import { useTheme } from "../contexts/ThemeContext"
 import ComingSoon from "../components/ComingSoon"
 
 function Filmek() {
   const { year } = useData()
+  const { colors } = useTheme()
   const [selectedTab, setSelectedTab] = useState(Object.keys(movies)[0])
   const [loadedImages, setLoadedImages] = useState({})
   const tabContainerRef = useRef(null)
@@ -85,7 +87,7 @@ function Filmek() {
               className="bg-gray-900 border border-white/10 rounded-xl shadow-xl flex flex-col md:flex-row overflow-hidden"
             >
               <div className="md:w-2/3 w-full p-6 space-y-2">
-                <h2 className="text-2xl font-bold text-[#cc2d1c]">
+                <h2 className="text-2xl font-bold" style={{ color: colors.mainColor }}>
                   {movie?.titleJSX ?? movie?.title}
                 </h2>
                 {movie?.director !== "-" && (
@@ -129,7 +131,7 @@ function Filmek() {
         onPress={() => {
           document.body.scrollTop = 0
         }}
-        className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all z-10000"
+        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg transition-all z-10000"
       >
         <SVG type="chevronUp" />
       </Button>

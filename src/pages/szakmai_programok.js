@@ -3,10 +3,12 @@ import { extraPrograms, dayLabels } from "utils/const"
 import { Button } from "@heroui/react"
 import SVG from "components/svg/SVG"
 import { useData } from "../contexts/DataContext"
+import { useTheme } from "../contexts/ThemeContext"
 import ComingSoon from "../components/ComingSoon"
 
 function SzakmaiProgramok() {
   const { year } = useData()
+  const { colors } = useTheme()
   const blockRefs = useRef({})
 
   useEffect(() => {
@@ -36,7 +38,7 @@ function SzakmaiProgramok() {
       <div className="space-y-16 max-w-4xl mx-auto">
         {Object.entries(extraPrograms).map(([date, programs]) => (
           <div key={date} className="space-y-8">
-            <h2 className="text-2xl font-semibold text-[#cc2d1c]">
+            <h2 className="text-2xl font-semibold" style={{ color: colors.mainColor }}>
               {dayLabels[date] || date}
             </h2>
 
@@ -54,7 +56,7 @@ function SzakmaiProgramok() {
                   >
                     <p className="text-lg font-semibold text-white">
                       <span className="uppercase">{program.title} </span>
-                      <span className="text-[#cc2d1c] text-sm font-normal">
+                      <span className="text-sm font-normal" style={{ color: colors.mainColor }}>
                         – {program.time}
                       </span>
                     </p>
@@ -91,7 +93,8 @@ function SzakmaiProgramok() {
                           href={program.link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="underline text-[#cc2d1c]"
+                          className="underline"
+                          style={{ color: colors.linkColor }}
                         >
                           {program.link.text}
                         </a>
@@ -109,7 +112,7 @@ function SzakmaiProgramok() {
         onPress={() => {
           document.body.scrollTop = 0
         }}
-        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg transition-all"
       >
         <SVG type="chevronUp" />
       </Button>

@@ -56,9 +56,9 @@ const AdminPanel = () => {
 
   // Show login form
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#542142] to-[#3a1730] flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
-        <CardHeader className="flex flex-col gap-3 bg-red-600 text-white rounded-t-lg">
+        <CardHeader className="flex flex-col gap-3 bg-[#542142] text-white rounded-t-lg">
           <h1 className="text-2xl font-bold">🍪 ELTE Szemle Admin</h1>
           <p className="text-sm">Bejelentkezés szükséges</p>
         </CardHeader>
@@ -84,7 +84,7 @@ const AdminPanel = () => {
             />
 
             {error && (
-              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+              <div className="bg-purple-100 border border-purple-400 text-purple-700 px-4 py-3 rounded">
                 {error}
               </div>
             )}

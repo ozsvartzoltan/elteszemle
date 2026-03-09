@@ -1,8 +1,11 @@
 import React, { useEffect } from "react"
 import { Button, Image } from "@heroui/react"
 import SVG from "components/svg/SVG"
+import { useTheme } from "../contexts/ThemeContext"
 
 function ErkezikAHarmadikElteSzemle() {
+  const { colors } = useTheme()
+  
   useEffect(() => {
     localStorage.removeItem("name")
   }, [])
@@ -41,7 +44,7 @@ function ErkezikAHarmadikElteSzemle() {
         </p>
 
         <p>
-          A fesztivál összes programja változatlanul ingyenesen látogatható. Az esemény fő támogatója a Canon Magyarország, kiemelt támogatója és technikai kivitelezője a Mindenki Mozija. Az ELTE filmszakos hallgatói március 17-ig nevezhetik filmjeiket az <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2xhelfzpV8Jyk82vE-uiXm3yt_1Nw-QNVOBa1QJCuJ1Kr_g/viewform?fbclid=IwY2xjawQWZ4RleHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeLXkGusujqSGUDE1Gn3So3excfmVeXK19lHu_PHbD7LN53ez1RS9luZ3572M_aem_QRFfIiOj3MvPQkLQgvc6tw" target="_blank" rel="noopener noreferrer" className="text-[#cc2d1c] underline">alábbi linken</a>. További infók az esemény weboldalán, valamint <a href="https://www.instagram.com/elteszemle?igsh=dmVhZ3czMmoyMG5h" target="_blank" rel="noopener noreferrer" className="text-[#cc2d1c] underline">social media felületein</a>. Részletes program április első felében várható.
+          A fesztivál összes programja változatlanul ingyenesen látogatható. Az esemény fő támogatója a Canon Magyarország, kiemelt támogatója és technikai kivitelezője a Mindenki Mozija. Az ELTE filmszakos hallgatói március 17-ig nevezhetik filmjeiket az <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2xhelfzpV8Jyk82vE-uiXm3yt_1Nw-QNVOBa1QJCuJ1Kr_g/viewform?fbclid=IwY2xjawQWZ4RleHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeLXkGusujqSGUDE1Gn3So3excfmVeXK19lHu_PHbD7LN53ez1RS9luZ3572M_aem_QRFfIiOj3MvPQkLQgvc6tw" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: colors.linkColor }}>alábbi linken</a>. További infók az esemény weboldalán, valamint <a href="https://www.instagram.com/elteszemle?igsh=dmVhZ3czMmoyMG5h" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: colors.linkColor }}>social media felületein</a>. Részletes program április első felében várható.
         </p>
       </div>
 
@@ -49,7 +52,7 @@ function ErkezikAHarmadikElteSzemle() {
         onPress={() => {
           document.body.scrollTop = 0
         }}
-        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg transition-all"
       >
         <SVG type="chevronUp" />
       </Button>

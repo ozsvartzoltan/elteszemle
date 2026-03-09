@@ -1,8 +1,11 @@
 import React, { useEffect } from "react"
 import { Button, Image } from "@heroui/react"
 import SVG from "components/svg/SVG"
+import { useTheme } from "../contexts/ThemeContext"
 
 export default function BestOfRegisztracio() {
+  const { colors } = useTheme()
+  
   useEffect(() => {
     localStorage.removeItem("name")
   }, [])
@@ -37,7 +40,8 @@ export default function BestOfRegisztracio() {
             href="https://forms.gle/kEVn5WQG8PJDLpKz7"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
           >
             alábbi űrlap kitöltésével tudjátok biztosítani a helyeteket a
             vetítésre.
@@ -52,7 +56,8 @@ export default function BestOfRegisztracio() {
             href="https://forms.gle/p9JxQRHH5D7MjvLu9"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
           >
             amire itt tudjátok bebiztosítani a helyeteket.
           </a>{" "}
@@ -71,7 +76,7 @@ export default function BestOfRegisztracio() {
           window.scrollTo({ top: 0, behavior: "smooth" })
           localStorage.removeItem("name")
         }}
-        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg transition-all"
       >
         <SVG type="chevronUp" />
       </Button>

@@ -15,18 +15,20 @@ import BestOfRegisztracio from "pages/BestOfRegisztracio"
 import Bestof from "pages/Bestof"
 import ErkezikAHarmadikElteSzemle from "pages/ErkezikAHarmadikElteSzemle"
 import { ConsentProvider } from "./contexts/ConsentContext"
-import { DataProvider } from "./contexts/DataContext"
+import { DataProvider, useData } from "./contexts/DataContext"
+import { ThemeProvider } from "./contexts/ThemeContext"
 import CookieConsentBanner from "./components/CookieConsent"
 import ConsentDebugger from "./components/ConsentDebugger"
 import AdminPanel from "./components/AdminPanel/AdminPanel"
 import YearSelector from "./components/YearSelector"
 import FirebaseTest from "./components/FirebaseTest"
 
-export default function App() {
+function AppContent() {
+  const { year } = useData()
+  
   return (
-    <ConsentProvider>
-      <DataProvider>
-        <HeroUIProvider>
+    <ThemeProvider year={year}>
+      <HeroUIProvider>
           <Router>
             <Routes>
               <Route path="/admin" element={<AdminPanel />} />
@@ -61,6 +63,15 @@ export default function App() {
             {/* <ConsentDebugger /> */}
           </Router>
         </HeroUIProvider>
+      </ThemeProvider>
+    )
+}
+
+export default function App() {
+  return (
+    <ConsentProvider>
+      <DataProvider>
+        <AppContent />
       </DataProvider>
     </ConsentProvider>
   )

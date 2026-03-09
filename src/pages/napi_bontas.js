@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom"
 import { dayLabels, scheduleData } from "utils/const"
 import { Button } from "@heroui/react"
 import { useData } from "../contexts/DataContext"
+import { useTheme } from "../contexts/ThemeContext"
 import ComingSoon from "../components/ComingSoon"
 
 function NapiBontas() {
   const { year } = useData()
+  const { colors } = useTheme()
   const navigate = useNavigate()
 
   const grouped = scheduleData.reduce((acc, item) => {
@@ -42,7 +44,7 @@ function NapiBontas() {
       <div className="space-y-16 max-w-4xl mx-auto">
         {Object.entries(grouped).map(([date, blocks]) => (
           <div key={date} className="space-y-8">
-            <h2 className="text-2xl font-semibold text-[#cc2d1c]">
+            <h2 className="text-2xl font-semibold" style={{ color: colors.mainColor }}>
               {dayLabels[date] || date}
               {(date === "04.29" || date === "04.30" || date === "05.01") && (
                 <span className="text-[#f7f2e3]"> - Stúdió K</span>
@@ -67,7 +69,7 @@ function NapiBontas() {
                     <span className=" font-medium text-lg">{block.name}</span>
                   </div>
                   <div>
-                    <span className="text-[#cc2d1c] font-semibold flex text-right">
+                    <span className="font-semibold flex text-right" style={{ color: colors.mainColor }}>
                       {block.time}
                     </span>
                   </div>
@@ -81,7 +83,7 @@ function NapiBontas() {
         onPress={() => {
           document.body.scrollTop = 0
         }}
-        className="fixed bottom-1 right-3 bg-black text-white  rounded-full shadow-lg hover:bg-[#702a25] transition-all"
+        className="fixed bottom-1 right-3 bg-black text-white rounded-full shadow-lg transition-all"
       >
         <SVG type="chevronUp" />
       </Button>

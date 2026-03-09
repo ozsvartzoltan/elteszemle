@@ -8,10 +8,13 @@ import {
   muziZug,
 } from "utils/const"
 import CookieSettings from "../CookieConsent/CookieSettings"
+import { useTheme } from "../../contexts/ThemeContext"
 
 export default function Footer() {
+  const { colors } = useTheme()
+  
   return (
-    <footer className="bg-[#cc2d1c] px-6 py-12 text-white sm:px-12">
+    <footer className="px-6 py-12 text-white sm:px-12" style={{ backgroundColor: colors.mainColor }}>
       {/* Desktop Layout */}
       <div className="hidden sm:grid mx-auto max-w-7xl gap-6 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] items-start">
         {/* FŐ TÁMOGATÓ */}

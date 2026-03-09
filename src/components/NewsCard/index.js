@@ -1,7 +1,9 @@
 import React from "react";
 import { Card, CardHeader, CardBody, Image, Button } from "@heroui/react";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const NewsCard = ({ newsItem }) => {
+  const { colors } = useTheme();
   return (
     <Card className="bg-gray-900 border border-gray-700 shadow-lg w-full overflow-hidden">
       <CardHeader className="p-0 w-full">
@@ -18,7 +20,8 @@ const NewsCard = ({ newsItem }) => {
           {newsItem.description}
         </p>
         <Button
-          className="bg-[#cc2d1c] text-white transition-all mt-auto"
+          className="text-white transition-all mt-auto"
+          style={{ backgroundColor: colors.mainColor }}
           onPress={() => window.open(`${newsItem?.link?.page}`, "_self")}
         >
           Megtekintés

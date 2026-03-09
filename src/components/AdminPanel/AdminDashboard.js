@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Tabs, Tab } from '@heroui/react'
 import MovieManager from './MovieManager'
 import JuryManager from './JuryManager'
+import SettingsManager from './SettingsManager'
 import { useData } from '../../contexts/DataContext'
 
 const AdminDashboard = ({ user, onLogout }) => {
@@ -10,17 +11,17 @@ const AdminDashboard = ({ user, onLogout }) => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <div className="bg-red-600 text-white p-6 shadow-lg">
+      <div className="bg-[#542142] text-white p-6 shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold">ELTE Szemle Admin Panel</h1>
-            <p className="text-red-100 mt-1">Bejelentkezve: {user.email}</p>
+            <p className="text-purple-100 mt-1">Bejelentkezve: {user.email}</p>
           </div>
           <Button
             color="danger"
             variant="light"
             onPress={onLogout}
-            className="text-white hover:bg-red-700"
+            className="text-white hover:bg-[#6a2952]"
           >
             Kijelentkezés
           </Button>
@@ -65,6 +66,9 @@ const AdminDashboard = ({ user, onLogout }) => {
             </Tab>
             <Tab key="jury" title="Szakmai zsűri">
               <JuryManager year={year} />
+            </Tab>
+            <Tab key="settings" title="Beállítások">
+              <SettingsManager />
             </Tab>
           </Tabs>
         )}

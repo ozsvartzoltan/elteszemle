@@ -6,6 +6,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Image, Button, Na
 import SVG from "components/svg/SVG"
 import { headerImage, links, programLinks } from "utils/const"
 import { useData } from "../../contexts/DataContext"
+import { useTheme } from "../../contexts/ThemeContext"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,6 +14,7 @@ export default function Header() {
   const navigate = useNavigate()
   const location = useLocation()
   const { year, changeYear } = useData()
+  const { colors } = useTheme()
 
   const scrollToSection = (targetId) => {
     setIsMenuOpen(false)
@@ -39,7 +41,8 @@ export default function Header() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-[#cc2d1c] text-white h-[100px] w-full flex-shrink-0"
+      className="text-white h-[100px] w-full flex-shrink-0"
+      style={{ backgroundColor: colors.mainColor }}
     >
       <div className="container mx-auto flex items-center justify-between w-full">
         <NavbarBrand className="flex-shrink-0">
@@ -154,7 +157,7 @@ export default function Header() {
         </div>
       </div>
 
-      <NavbarMenu className="bg-[#cc2d1c] pt-16">
+      <NavbarMenu className="pt-16" style={{ backgroundColor: colors.mainColor }}>
         <NavbarMenuItem>
           <Link
             onPress={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}

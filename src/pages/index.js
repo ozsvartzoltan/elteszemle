@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Button } from "@heroui/react"
 import SVG from "components/svg/SVG"
-import { newsByYear } from "utils/const"
+import { newsByYear, rolunk, stab } from "utils/const"
 import { Swiper, SwiperSlide } from "swiper/react"
 import NewsCard from "components/NewsCard/index"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import { useData } from "../contexts/DataContext"
+import { useTheme } from "../contexts/ThemeContext"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
@@ -13,9 +14,12 @@ import "../styles.css"
 
 function Home() {
   const { year } = useData()
+  const { colors } = useTheme()
   const [showScroll] = useState(true)
   const swiperRef = useRef(null)
   const currentNews = newsByYear[year] || newsByYear[2026]
+  const currentRolunk = rolunk[year] || rolunk[2025]
+  const currentStab = stab[year] || stab[2025]
 
   useEffect(() => {
     localStorage.removeItem("name")
@@ -128,70 +132,45 @@ function Home() {
 
       <div id="rolunk" className=" space-y-6 text-justify leading-relaxed">
         <div className="font-bold text-4xl mt-10">Rólunk</div>
-        <div>
-          Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi
-          filmfesztivál, amelyen az ELTE Filmtanszékén készülő hallgatói filmek
-          kerülnek bemutatásra. Célunk láthatóságot adni a műhelymunkának, ami a
-          magyar film jövőjét alakíthatja ki.
-        </div>
-        <div>
-          A fesztiválon a Mozgókép alapképzés (MoHa), a Filmtudomány mesterszak,
-          valamint a Szabad bölcsészet Film specializációs hallgatók munkáit
-          vetítjük. A filmek díjazására egy szakmai zsűrit kérünk fel, amely
-          dönt a fesztivál fődíjáról, illetve összeállít egy ún. BEST OF blokkot
-          a legmagasabb színvonalú munkákból. A vetítéseken kívül különböző
-          szakmai programokat is szervezünk. Az érdeklődők betekintést kaphatnak
-          a hazai filmes szakmai kulisszái mögé, izgalmas
-          kerekasztal-beszélgetések, valamint mesterkurzusok és workshopok
-          révén.
-        </div>
-        <div>
-          A fesztivált immár egy több mint tíz fős csapat szervezi. Ezt a
-          küldetést mindannyian egyfajta elhivatottságból vállaltuk. Hiszünk
-          abban, hogy ez az esemény egy olyan érték lehet hosszútávon, amely
-          nemcsak a fiatal filmesek körében, de az egész magyar filmszakmában is
-          népszerűvé, elismertté tud válni.
-        </div>
-        <div>
-          Az ELTE képzésein temérdek értékes és figyelemre méltó alkotás készül.
-          A 2024-es Friss Húson hat, míg a 2025-ös Magyar Filmszemlén tizenhárom
-          rövidfilm szerepelt a programban. Ress Abigél Háztűznéző című filmje
-          ráadásul elnyerte a Legjobb Rövid Dokumentumfilm díját. De nem csak
-          idehaza aratnak sikert ezek a filmek: 2022-ben Szelestey Bianka
-          Hajszálrepedés című diplomafilmje a Cannes-i Nemzetközi filmfesztivál
-          Cinéfondation szekciójában versenyzett, Heim Vilmos Apám fia című
-          alkotását vetítették az egyik legrangosabb német diákfilmfesztiválon,
-          a müncheni Filmschoolfesten, de megjárta Mexikót, Bulgáriát és
-          Lengyelországot is.
-        </div>
-        <div>
-          Az ELTE Szemle összes programja nyitott és ingyenesen látogatható.
-        </div>
+        {currentRolunk.map((paragraph, index) => {
+          // Special handling for the 2026 registration link
+          if (year === 2026 && paragraph.includes("Az ELTE filmszakos diákjai itt tudnak nevezni")) {
+            const parts = paragraph.split("itt")
+            return (
+              <div key={index}>
+                {parts[0]}
+                <a 
+                  href="https://forms.gle/Bv7nSY4wU2ueXJrYA" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:underline font-semibold"
+                  style={{ color: colors.linkColor }}
+                >
+                  itt
+                </a>
+                {parts[1]}
+              </div>
+            )
+          }
+          return <div key={index}>{paragraph}</div>
+        })}
       </div>
       <div id="stab" className="space-y-6 text-justify">
         <div className="font-bold text-4xl mt-10">Stáb</div>
         <div className="font-bold my-0">Az ELTE Szemle csapata:</div>
         <div>
-          <div className="font-bold">Főszervezők:</div>
-          <div>Tóth Anna Júlia és Kristóf Álmos</div>
-          <div className="font-bold pt-4">Szervezői csapat:</div>
-          <div>
-            Kriza Áron, Bíró Rozi, Hurtik Nóra, Somorjai Máté, Rözge Borisz,
-            Szirmai János, Vajda Fruzsi, Mrena Dorka, Vigh Martin, Igaz Réka,
-            Orbán Róza
-          </div>{" "}
-          <div className=" pt-4">
-            <div>
-              <span className="font-bold">Mozigépészek:</span> Dér Zsolt, dr.
-              Kerekes Zoltán
+          {Object.entries(currentStab).map(([key, value]) => (
+            <div key={key} className={key === "Főszervezők" ? "" : "pt-4"}>
+              <span className="font-bold">{key}:</span>{" "}
+              {key === "Főszervezők" ? (
+                <div>{value}</div>
+              ) : key === "Szervezői csapat" || key === "Külön köszönet" ? (
+                <div>{value}</div>
+              ) : (
+                value
+              )}
             </div>
-            <div>
-              <span className="font-bold">Arculat:</span> Kristóf Viola
-            </div>
-            <div>
-              <span className="font-bold">Weboldal:</span> Ozsvárt Zoltán
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       {showScroll && (
