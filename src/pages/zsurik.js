@@ -26,7 +26,7 @@ function Zsurik() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <Card className="bg-gray-900 border border-gray-700 shadow-lg overflow-hidden w-full max-w-[420px]">
+            <Card className="bg-gray-900 border border-gray-700 shadow-lg overflow-hidden w-full max-w-[500px]">
               <CardHeader className="p-0 items-center justify-center">
                 <Image
                   src={zsuri.img || zsuri.image}

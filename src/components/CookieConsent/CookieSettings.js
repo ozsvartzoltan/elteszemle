@@ -5,7 +5,6 @@ import { useTheme } from 'contexts/ThemeContext'
 
 const CookieSettings = ({ className = '' }) => {
     const { showConsentSettings, hasConsentBeenSet, consentPreferences } = useConsent()
-  const { colors } = useTheme()
 
     const handleShowSettings = () => {
         showConsentSettings()

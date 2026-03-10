@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Image, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/react"
 import SVG from "components/svg/SVG"
-import { headerImage, links, logo_2026, programLinks } from "utils/const"
+import { headerImage, logo_2026, links, programLinks } from "utils/const"
 import { useData } from "../../contexts/DataContext"
 import { useTheme } from "../../contexts/ThemeContext"
 
@@ -47,12 +47,16 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between w-full">
         <NavbarBrand className="flex-shrink-0">
           <Image
-            src={logo_2026 || "/placeholder.svg"}
+            src={(year === 2026 ? logo_2026 : headerImage) || "/placeholder.svg"}
             alt="ELTE Szemle Logo"
             radius="none"
-            width={100}
-            height={100}
-            className="w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent -ml-6"
+            width={year === 2026 ? 90 : 100}
+            height={year === 2026 ? 90 : 100}
+            className={
+              year === 2026
+                ? "w-[90px] h-[90px] min-w-[90px] min-h-[90px] cursor-pointer bg-transparent -ml-6"
+                : "w-[100px] h-[100px] min-w-[100px] cursor-pointer bg-transparent -ml-6"
+            }
             onClick={() => {
               setIsMenuOpen(false)
               navigate("/")
