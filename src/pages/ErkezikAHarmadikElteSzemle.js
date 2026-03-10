@@ -15,7 +15,7 @@ function ErkezikAHarmadikElteSzemle() {
       <div className="max-w-3xl mx-auto space-y-6 text-white/90 leading-relaxed text-justify">
         <div className="flex justify-center">
           <Image
-            src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/sajtokozlemeny_borito_lgkedf.png"
+            src="https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/hirek/ErkezikAHarmadikElteSzemle.png"
             alt="Érkezik a III. ELTE Szemle"
             className="shadow-lg w-full max-w-2xl rounded-3xl"
           />

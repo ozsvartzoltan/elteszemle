@@ -12,6 +12,7 @@ export const elteImage =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/filmtansz_logo_ktl0r1.png"
 export const muziZug =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/Mozizug_logo_vilagos.png"
+export const logo_2026 = "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/logo/logo_2026.png"
 
 export const zsurik = [
   {
@@ -99,7 +100,7 @@ export const stab = {
   2026: {
     "Főszervezők": "Tóth Anna Júlia és Kristóf Álmos",
     "Szervezői csapat": "Vajda Fruzsi, Hurtik Nóra, Nagy Sára, Papp Tánya Zsófia, Vigh Sára, Csókás Nándor, Nagy Dániel, Lelkes Sára, Mrena Dorka",
-    "Külön köszönet": "Bíró Rozi, Kriza Áron, Jó Kristóf, Kis Xavér, Győri Csilla",
+    "Külön köszönet": "Bíró Rozi, Kriza Áron, Jó Kristóf, Kis Xavér, Győri Csilla, Lázár Eszter, Rigó Karolina, Vigh Martin",
     "Mozigépészek": "dr. Kerekes Zoltán, Dér Zsolt, Gazdag Gergő",
     "Arculat": "Kristóf Viola",
     "Weboldal": "Ozsvárt Zoltán" 
@@ -204,7 +205,7 @@ export const news2026 = {
     title: "Érkezik a III. ELTE Szemle, hivatalos a zsűri névsora",
     date: "2026. március 08.",
     image:
-      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/sajtokozlemeny_borito_lgkedf.png",
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/hirek/ErkezikAHarmadikElteSzemle.png",
     link: {
       page: "/erkezik_a_harmadik_elte_szemle",
     },
