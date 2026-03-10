@@ -5,12 +5,16 @@ import {
   elteImage,
   mhaImage,
   mindenkiMozijaImage,
+  muziZug,
 } from "utils/const"
 import CookieSettings from "../CookieConsent/CookieSettings"
+import { useTheme } from "../../contexts/ThemeContext"
 
 export default function Footer() {
+  const { colors } = useTheme()
+  
   return (
-    <footer className="bg-[#cc2d1c] px-6 py-12 text-white sm:px-12">
+    <footer className="px-6 py-12 text-white sm:px-12" style={{ backgroundColor: colors.mainColor }}>
       {/* Desktop Layout */}
       <div className="hidden sm:grid mx-auto max-w-7xl gap-6 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] items-start">
         {/* FŐ TÁMOGATÓ */}
@@ -63,6 +67,17 @@ export default function Footer() {
                 )
               }
             />
+            <Image
+              src={muziZug}
+              alt="MuziZug"
+              className="w-[150px] min-w-[120px] max-w-full h-auto object-contain bg-transparent cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://mozizug.hu/",
+                  "_blank"
+                )
+              }
+            />
           </div>
         </div>
 
@@ -104,8 +119,8 @@ export default function Footer() {
       </div>
 
       {/* Copyright and Cookie Settings */}
-      <div className="hidden sm:block border-t border-red-400 mt-8 pt-6 text-center">
-        <div className="flex justify-center items-center gap-4 text-sm text-red-100">
+      <div className={`hidden sm:block border-t border-[${colors.linkColor}] mt-8 pt-6 text-center`}>
+        <div className="flex justify-center items-center gap-4 text-sm">
           <span>© 2026 ELTE Szemle. Minden jog fenntartva.</span>
           <span>|</span>
           <CookieSettings />
@@ -160,6 +175,17 @@ export default function Footer() {
                 )
               }
             />
+            <Image
+              src={muziZug}
+              alt="MuziZug"
+              className="w-[140px] min-w-[120px] max-w-full h-auto object-contain bg-transparent cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://mozizug.hu/",
+                  "_blank"
+                )
+              }
+            />
           </div>
         </div>
 
@@ -197,8 +223,8 @@ export default function Footer() {
       </div>
 
       {/* Copyright and Cookie Settings - Mobile */}
-      <div className="sm:hidden border-t border-red-400 mt-8 pt-6 text-center">
-        <div className="flex flex-col items-center gap-2 text-sm text-red-100">
+      <div className={`sm:hidden border-t border-[${colors.linkColor}] mt-8 pt-6 text-center`}>
+        <div className="flex flex-col items-center gap-2 text-sm ">
           <span>© 2026 ELTE Szemle</span>
           <span>Minden jog fenntartva.</span>
           <CookieSettings />

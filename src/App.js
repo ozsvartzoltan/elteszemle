@@ -13,16 +13,28 @@ import Nevezes from "pages/nevezes"
 import Sajtokozlemenyketto from "pages/Sajtokozlemenyketto"
 import BestOfRegisztracio from "pages/BestOfRegisztracio"
 import Bestof from "pages/Bestof"
+import ErkezikAHarmadikElteSzemle from "pages/ErkezikAHarmadikElteSzemle"
 import { ConsentProvider } from "./contexts/ConsentContext"
+import { DataProvider, useData } from "./contexts/DataContext"
+import { ThemeProvider } from "./contexts/ThemeContext"
 import CookieConsentBanner from "./components/CookieConsent"
 import ConsentDebugger from "./components/ConsentDebugger"
+import AdminPanel from "./components/AdminPanel/AdminPanel"
+import YearSelector from "./components/YearSelector"
+import FirebaseTest from "./components/FirebaseTest"
 
-export default function App() {
+function AppContent() {
+  const { year } = useData()
+  
   return (
-    <ConsentProvider>
+    <ThemeProvider year={year}>
       <HeroUIProvider>
-        <Router>
-          <Layout className="space-y-6 leading-relaxed">
+          <Router>
+            <Routes>
+              <Route path="/admin" element={<AdminPanel />} />
+              <Route path="/firebase-test" element={<FirebaseTest />} />
+              <Route path="*" element={
+                <Layout className="space-y-6 leading-relaxed">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/zsurik" element={<Zsurik />} />
@@ -33,6 +45,10 @@ export default function App() {
               <Route path="/1_sajtokozlemeny" element={<Sajtokozlemenyegy />} />
               <Route path="/nevezes" element={<Nevezes />} />
               <Route path="/sajtokozlemeny" element={<Sajtokozlemenyketto />} />
+              <Route
+                path="/erkezik_a_harmadik_elte_szemle"
+                element={<ErkezikAHarmadikElteSzemle />}
+              />
               <Route path="/best_of" element={<Bestof />} />
               <Route
                 path="/best_of_regisztracio"
@@ -40,11 +56,23 @@ export default function App() {
               />
               <Route path="*" element={<Home />} />
             </Routes>
-          </Layout>
-          <CookieConsentBanner />
-          <ConsentDebugger />
-        </Router>
-      </HeroUIProvider>
+                </Layout>
+              } />
+            </Routes>
+            <CookieConsentBanner />
+            {/* <ConsentDebugger /> */}
+          </Router>
+        </HeroUIProvider>
+      </ThemeProvider>
+    )
+}
+
+export default function App() {
+  return (
+    <ConsentProvider>
+      <DataProvider>
+        <AppContent />
+      </DataProvider>
     </ConsentProvider>
   )
 }

@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import { Card, CardHeader, CardBody, Image } from "@heroui/react";
 import { motion } from "framer-motion";
-import { fixWidows, zsurik } from "utils/const";
+import { fixWidows } from "utils/const";
+import { useData } from "../contexts/DataContext";
 
 function Zsurik() {
+  const { jurys } = useData();
+
   useEffect(() => {
-    localStorage.clear();
+    localStorage.removeItem("name");
   }, []);
   return (
     <div className="min-h-screen bg-black text-white px-4 sm:px-10 py-10">
@@ -14,7 +17,7 @@ function Zsurik() {
       </h1>
 
       <div className="flex flex-wrap justify-center gap-8">
-        {zsurik.map((zsuri, index) => (
+        {jurys.map((zsuri, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
@@ -23,10 +26,10 @@ function Zsurik() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <Card className="bg-gray-900 border border-gray-700 shadow-lg overflow-hidden w-full max-w-[420px]">
+            <Card className="bg-gray-900 border border-gray-700 shadow-lg overflow-hidden w-full max-w-[500px]">
               <CardHeader className="p-0 items-center justify-center">
                 <Image
-                  src={zsuri.image}
+                  src={zsuri.img || zsuri.image}
                   alt={zsuri.name}
                   className="w-full h-64 object-cover"
                 />
@@ -35,9 +38,9 @@ function Zsurik() {
                 <h2 className="text-white text-2xl font-semibold">
                   {zsuri.name}
                 </h2>
-                <p className="text-gray-400 mb-4">{zsuri.title}</p>
+                <p className="text-gray-400 mb-4">{zsuri.work || zsuri.title}</p>
                 <p className="text-gray-300 " lang="hu">
-                  {fixWidows(zsuri.description)}
+                  {fixWidows(zsuri.desc || zsuri.description || "")}
                 </p>
               </CardBody>
             </Card>

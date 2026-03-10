@@ -3,7 +3,7 @@ import { Image } from "@heroui/react"
 
 function Sajtokozlemenyegy() {
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
   return (
     <div className="min-h-screen bg-black text-white px-4 md:px-20 lg:px-40 py-2">

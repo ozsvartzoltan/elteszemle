@@ -10,6 +10,9 @@ export const mhaImage =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/mha_logo_hgneh5.png"
 export const elteImage =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/filmtansz_logo_ktl0r1.png"
+export const muziZug =
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/Mozizug_logo_vilagos.png"
+export const logo_2026 = "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/logo/logo_2026.png"
 
 export const zsurik = [
   {
@@ -66,6 +69,42 @@ export const fixWidows = (text) => {
     .replace(/ oda /g, " oda\u00A0")
     .replace(/ ami /g, " ami\u00A0")
     .replace(/ aki /g, " aki\u00A0")
+}
+
+export const rolunk = {
+  2026: [
+    "Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi filmfesztivál, amelyen az ELTE Filmtanszékén készülő hallgatói filmek kerülnek bemutatásra. Célunk láthatóságot adni a műhelymunkának, ami a magyar film jövőjét alakíthatja ki.",
+    "A fesztiválon a Mozgókép alapképzés (MoHa), a Filmtudomány mesterszak, valamint a Szabadbölcsészet Film specializációs hallgatók munkáit vetítjük. A filmek díjazására egy  szakmai zsűrit kérünk fel, amely dönt a fesztivál fődíjáról, illetve összeállít egy ún. BEST OF blokkot a legmagasabb színvonalú munkákból, amik a legjobban mutatják be az egyetemen készülő filmek világát. A vetítéseken kívül különböző szakmai programokat is szervezünk. Az érdeklődők betekintést kaphatnak a hazai filmes szakmai kulisszái mögé, izgalmas kerekasztal-beszélgetések, valamint mesterkurzusok és workshopok révén.",
+    "A fesztivált immár egy nagyobb csapat szervezi. Ezt a küldetést mindannyian egyfajta elhivatottságból vállaltuk. Hiszünk abban, hogy ez az esemény egy olyan érték lehet hosszútávon, amely nemcsak a fiatal filmesek körében, de az egész magyar filmszakmában is népszerűvé, elismertté tud válni.",
+    "Az ELTE képzésein temérdek értékes és figyelemre méltó alkotás készül. A 2025-ös Friss Húson nyolc, a miskolci CineFesten öt, míg a 2026-ös Magyar Filmszemlén kilenc rövidfilm szerepelt a programban. Emelett rendszeresen vetítenek ELTE-s filmeket többek között a szolnoki ATAFF-on, a szegedi Zsigmond Vilmos Nemzetközi Filmfesztiválon, illetve a Malter Filmfesztiválon.",
+    "Az ELTE Szemle összes programja nyitott és ingyenesen látogatható.",
+    "Az ELTE filmszakos diákjai itt tudnak nevezni március 17-ig.",
+  ],
+  2025: [
+    "Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi filmfesztivál, amelyen az ELTE Filmtanszékén készülő hallgatói filmek kerülnek bemutatásra. Célunk láthatóságot adni a műhelymunkának, ami a magyar film jövőjét alakíthatja ki.",
+    "A fesztiválon a Mozgókép alapképzés (MoHa), a Filmtudomány mesterszak, valamint a Szabad bölcsészet Film specializációs hallgatók munkáit vetítjük. A filmek díjazására egy szakmai zsűrit kérünk fel, amely dönt a fesztivál fődíjáról, illetve összeállít egy ún. BEST OF blokkot a legmagasabb színvonalú munkákból. A vetítéseken kívül különböző szakmai programokat is szervezünk. Az érdeklődők betekintést kaphatnak a hazai filmes szakmai kulisszái mögé, izgalmas kerekasztal-beszélgetések, valamint mesterkurzusok és workshopok révén.",
+    "A fesztivált immár egy több mint tíz fős csapat szervezi. Ezt a küldetést mindannyian egyfajta elhivatottságból vállaltuk. Hiszünk abban, hogy ez az esemény egy olyan érték lehet hosszútávon, amely nemcsak a fiatal filmesek körében, de az egész magyar filmszakmában is népszerűvé, elismertté tud válni.",
+    "Az ELTE képzésein temérdek értékes és figyelemre méltó alkotás készül. A 2024-es Friss Húson hat, míg a 2025-ös Magyar Filmszemlén tizenhárom rövidfilm szerepelt a programban. Ress Abigél Háztűznéző című filmje ráadásul elnyerte a Legjobb Rövid Dokumentumfilm díját. De nem csak idehaza aratnak sikert ezek a filmek: 2022-ben Szelestey Bianka Hajszálrepedés című diplomafilmje a Cannes-i Nemzetközi filmfesztivál Cinéfondation szekciójában versenyzett, Heim Vilmos Apám fia című alkotását vetítették az egyik legrangosabb német diákfilmfesztiválon, a müncheni Filmschoolfesten, de megjárta Mexikót, Bulgáriát és Lengyelországot is.",
+    "Az ELTE Szemle összes programja nyitott és ingyenesen látogatható.",
+  ]
+}
+
+export const stab = {
+  2025: {
+    "Főszervezők": "Tóth Anna Júlia és Kristóf Álmos",
+    "Szervezői csapat": "Kriza Áron, Bíró Rozi, Hurtik Nóra, Somorjai Máté, Rözge Borisz, Szirmai János, Vajda Fruzsi, Mrena Dorka, Vigh Martin, Igaz Réka, Orbán Róza",
+    "Mozigépészek": "Dér Zsolt, dr. Kerekes Zoltán",
+    "Arculat": "Kristóf Viola",
+    "Weboldal": "Ozsvárt Zoltán"
+  },
+  2026: {
+    "Főszervezők": "Tóth Anna Júlia és Kristóf Álmos",
+    "Szervezői csapat": "Vajda Fruzsi, Hurtik Nóra, Nagy Sára, Papp Tánya Zsófia, Vigh Sára, Csókás Nándor, Nagy Dániel, Lelkes Sára, Mrena Dorka",
+    "Külön köszönet": "Bíró Rozi, Kriza Áron, Jó Kristóf, Kis Xavér, Győri Csilla, Lázár Eszter, Rigó Karolina, Vigh Martin",
+    "Mozigépészek": "dr. Kerekes Zoltán, Dér Zsolt, Gazdag Gergő",
+    "Arculat": "Kristóf Viola",
+    "Weboldal": "Ozsvárt Zoltán" 
+  }
 }
 
 export const links = {
@@ -159,6 +198,25 @@ export const news = {
       "A JELEN-re itt, a WERK-re itt tudtok nevezni március 31-ig.",
     ],
   },
+}
+
+export const news2026 = {
+  0: {
+    title: "Érkezik a III. ELTE Szemle, hivatalos a zsűri névsora",
+    date: "2026. március 08.",
+    image:
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/hirek/ErkezikAHarmadikElteSzemle.png",
+    link: {
+      page: "/erkezik_a_harmadik_elte_szemle",
+    },
+    description:
+      "A tavalyi évhez hasonlóan idén is április 29. és május 2. között rendezik meg az ELTE filmes képzésein készülő hallgatói filmek fesztiválját, az ELTE Szemlét.",
+  },
+}
+
+export const newsByYear = {
+  2025: news,
+  2026: news2026,
 }
 
 export const scheduleData = [

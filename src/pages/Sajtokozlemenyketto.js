@@ -1,10 +1,13 @@
 import React, { useEffect } from "react"
 import { Button, Image } from "@heroui/react"
 import SVG from "components/svg/SVG"
+import { useTheme } from "../contexts/ThemeContext"
 
 function Sajtokozlemenyketto() {
+  const { colors } = useTheme()
+  
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
 
   return (
@@ -96,7 +99,8 @@ function Sajtokozlemenyketto() {
           <a
             href="https://www.facebook.com/CinemaNiche/?locale=hu_HU"
             target="_blank"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
             rel="noopener noreferrer"
           >
             Cinema Niche
@@ -105,7 +109,8 @@ function Sajtokozlemenyketto() {
           <a
             href="https://mozinet.hu"
             target="_blank"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
             rel="noopener noreferrer"
           >
             Mozinet
@@ -114,7 +119,8 @@ function Sajtokozlemenyketto() {
           <a
             href="https://magyarhangya.hu/"
             target="_blank"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
             rel="noopener noreferrer"
           >
             Magyarhangya
@@ -123,7 +129,8 @@ function Sajtokozlemenyketto() {
           <a
             href="https://cirkofilm.hu/"
             target="_blank"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
             rel="noopener noreferrer"
           >
             Cirko Film
@@ -137,7 +144,8 @@ function Sajtokozlemenyketto() {
           <a
             href="http://cinego.hu"
             target="_blank"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
             rel="noopener noreferrer"
           >
             Cinego
@@ -150,7 +158,8 @@ function Sajtokozlemenyketto() {
           <a
             href="http://biff.hu"
             target="_blank"
-            className="text-[#cc2d1c] underline"
+            className="underline"
+            style={{ color: colors.linkColor }}
             rel="noopener noreferrer"
           >
             Budapest International Film Festival (BIFF)

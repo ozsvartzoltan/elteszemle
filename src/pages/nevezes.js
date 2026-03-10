@@ -3,7 +3,7 @@ import { Image } from "@heroui/react"
 
 function Nevezes() {
   useEffect(() => {
-    localStorage.clear()
+    localStorage.removeItem("name")
   }, [])
   return (
     <div className=" bg-black text-white px-4 md:px-20 lg:px-40 pb-2 ">
