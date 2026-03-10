@@ -1,0 +1,60 @@
+name: Nightly Dev → Master Merge
+
+on:
+  schedule:
+    - cron: '15 22 10 3 *'   # 2026-03-10 22:00 UTC = 23:00 Hungary (CET)
+  workflow_dispatch:         # allow manual trigger from GitHub UI as well
+
+jobs:
+  merge-dev-into-master:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Guard one-time execution date (UTC)
+        run: |
+          if [ "$(date -u +%Y-%m-%d)" != "2026-03-10" ]; then
+            echo "Not the target date (2026-03-10 UTC). Skipping."
+            exit 0
+          fi
+
+      - name: Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (smoke test before merge)
+        env:
+          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
+          REACT_APP_FIREBASE_AUTH_DOMAIN: ${{ secrets.REACT_APP_FIREBASE_AUTH_DOMAIN }}
+          REACT_APP_FIREBASE_PROJECT_ID: ${{ secrets.REACT_APP_FIREBASE_PROJECT_ID }}
+          REACT_APP_FIREBASE_STORAGE_BUCKET: ${{ secrets.REACT_APP_FIREBASE_STORAGE_BUCKET }}
+          REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}
+          REACT_APP_FIREBASE_APP_ID: ${{ secrets.REACT_APP_FIREBASE_APP_ID }}
+          CI: false
+        run: npm run build
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge dev into master
+        run: |
+          git fetch origin master dev
+          if git merge-base --is-ancestor origin/dev origin/master; then
+            echo "master is already up to date with dev. Skipping merge."
+            exit 0
+          fi
+          git checkout -B master origin/master
+          git merge origin/dev --no-edit --no-ff
+          git push origin master
