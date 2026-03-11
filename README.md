@@ -1,5 +1,3 @@
-Logo valtozik, szin arnyalat is valtozik,
-
 # Favicon
 
 https://realfavicongenerator.net/
