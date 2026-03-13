@@ -3,6 +3,7 @@ import { Button, Tabs, Tab } from '@heroui/react'
 import MovieManager from './MovieManager'
 import JuryManager from './JuryManager'
 import SettingsManager from './SettingsManager'
+import BlockManager from './BlockManager'
 import { useData } from '../../contexts/DataContext'
 
 const AdminDashboard = ({ user, onLogout }) => {
@@ -61,6 +62,9 @@ const AdminDashboard = ({ user, onLogout }) => {
           </div>
         ) : (
           <Tabs aria-label="Admin sections" className="bg-white rounded-lg shadow">
+            <Tab key="blocks" title="Blokkok">
+              <BlockManager year={year} />
+            </Tab>
             <Tab key="movies" title="Filmek">
               <MovieManager year={year} />
             </Tab>

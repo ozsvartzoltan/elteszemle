@@ -58,6 +58,74 @@ export const deleteMovie = async (year, movieId) => {
   }
 }
 
+// ==================== BLOCKS ====================
+
+export const getBlocks = async (year) => {
+  if (year === 2025) {
+    const { movies } = await import('../utils/const')
+    return Object.keys(movies || {}).map((name, index) => ({
+      id: `const-${index}`,
+      name,
+      order: index + 1,
+    }))
+  }
+
+  try {
+    const blocksSnapshot = await getDocs(collection(db, `years/${year}/blocks`))
+    const blocks = blocksSnapshot.docs.map((blockDoc) => ({
+      id: blockDoc.id,
+      ...blockDoc.data(),
+    }))
+
+    return blocks.sort((first, second) => {
+      const firstOrder = Number.isFinite(first.order) ? first.order : Number.MAX_SAFE_INTEGER
+      const secondOrder = Number.isFinite(second.order) ? second.order : Number.MAX_SAFE_INTEGER
+      if (firstOrder !== secondOrder) {
+        return firstOrder - secondOrder
+      }
+      return (first.name || '').localeCompare(second.name || '')
+    })
+  } catch (error) {
+    console.error('Error fetching blocks:', error)
+    return []
+  }
+}
+
+export const addBlock = async (year, blockData) => {
+  try {
+    const docRef = await addDoc(collection(db, `years/${year}/blocks`), {
+      ...blockData,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    })
+    return docRef.id
+  } catch (error) {
+    console.error('Error adding block:', error)
+    throw error
+  }
+}
+
+export const updateBlock = async (year, blockId, blockData) => {
+  try {
+    await updateDoc(doc(db, `years/${year}/blocks/${blockId}`), {
+      ...blockData,
+      updatedAt: new Date(),
+    })
+  } catch (error) {
+    console.error('Error updating block:', error)
+    throw error
+  }
+}
+
+export const deleteBlock = async (year, blockId) => {
+  try {
+    await deleteDoc(doc(db, `years/${year}/blocks/${blockId}`))
+  } catch (error) {
+    console.error('Error deleting block:', error)
+    throw error
+  }
+}
+
 // ==================== JURYS ====================
 
 export const getJurys = async (year) => {
@@ -124,7 +192,12 @@ export const getYearData = async (year) => {
       movies: movies || {},
       jury: zsurik || [],
       news: news || {},
-      schedule: scheduleData || []
+      schedule: scheduleData || [],
+      blocks: Object.keys(movies || {}).map((name, index) => ({
+        id: `const-${index}`,
+        name,
+        order: index + 1,
+      })),
     }
   }
 
@@ -133,9 +206,9 @@ export const getYearData = async (year) => {
     if (yearDoc.exists()) {
       return yearDoc.data()
     }
-    return { movies: {}, jury: [], news: {}, schedule: [] }
+    return { movies: {}, jury: [], news: {}, schedule: [], blocks: [] }
   } catch (error) {
     console.error('Error fetching year data:', error)
-    return { movies: {}, jury: [], news: {}, schedule: [] }
+    return { movies: {}, jury: [], news: {}, schedule: [], blocks: [] }
   }
 }
