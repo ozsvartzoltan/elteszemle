@@ -9,8 +9,11 @@ const MovieManager = ({ year }) => {
   const [editingId, setEditingId] = useState(null)
   const [error, setError] = useState('')
   const [formError, setFormError] = useState('')
+  const [blockError, setBlockError] = useState('')
+  const [indexError, setIndexError] = useState('')
   const [formData, setFormData] = useState({
     blockId: '',
+    indexInBlock: '',
     title: '',
     length: '',
     director: '',
@@ -31,10 +34,39 @@ const MovieManager = ({ year }) => {
     setError('')
     try {
       const [data, blockData] = await Promise.all([getMovies(year), getBlocks(year)])
+      const blockOrderById = blockData.reduce((accumulator, block) => {
+        accumulator[block.id] = Number.isFinite(block.order)
+          ? block.order
+          : Number.MAX_SAFE_INTEGER
+        return accumulator
+      }, {})
+
       // Convert object to array if needed
       const moviesArray = typeof data === 'object' && !Array.isArray(data)
         ? Object.entries(data).map(([id, movie]) => ({ id, ...movie }))
         : Array.isArray(data) ? data : []
+      moviesArray.sort((firstMovie, secondMovie) => {
+        const firstBlockOrder = blockOrderById[firstMovie.blockId] ?? Number.MAX_SAFE_INTEGER
+        const secondBlockOrder = blockOrderById[secondMovie.blockId] ?? Number.MAX_SAFE_INTEGER
+        if (firstBlockOrder !== secondBlockOrder) {
+          return firstBlockOrder - secondBlockOrder
+        }
+
+        const firstParsedIndex = Number.parseInt(firstMovie.indexInBlock, 10)
+        const secondParsedIndex = Number.parseInt(secondMovie.indexInBlock, 10)
+        const firstIndex = Number.isNaN(firstParsedIndex)
+          ? Number.MAX_SAFE_INTEGER
+          : firstParsedIndex
+        const secondIndex = Number.isNaN(secondParsedIndex)
+          ? Number.MAX_SAFE_INTEGER
+          : secondParsedIndex
+        if (firstIndex !== secondIndex) {
+          return firstIndex - secondIndex
+        }
+
+        return (firstMovie.title || '').localeCompare(secondMovie.title || '')
+      })
+
       setMovies(moviesArray)
       setBlocks(blockData)
     } catch (error) {
@@ -49,8 +81,11 @@ const MovieManager = ({ year }) => {
     setEditingId(null)
     setError('')
     setFormError('')
+    setBlockError('')
+    setIndexError('')
     setFormData({
       blockId: '',
+      indexInBlock: '',
       title: '',
       length: '',
       director: '',
@@ -66,8 +101,11 @@ const MovieManager = ({ year }) => {
     setEditingId(movie.id)
     setError('')
     setFormError('')
+    setBlockError('')
+    setIndexError('')
     setFormData({
       blockId: movie.blockId || '',
+      indexInBlock: movie.indexInBlock ? String(movie.indexInBlock) : '',
       title: movie.title || '',
       length: movie.length || '',
       director: movie.director || '',
@@ -80,13 +118,24 @@ const MovieManager = ({ year }) => {
   }
 
   const handleSubmit = async () => {
+    setFormError('')
+    setBlockError('')
+    setIndexError('')
+
     if (!formData.blockId) {
-      setFormError('A blokk kiválasztása kötelező.')
+      setBlockError('A blokk kiválasztása kötelező.')
+      return
+    }
+
+    const parsedIndex = Number.parseInt(formData.indexInBlock, 10)
+    if (Number.isNaN(parsedIndex) || parsedIndex < 1) {
+      setIndexError('A blokkon belüli sorszám kötelező és legalább 1 kell legyen.')
       return
     }
 
     const payload = {
       blockId: formData.blockId,
+      indexInBlock: parsedIndex,
       title: formData.title,
       length: formData.length,
       director: formData.director,
@@ -98,7 +147,6 @@ const MovieManager = ({ year }) => {
 
     try {
       setError('')
-      setFormError('')
       if (editingId) {
         await updateMovie(year, editingId, payload)
       } else {
@@ -155,6 +203,7 @@ const MovieManager = ({ year }) => {
         <Table aria-label="Filmek táblázata">
           <TableHeader>
             <TableColumn>Blokk</TableColumn>
+            <TableColumn>Sorszám</TableColumn>
             <TableColumn>Cím</TableColumn>
             <TableColumn>Rendező</TableColumn>
             <TableColumn>Típus</TableColumn>
@@ -165,6 +214,7 @@ const MovieManager = ({ year }) => {
             {movies.map(movie => (
               <TableRow key={movie.id}>
                 <TableCell>{getBlockName(movie.blockId)}</TableCell>
+                <TableCell>{movie.indexInBlock || '-'}</TableCell>
                 <TableCell>{movie.title}</TableCell>
                 <TableCell>{movie.director || '-'}</TableCell>
                 <TableCell>{movie.type || movie.genre || '-'}</TableCell>
@@ -204,13 +254,13 @@ const MovieManager = ({ year }) => {
             <Select
               label="Blokk *"
               placeholder="Válassz blokkot..."
-              isInvalid={Boolean(formError)}
-              errorMessage={formError}
+              isInvalid={Boolean(blockError)}
+              errorMessage={blockError}
               selectedKeys={formData.blockId ? new Set([formData.blockId]) : new Set([])}
               onSelectionChange={(keys) => {
                 const selectedKey = Array.from(keys)[0] || ''
                 if (selectedKey) {
-                  setFormError('')
+                  setBlockError('')
                 }
                 setFormData({ ...formData, blockId: selectedKey })
               }}
@@ -219,6 +269,24 @@ const MovieManager = ({ year }) => {
                 <SelectItem key={block.id}>{block.name}</SelectItem>
               ))}
             </Select>
+            <Input
+              type="number"
+              min={1}
+              label="Blokkon belüli sorszám *"
+              placeholder="Pl. 1"
+              isInvalid={Boolean(indexError)}
+              errorMessage={indexError}
+              value={formData.indexInBlock}
+              onChange={(event) => {
+                setIndexError('')
+                setFormData({ ...formData, indexInBlock: event.target.value })
+              }}
+            />
+            {formError && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded text-sm">
+                {formError}
+              </div>
+            )}
             <Input
               label="Cím"
               placeholder="Film címe"
