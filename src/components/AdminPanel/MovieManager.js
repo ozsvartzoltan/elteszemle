@@ -245,7 +245,7 @@ const MovieManager = ({ year }) => {
       )}
 
       {/* Modal */}
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl" className="max-h-[800px] overflow-auto">
         <ModalContent>
           <ModalHeader className="flex flex-col gap-1">
             {editingId ? 'Film szerkesztése' : 'Új film hozzáadása'}
