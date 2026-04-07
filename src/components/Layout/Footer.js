@@ -3,6 +3,7 @@ import { SocialIcon } from "react-social-icons"
 import {
   canonImage,
   elteImage,
+  magyar_film_napja,
   mhaImage,
   mindenkiMozijaImage,
   muziZug,
@@ -18,7 +19,7 @@ export default function Footer() {
       {/* Desktop Layout */}
       <div className="hidden sm:grid mx-auto max-w-7xl gap-6 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] items-start">
         {/* FŐ TÁMOGATÓ */}
-        <div className="flex flex-col min-w-[200px]">
+        <div className="flex flex-col min-w-[200px] items-center">
           <h2 className="mb-2 text-xl font-light text-left whitespace-nowrap">
             FŐ TÁMOGATÓ
           </h2>
@@ -32,7 +33,7 @@ export default function Footer() {
         </div>
 
         {/* KIEMELT TÁMOGATÓ */}
-        <div className="flex flex-col min-w-[200px]">
+        <div className="flex flex-col min-w-[200px] items-center">
           <h2 className="mb-2 text-xl font-light text-left whitespace-nowrap">
             KIEMELT TÁMOGATÓ
           </h2>
@@ -45,7 +46,7 @@ export default function Footer() {
         </div>
 
         {/* PARTNEREK */}
-        <div className="flex flex-col min-w-[200px]">
+        <div className="flex flex-col min-w-[200px] items-center">
           <h2 className="mb-2 text-xl font-light text-left whitespace-nowrap">
             PARTNEREK
           </h2>
@@ -78,11 +79,22 @@ export default function Footer() {
                 )
               }
             />
+            <Image
+              src={magyar_film_napja}
+              alt="Magyar Film Napja"
+              className="w-[150px] min-w-[120px] max-w-full h-auto object-fit bg-transparent cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://www.magyarfilmnapja.hu/",
+                  "_blank"
+                )
+              }
+            />
           </div>
         </div>
 
         {/* KAPCSOLAT */}
-        <div className="sm:ml-auto flex flex-col min-w-[220px]">
+        <div className="sm:ml-auto flex flex-col min-w-[220px] items-center">
           <h2 className="mb-2 text-xl font-light whitespace-nowrap">
             KAPCSOLAT
           </h2>
@@ -182,6 +194,17 @@ export default function Footer() {
               onClick={() =>
                 window.open(
                   "https://mozizug.hu/",
+                  "_blank"
+                )
+              }
+            />
+            <Image
+              src={magyar_film_napja}
+              alt="Magyar Film Napja"
+              className="w-[140px] min-w-[120px] max-w-full h-auto object-contain bg-transparent cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://www.magyarfilmnapja.hu/",
                   "_blank"
                 )
               }

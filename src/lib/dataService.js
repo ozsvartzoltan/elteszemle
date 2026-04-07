@@ -48,15 +48,79 @@ const sortDailyPrograms = (programs) => {
   })
 }
 
-const groupDailyProgramsByDate = (programs) => {
-  return programs.reduce((accumulator, program) => {
-    const dateKey = program.date || 'ismeretlen'
+const sortDailyProgramEntries = (programs) => {
+  return [...(programs || [])].sort((first, second) => {
+    const firstTime = first.time || ''
+    const secondTime = second.time || ''
+    if (firstTime !== secondTime) {
+      return firstTime.localeCompare(secondTime)
+    }
+
+    return (first.title || '').localeCompare(second.title || '')
+  })
+}
+
+const sortDailyProgramGroups = (groups) => {
+  return [...(groups || [])].sort((first, second) => {
+    const firstDate = first.date || ''
+    const secondDate = second.date || ''
+    if (firstDate !== secondDate) {
+      return firstDate.localeCompare(secondDate)
+    }
+
+    return (first.place || '').localeCompare(second.place || '')
+  })
+}
+
+const groupDailyProgramGroupsByDate = (groups) => {
+  const sortedGroups = sortDailyProgramGroups(groups)
+  return sortedGroups.reduce((accumulator, group) => {
+    const dateKey = group.date || 'ismeretlen'
     if (!accumulator[dateKey]) {
       accumulator[dateKey] = []
     }
-    accumulator[dateKey].push(program)
+    accumulator[dateKey].push(group)
     return accumulator
   }, {})
+}
+
+const extractPlaceFromTime = (timeText) => {
+  const text = timeText || ''
+  const match = text.match(/\(([^)]+)\)\s*$/)
+  return match ? match[1].trim() : ''
+}
+
+const normalizeLegacyScheduleToGroups = (scheduleData) => {
+  const grouped = new Map()
+
+  ;(scheduleData || []).forEach((item, index) => {
+    const date = item.date || ''
+    const place = extractPlaceFromTime(item.time)
+    const key = `${date}||${place}`
+
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        id: `const-group-${date}-${place || 'no-place'}`,
+        date,
+        place,
+        programs: [],
+      })
+    }
+
+    grouped.get(key).programs.push({
+      id: `const-program-${index}`,
+      title: item.name || '',
+      time: item.time || '',
+      link: item.link || '',
+    })
+  })
+
+  const groups = Array.from(grouped.values()).map((group) => ({
+    ...group,
+    programs: sortDailyProgramEntries(group.programs),
+  }))
+
+  return groupDailyProgramGroupsByDate(groups)
 }
 
 // ==================== MOVIES ====================
@@ -326,29 +390,49 @@ export const deleteExtraProgram = async (year, extraProgramId) => {
 export const getDailyPrograms = async (year) => {
   if (year === 2025) {
     const { scheduleData } = await import('../utils/const')
-    const flatPrograms = (scheduleData || []).map((program, index) => ({
-      id: `const-${index}`,
-      name: program.name || '',
-      date: program.date || '',
-      time: program.time || '',
-      link: program.link || '',
-    }))
-
-    return groupDailyProgramsByDate(sortDailyPrograms(flatPrograms))
+    return normalizeLegacyScheduleToGroups(scheduleData)
   }
 
   try {
     const snapshot = await getDocs(collection(db, `years/${year}/dailyPrograms`))
-    const programs = snapshot.docs.map((programDoc) => ({
-      id: programDoc.id,
-      ...programDoc.data(),
-      name: programDoc.data().name || '',
-      date: programDoc.data().date || '',
-      time: programDoc.data().time || '',
-      link: programDoc.data().link || '',
-    }))
+    const groups = snapshot.docs.map((programDoc) => {
+      const data = programDoc.data()
 
-    return groupDailyProgramsByDate(sortDailyPrograms(programs))
+      // Backward compatibility with old flat model (name/date/time/link)
+      if (typeof data.name === 'string' || typeof data.time === 'string') {
+        return {
+          id: programDoc.id,
+          date: data.date || '',
+          place: data.place || '',
+          programs: sortDailyProgramEntries([
+            {
+              id: `${programDoc.id}-legacy`,
+              title: data.name || '',
+              time: data.time || '',
+              link: data.link || '',
+            },
+          ]),
+        }
+      }
+
+      return {
+        id: programDoc.id,
+        date: data.date || '',
+        place: data.place || '',
+        programs: sortDailyProgramEntries(
+          Array.isArray(data.programs)
+            ? data.programs.map((program, index) => ({
+                id: program.id || `${programDoc.id}-program-${index}`,
+                title: program.title || '',
+                time: program.time || '',
+                link: program.link || '',
+              }))
+            : []
+        ),
+      }
+    })
+
+    return groupDailyProgramGroupsByDate(groups)
   } catch (error) {
     console.error('Error fetching daily programs:', error)
     return {}
@@ -358,7 +442,11 @@ export const getDailyPrograms = async (year) => {
 export const addDailyProgram = async (year, dailyProgramData) => {
   try {
     const docRef = await addDoc(collection(db, `years/${year}/dailyPrograms`), {
-      ...dailyProgramData,
+      date: dailyProgramData.date || '',
+      place: dailyProgramData.place || '',
+      programs: sortDailyProgramEntries(
+        Array.isArray(dailyProgramData.programs) ? dailyProgramData.programs : []
+      ),
       createdAt: new Date(),
       updatedAt: new Date(),
     })
@@ -372,7 +460,11 @@ export const addDailyProgram = async (year, dailyProgramData) => {
 export const updateDailyProgram = async (year, dailyProgramId, dailyProgramData) => {
   try {
     await updateDoc(doc(db, `years/${year}/dailyPrograms/${dailyProgramId}`), {
-      ...dailyProgramData,
+      date: dailyProgramData.date || '',
+      place: dailyProgramData.place || '',
+      programs: sortDailyProgramEntries(
+        Array.isArray(dailyProgramData.programs) ? dailyProgramData.programs : []
+      ),
       updatedAt: new Date(),
     })
   } catch (error) {
@@ -401,7 +493,7 @@ export const getYearData = async (year) => {
       jury: zsurik || [],
       news: news || {},
       schedule: scheduleData || [],
-      dailyPrograms: scheduleData || [],
+      dailyPrograms: normalizeLegacyScheduleToGroups(scheduleData),
       extraPrograms: extraPrograms || {},
       blocks: Object.keys(movies || {}).map((name, index) => ({
         id: `const-${index}`,

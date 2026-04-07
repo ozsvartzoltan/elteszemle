@@ -12,6 +12,8 @@ export const elteImage =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/filmtansz_logo_ktl0r1.png"
 export const muziZug =
   "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/Mozizug_logo_vilagos.png"
+export const magyar_film_napja =
+  "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/szponzor/magyar_film_napja_logo_2026-white.png"
 export const logo_2026 = "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/logo/logo_2026.png"
 
 export const zsurik = [
@@ -78,7 +80,6 @@ export const rolunk = {
     "A fesztivált immár egy nagyobb csapat szervezi. Ezt a küldetést mindannyian egyfajta elhivatottságból vállaltuk. Hiszünk abban, hogy ez az esemény egy olyan érték lehet hosszútávon, amely nemcsak a fiatal filmesek körében, de az egész magyar filmszakmában is népszerűvé, elismertté tud válni.",
     "Az ELTE képzésein temérdek értékes és figyelemre méltó alkotás készül. A 2025-ös Friss Húson nyolc, a miskolci CineFesten öt, míg a 2026-ös Magyar Filmszemlén kilenc rövidfilm szerepelt a programban. Emelett rendszeresen vetítenek ELTE-s filmeket többek között a szolnoki ATAFF-on, a szegedi Zsigmond Vilmos Nemzetközi Filmfesztiválon, illetve a Malter Filmfesztiválon.",
     "Az ELTE Szemle összes programja nyitott és ingyenesen látogatható.",
-    "Az ELTE filmszakos diákjai itt tudnak nevezni március 17-ig.",
   ],
   2025: [
     "Az ELTE Szemle egy 2024-ben hallgatói önerőből létrejött egyetemi filmfesztivál, amelyen az ELTE Filmtanszékén készülő hallgatói filmek kerülnek bemutatásra. Célunk láthatóságot adni a műhelymunkának, ami a magyar film jövőjét alakíthatja ki.",
@@ -99,8 +100,8 @@ export const stab = {
   },
   2026: {
     "Főszervezők": "Tóth Anna Júlia és Kristóf Álmos",
-    "Szervezői csapat": "Vajda Fruzsi, Hurtik Nóra, Nagy Sára, Papp Tánya Zsófia, Vigh Sára, Csókás Nándor, Nagy Dániel, Lelkes Sára, Mrena Dorka",
-    "Külön köszönet": "Bíró Rozi, Kriza Áron, Jó Kristóf, Kis Xavér, Győri Csilla, Lázár Eszter, Rigó Karolina, Vigh Martin",
+    "Szervezői csapat": "Vajda Fruzsi, Hurtik Nóra, Nagy Sára, Papp Tánya Zsófia, Vigh Sára, Csókás Nándor, Nagy Dániel, Lelkes Sára, Mrena Dorka, Félegyházi Janka",
+    "Külön köszönet": "Bíró Rozi, Kriza Áron, Jó Kristóf, Kis Xavér, Győri Csilla, Bajomi Eszter, Rigó Karolina, Vigh Martin, Szalai Sámuel",
     "Mozigépészek": "dr. Kerekes Zoltán, Dér Zsolt, Gazdag Gergő",
     "Arculat": "Kristóf Viola",
     "Weboldal": "Ozsvárt Zoltán" 

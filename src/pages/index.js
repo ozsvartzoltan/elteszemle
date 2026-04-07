@@ -133,25 +133,6 @@ function Home() {
       <div id="rolunk" className=" space-y-6 text-justify leading-relaxed">
         <div className="font-bold text-4xl mt-10">Rólunk</div>
         {currentRolunk.map((paragraph, index) => {
-          // Special handling for the 2026 registration link
-          if (year === 2026 && paragraph.includes("Az ELTE filmszakos diákjai itt tudnak nevezni")) {
-            const parts = paragraph.split("itt")
-            return (
-              <div key={index}>
-                {parts[0]}
-                <a 
-                  href="https://forms.gle/Bv7nSY4wU2ueXJrYA" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:underline font-semibold"
-                  style={{ color: colors.linkColor }}
-                >
-                  itt
-                </a>
-                {parts[1]}
-              </div>
-            )
-          }
           return <div key={index}>{paragraph}</div>
         })}
       </div>

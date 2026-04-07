@@ -14,14 +14,14 @@ function NapiBontas() {
 
   const grouped = dailyPrograms || {}
 
-  const handleBlockClick = (block) => {
-    console.log(block?.name + " - " + block?.date + " - " + block?.time)
-    console.log(`${block?.name} - ${block?.date} - ${block?.time}`)
+  const handleProgramClick = (program, date) => {
+    console.log(program?.title + " - " + date + " - " + program?.time)
+    console.log(`${program?.title} - ${date} - ${program?.time}`)
     localStorage.setItem(
       "name",
-      `${block?.name} - ${block?.date} - ${block?.time}`
+      `${program?.title} - ${date} - ${program?.time}`
     )
-    let isBlokk = block?.name.split(" ")[1] === "Blokk"
+    let isBlokk = (program?.title || '').split(" ")[1] === "Blokk"
     navigate(isBlokk ? "/filmek" : "/szakmai_programok")
   }
 
@@ -38,40 +38,45 @@ function NapiBontas() {
       <h1 className="text-4xl font-bold text-center mb-12">Napi bontás</h1>
 
       <div className="space-y-16 max-w-4xl mx-auto">
-        {Object.entries(grouped).map(([date, blocks]) => (
+        {Object.entries(grouped).map(([date, groups]) => (
           <div key={date} className="space-y-8">
             <h2 className="text-2xl font-semibold" style={{ color: colors.mainColor }}>
               {dayLabels[date] || date}
-              {(date === "04.29" || date === "04.30" || date === "05.01") && (
-                <span className="text-[#f7f2e3]"> - Stúdió K</span>
-              )}
             </h2>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {blocks.map((block) => (
-                <button
-                  key={block.id || `${block.name}-${block.date}-${block.time}`}
-                  onClick={() => {
-                    if (block?.link) {
-                      window.open(block.link, "_blank")
-                      return
-                    }
+            <div className="space-y-6">
+              {groups.map((group) => (
+                <div key={group.id || `${group.date}-${group.place}`} className="space-y-3">
+                  <h3 className="text-xl font-medium text-[#f7f2e3]">{group.place || "Helyszín nélkül"}</h3>
 
-                    if (block?.name) {
-                      handleBlockClick(block)
-                    }
-                  }}
-                  className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition flex justify-between items-center"
-                >
-                  <div>
-                    <span className=" font-medium text-lg">{block.name}</span>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {(group.programs || []).map((program, index) => (
+                      <button
+                        key={program.id || `${group.id}-${index}-${program.title}`}
+                        onClick={() => {
+                          if (program?.link) {
+                            window.open(program.link, "_blank")
+                            return
+                          }
+
+                          if (program?.title) {
+                            handleProgramClick(program, date)
+                          }
+                        }}
+                        className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition flex justify-between items-center"
+                      >
+                        <div>
+                          <span className=" font-medium text-lg">{program.title}</span>
+                        </div>
+                        <div>
+                          <span className="font-semibold flex text-right" style={{ color: colors.mainColor }}>
+                            {program.time}
+                          </span>
+                        </div>
+                      </button>
+                    ))}
                   </div>
-                  <div>
-                    <span className="font-semibold flex text-right" style={{ color: colors.mainColor }}>
-                      {block.time}
-                    </span>
-                  </div>
-                </button>
+                </div>
               ))}
             </div>
           </div>

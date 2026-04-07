@@ -23,28 +23,41 @@ import {
 } from '../../lib/dataService'
 
 const createEmptyFormData = () => ({
-  name: '',
   date: '',
-  time: '',
-  link: '',
+  place: '',
+  programs: [{ title: '', time: '', link: '' }],
 })
 
-const normalizeProgramForForm = (program) => ({
-  name: program.name || '',
-  date: program.date || '',
-  time: program.time || '',
-  link: program.link || '',
-})
+const normalizeProgramForForm = (group) => {
+  const normalizedPrograms = Array.isArray(group.programs)
+    ? group.programs.map((program) => ({
+        title: program.title || '',
+        time: program.time || '',
+        link: program.link || '',
+      }))
+    : []
+
+  return {
+    date: group.date || '',
+    place: group.place || '',
+    programs: normalizedPrograms.length > 0 ? normalizedPrograms : [{ title: '', time: '', link: '' }],
+  }
+}
 
 const buildPayload = (formData) => ({
-  name: (formData.name || '').trim(),
   date: (formData.date || '').trim(),
-  time: (formData.time || '').trim(),
-  link: (formData.link || '').trim(),
+  place: (formData.place || '').trim(),
+  programs: (formData.programs || [])
+    .map((program) => ({
+      title: (program.title || '').trim(),
+      time: (program.time || '').trim(),
+      link: (program.link || '').trim(),
+    }))
+    .filter((program) => program.title && program.time),
 })
 
 const DailyProgramManager = ({ year }) => {
-  const [programs, setPrograms] = useState([])
+  const [groups, setGroups] = useState([])
   const [loading, setLoading] = useState(true)
   const [editingId, setEditingId] = useState(null)
   const [error, setError] = useState('')
@@ -56,23 +69,17 @@ const DailyProgramManager = ({ year }) => {
     loadPrograms()
   }, [year])
 
-  const sortedPrograms = useMemo(() => {
-    return [...programs].sort((first, second) => {
+  const sortedGroups = useMemo(() => {
+    return [...groups].sort((first, second) => {
       const firstDate = first.date || ''
       const secondDate = second.date || ''
       if (firstDate !== secondDate) {
         return firstDate.localeCompare(secondDate)
       }
 
-      const firstTime = first.time || ''
-      const secondTime = second.time || ''
-      if (firstTime !== secondTime) {
-        return firstTime.localeCompare(secondTime)
-      }
-
-      return (first.name || '').localeCompare(second.name || '')
+      return (first.place || '').localeCompare(second.place || '')
     })
-  }, [programs])
+  }, [groups])
 
   const loadPrograms = async () => {
     setLoading(true)
@@ -81,7 +88,7 @@ const DailyProgramManager = ({ year }) => {
     try {
       const grouped = await getDailyPrograms(year)
       const list = Object.values(grouped || {}).flatMap((items) => items || [])
-      setPrograms(list)
+      setGroups(list)
     } catch (loadError) {
       console.error('Error loading daily programs:', loadError)
       setError('Nem sikerült betölteni a napi bontást.')
@@ -107,8 +114,13 @@ const DailyProgramManager = ({ year }) => {
   const handleSubmit = async () => {
     const payload = buildPayload(formData)
 
-    if (!payload.name || !payload.date || !payload.time) {
-      setFormError('A név, dátum és idő mező kitöltése kötelező.')
+    if (!payload.date || !payload.place) {
+      setFormError('A dátum és helyszín mező kitöltése kötelező.')
+      return
+    }
+
+    if (!payload.programs.length) {
+      setFormError('Legalább egy programot adj meg (cím + idő).')
       return
     }
 
@@ -159,32 +171,30 @@ const DailyProgramManager = ({ year }) => {
 
       {loading ? (
         <div className="text-center py-8">Betöltés...</div>
-      ) : sortedPrograms.length === 0 ? (
+      ) : sortedGroups.length === 0 ? (
         <div className="text-center py-8 text-gray-500">
-          Még nincsenek napi programok az {year} évhez.
+          Még nincsenek napi program csoportok az {year} évhez.
         </div>
       ) : (
         <Table aria-label="Napi bontás táblázata">
           <TableHeader>
             <TableColumn>Dátum</TableColumn>
-            <TableColumn>Név</TableColumn>
-            <TableColumn>Idő</TableColumn>
-            <TableColumn>Link</TableColumn>
+            <TableColumn>Helyszín</TableColumn>
+            <TableColumn>Programok száma</TableColumn>
             <TableColumn>Műveletek</TableColumn>
           </TableHeader>
           <TableBody>
-            {sortedPrograms.map((program) => (
-              <TableRow key={program.id}>
-                <TableCell>{program.date || '-'}</TableCell>
-                <TableCell>{program.name || '-'}</TableCell>
-                <TableCell>{program.time || '-'}</TableCell>
-                <TableCell>{program.link || '-'}</TableCell>
+            {sortedGroups.map((group) => (
+              <TableRow key={group.id}>
+                <TableCell>{group.date || '-'}</TableCell>
+                <TableCell>{group.place || '-'}</TableCell>
+                <TableCell>{Array.isArray(group.programs) ? group.programs.length : 0}</TableCell>
                 <TableCell className="flex gap-2">
                   <Button
                     isIconOnly
                     size="sm"
                     variant="light"
-                    onPress={() => openEditForm(program)}
+                    onPress={() => openEditForm(group)}
                   >
                     ✏️
                   </Button>
@@ -193,7 +203,7 @@ const DailyProgramManager = ({ year }) => {
                     size="sm"
                     variant="light"
                     color="danger"
-                    onPress={() => handleDelete(program.id)}
+                    onPress={() => handleDelete(group.id)}
                   >
                     🗑️
                   </Button>
@@ -204,10 +214,10 @@ const DailyProgramManager = ({ year }) => {
         </Table>
       )}
 
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl" className="max-h-[800px] overflow-auto">
         <ModalContent>
           <ModalHeader className="flex flex-col gap-1">
-            {editingId ? 'Napi program szerkesztése' : 'Új napi program'}
+            {editingId ? 'Napi program csoport szerkesztése' : 'Új napi program csoport'}
           </ModalHeader>
           <ModalBody className="gap-4">
             {formError && (
@@ -217,29 +227,87 @@ const DailyProgramManager = ({ year }) => {
             )}
 
             <Input
-              label="Név *"
-              placeholder="Program neve"
-              value={formData.name}
-              onChange={(event) => setFormData({ ...formData, name: event.target.value })}
-            />
-            <Input
               label="Dátum *"
               placeholder="Pl. 05.01"
               value={formData.date}
               onChange={(event) => setFormData({ ...formData, date: event.target.value })}
             />
             <Input
-              label="Idő *"
-              placeholder="Pl. 19:30 - 20:15"
-              value={formData.time}
-              onChange={(event) => setFormData({ ...formData, time: event.target.value })}
+              label="Helyszín *"
+              placeholder="Pl. Stúdió K"
+              value={formData.place}
+              onChange={(event) => setFormData({ ...formData, place: event.target.value })}
             />
-            <Input
-              label="Link"
-              placeholder="https://..."
-              value={formData.link}
-              onChange={(event) => setFormData({ ...formData, link: event.target.value })}
-            />
+
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <label className="text-sm font-medium text-gray-700">Programok</label>
+                <Button
+                  size="sm"
+                  variant="flat"
+                  onPress={() => setFormData({
+                    ...formData,
+                    programs: [...formData.programs, { title: '', time: '', link: '' }],
+                  })}
+                >
+                  + Új program
+                </Button>
+              </div>
+
+              {formData.programs.map((program, index) => (
+                <div key={`program-row-${index}`} className="border border-gray-200 rounded-lg p-3 space-y-2">
+                  <Input
+                    label={`Cím ${index + 1} *`}
+                    placeholder="Program címe"
+                    value={program.title}
+                    onChange={(event) => {
+                      const nextPrograms = [...formData.programs]
+                      nextPrograms[index] = { ...nextPrograms[index], title: event.target.value }
+                      setFormData({ ...formData, programs: nextPrograms })
+                    }}
+                  />
+                  <Input
+                    label={`Idő ${index + 1} *`}
+                    placeholder="Pl. 19:30 - 20:15"
+                    value={program.time}
+                    onChange={(event) => {
+                      const nextPrograms = [...formData.programs]
+                      nextPrograms[index] = { ...nextPrograms[index], time: event.target.value }
+                      setFormData({ ...formData, programs: nextPrograms })
+                    }}
+                  />
+                  <Input
+                    label={`Link ${index + 1}`}
+                    placeholder="https://..."
+                    value={program.link}
+                    onChange={(event) => {
+                      const nextPrograms = [...formData.programs]
+                      nextPrograms[index] = { ...nextPrograms[index], link: event.target.value }
+                      setFormData({ ...formData, programs: nextPrograms })
+                    }}
+                  />
+                  <div className="flex justify-end">
+                    <Button
+                      size="sm"
+                      variant="light"
+                      color="danger"
+                      onPress={() => {
+                        if (formData.programs.length === 1) {
+                          setFormData({ ...formData, programs: [{ title: '', time: '', link: '' }] })
+                          return
+                        }
+                        setFormData({
+                          ...formData,
+                          programs: formData.programs.filter((_, rowIndex) => rowIndex !== index),
+                        })
+                      }}
+                    >
+                      Program törlése
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </ModalBody>
           <ModalFooter>
             <Button color="danger" variant="light" onPress={() => onOpenChange()}>
