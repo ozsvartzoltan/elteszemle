@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react"
-import { extraPrograms, dayLabels } from "utils/const"
+import { dayLabels } from "utils/const"
 import { Button } from "@heroui/react"
 import SVG from "components/svg/SVG"
 import { useData } from "../contexts/DataContext"
@@ -7,7 +7,7 @@ import { useTheme } from "../contexts/ThemeContext"
 import ComingSoon from "../components/ComingSoon"
 
 function SzakmaiProgramok() {
-  const { year } = useData()
+  const { year, extraPrograms } = useData()
   const { colors } = useTheme()
   const blockRefs = useRef({})
 
@@ -36,7 +36,7 @@ function SzakmaiProgramok() {
       </h1>
 
       <div className="space-y-16 max-w-4xl mx-auto">
-        {Object.entries(extraPrograms).map(([date, programs]) => (
+        {Object.entries(extraPrograms || {}).map(([date, programs]) => (
           <div key={date} className="space-y-8">
             <h2 className="text-2xl font-semibold" style={{ color: colors.mainColor }}>
               {dayLabels[date] || date}
@@ -58,6 +58,7 @@ function SzakmaiProgramok() {
                       <span className="uppercase">{program.title} </span>
                       <span className="text-sm font-normal" style={{ color: colors.mainColor }}>
                         – {program.time}
+                        {program.place ? ` (${program.place})` : ""}
                       </span>
                     </p>
 
@@ -75,28 +76,28 @@ function SzakmaiProgramok() {
                       </ul>
                     )}
 
-                    {program.eloadok && (
+                    {program.performers && (
                       <p className="text-sm text-white/70 mt-2">
-                        <strong>Előadók:</strong> {program.eloadok}
+                        <strong>Előadók:</strong> {program.performers}
                       </p>
                     )}
 
-                    {program.speakers && (
-                      <p className="text-sm text-white/70 mt-2">
-                        {program.speakers}
+                    {program.end && (
+                      <p className="text-sm text-white/70 mt-1">
+                        <strong>Vége:</strong> {program.end}
                       </p>
                     )}
 
                     {program.link && (
                       <p className="text-sm mt-2">
                         <a
-                          href={program.link.url}
+                          href={program.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="underline"
                           style={{ color: colors.linkColor }}
                         >
-                          {program.link.text}
+                          További információ
                         </a>
                       </p>
                     )}

@@ -4,6 +4,7 @@ import MovieManager from './MovieManager'
 import JuryManager from './JuryManager'
 import SettingsManager from './SettingsManager'
 import BlockManager from './BlockManager'
+import ExtraProgramManager from './ExtraProgramManager'
 import { useData } from '../../contexts/DataContext'
 
 const AdminDashboard = ({ user, onLogout }) => {
@@ -70,6 +71,9 @@ const AdminDashboard = ({ user, onLogout }) => {
             </Tab>
             <Tab key="jury" title="Szakmai zsűri">
               <JuryManager year={year} />
+            </Tab>
+            <Tab key="extra-programs" title="Szakmai programok">
+              <ExtraProgramManager year={year} />
             </Tab>
             <Tab key="settings" title="Beállítások">
               <SettingsManager />
