@@ -13,8 +13,8 @@ export const useData = () => {
 
 export const DataProvider = ({ children }) => {
   const [year, setYear] = useState(() => {
-    const saved = localStorage.getItem('selectedYear')
-    return saved ? parseInt(saved, 10) : 2026
+    const savedYear = sessionStorage.getItem('selectedYear')
+    return savedYear ? Number.parseInt(savedYear, 10) : 2026
   })
   const [movies, setMovies] = useState({})
   const [jurys, setJurys] = useState([])
@@ -22,9 +22,9 @@ export const DataProvider = ({ children }) => {
   const [dailyPrograms, setDailyPrograms] = useState({})
   const [loading, setLoading] = useState(true)
 
-  // Persist year to localStorage when it changes
+  // Keep selected year for the current browser tab/session only.
   useEffect(() => {
-    localStorage.setItem('selectedYear', year.toString())
+    sessionStorage.setItem('selectedYear', year.toString())
   }, [year])
 
   // Load data when year changes
