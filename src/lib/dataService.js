@@ -30,6 +30,35 @@ const groupExtraProgramsByDate = (programs) => {
   }, {})
 }
 
+const sortDailyPrograms = (programs) => {
+  return [...programs].sort((first, second) => {
+    const firstDate = first.date || ''
+    const secondDate = second.date || ''
+    if (firstDate !== secondDate) {
+      return firstDate.localeCompare(secondDate)
+    }
+
+    const firstTime = first.time || ''
+    const secondTime = second.time || ''
+    if (firstTime !== secondTime) {
+      return firstTime.localeCompare(secondTime)
+    }
+
+    return (first.name || '').localeCompare(second.name || '')
+  })
+}
+
+const groupDailyProgramsByDate = (programs) => {
+  return programs.reduce((accumulator, program) => {
+    const dateKey = program.date || 'ismeretlen'
+    if (!accumulator[dateKey]) {
+      accumulator[dateKey] = []
+    }
+    accumulator[dateKey].push(program)
+    return accumulator
+  }, {})
+}
+
 // ==================== MOVIES ====================
 
 export const getMovies = async (year) => {
@@ -292,6 +321,75 @@ export const deleteExtraProgram = async (year, extraProgramId) => {
   }
 }
 
+// ==================== DAILY PROGRAMS ====================
+
+export const getDailyPrograms = async (year) => {
+  if (year === 2025) {
+    const { scheduleData } = await import('../utils/const')
+    const flatPrograms = (scheduleData || []).map((program, index) => ({
+      id: `const-${index}`,
+      name: program.name || '',
+      date: program.date || '',
+      time: program.time || '',
+      link: program.link || '',
+    }))
+
+    return groupDailyProgramsByDate(sortDailyPrograms(flatPrograms))
+  }
+
+  try {
+    const snapshot = await getDocs(collection(db, `years/${year}/dailyPrograms`))
+    const programs = snapshot.docs.map((programDoc) => ({
+      id: programDoc.id,
+      ...programDoc.data(),
+      name: programDoc.data().name || '',
+      date: programDoc.data().date || '',
+      time: programDoc.data().time || '',
+      link: programDoc.data().link || '',
+    }))
+
+    return groupDailyProgramsByDate(sortDailyPrograms(programs))
+  } catch (error) {
+    console.error('Error fetching daily programs:', error)
+    return {}
+  }
+}
+
+export const addDailyProgram = async (year, dailyProgramData) => {
+  try {
+    const docRef = await addDoc(collection(db, `years/${year}/dailyPrograms`), {
+      ...dailyProgramData,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    })
+    return docRef.id
+  } catch (error) {
+    console.error('Error adding daily program:', error)
+    throw error
+  }
+}
+
+export const updateDailyProgram = async (year, dailyProgramId, dailyProgramData) => {
+  try {
+    await updateDoc(doc(db, `years/${year}/dailyPrograms/${dailyProgramId}`), {
+      ...dailyProgramData,
+      updatedAt: new Date(),
+    })
+  } catch (error) {
+    console.error('Error updating daily program:', error)
+    throw error
+  }
+}
+
+export const deleteDailyProgram = async (year, dailyProgramId) => {
+  try {
+    await deleteDoc(doc(db, `years/${year}/dailyPrograms/${dailyProgramId}`))
+  } catch (error) {
+    console.error('Error deleting daily program:', error)
+    throw error
+  }
+}
+
 // ==================== GENERAL DATA ====================
 
 export const getYearData = async (year) => {
@@ -303,6 +401,7 @@ export const getYearData = async (year) => {
       jury: zsurik || [],
       news: news || {},
       schedule: scheduleData || [],
+      dailyPrograms: scheduleData || [],
       extraPrograms: extraPrograms || {},
       blocks: Object.keys(movies || {}).map((name, index) => ({
         id: `const-${index}`,
@@ -317,9 +416,9 @@ export const getYearData = async (year) => {
     if (yearDoc.exists()) {
       return yearDoc.data()
     }
-    return { movies: {}, jury: [], news: {}, schedule: [], extraPrograms: {}, blocks: [] }
+    return { movies: {}, jury: [], news: {}, schedule: [], dailyPrograms: [], extraPrograms: {}, blocks: [] }
   } catch (error) {
     console.error('Error fetching year data:', error)
-    return { movies: {}, jury: [], news: {}, schedule: [], extraPrograms: {}, blocks: [] }
+    return { movies: {}, jury: [], news: {}, schedule: [], dailyPrograms: [], extraPrograms: {}, blocks: [] }
   }
 }

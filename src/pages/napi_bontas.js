@@ -1,22 +1,18 @@
 import SVG from "components/svg/SVG"
 import React, { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { dayLabels, scheduleData } from "utils/const"
+import { dayLabels } from "utils/const"
 import { Button } from "@heroui/react"
 import { useData } from "../contexts/DataContext"
 import { useTheme } from "../contexts/ThemeContext"
 import ComingSoon from "../components/ComingSoon"
 
 function NapiBontas() {
-  const { year } = useData()
+  const { year, dailyPrograms } = useData()
   const { colors } = useTheme()
   const navigate = useNavigate()
 
-  const grouped = scheduleData.reduce((acc, item) => {
-    if (!acc[item.date]) acc[item.date] = []
-    acc[item.date].push(item)
-    return acc
-  }, {})
+  const grouped = dailyPrograms || {}
 
   const handleBlockClick = (block) => {
     console.log(block?.name + " - " + block?.date + " - " + block?.time)
@@ -54,13 +50,15 @@ function NapiBontas() {
             <div className="grid gap-4 sm:grid-cols-2">
               {blocks.map((block) => (
                 <button
-                  key={block.name}
+                  key={block.id || `${block.name}-${block.date}-${block.time}`}
                   onClick={() => {
-                    if (block?.redirect !== false) {
-                      handleBlockClick(block)
+                    if (block?.link) {
+                      window.open(block.link, "_blank")
+                      return
                     }
-                    if (block?.link !== undefined) {
-                      window.open(block?.link, "_blank")
+
+                    if (block?.name) {
+                      handleBlockClick(block)
                     }
                   }}
                   className="text-left w-full bg-gray-900 rounded-xl px-6 py-4 border border-white/10 hover:bg-white/10 transition flex justify-between items-center"

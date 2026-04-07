@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { getMovies, getJurys, getExtraPrograms } from '../lib/dataService'
+import { getMovies, getJurys, getExtraPrograms, getDailyPrograms } from '../lib/dataService'
 
 const DataContext = createContext()
 
@@ -19,6 +19,7 @@ export const DataProvider = ({ children }) => {
   const [movies, setMovies] = useState({})
   const [jurys, setJurys] = useState([])
   const [extraPrograms, setExtraPrograms] = useState({})
+  const [dailyPrograms, setDailyPrograms] = useState({})
   const [loading, setLoading] = useState(true)
 
   // Persist year to localStorage when it changes
@@ -31,14 +32,16 @@ export const DataProvider = ({ children }) => {
     const loadData = async () => {
       setLoading(true)
       try {
-        const [moviesData, jurysData, extraProgramsData] = await Promise.all([
+        const [moviesData, jurysData, extraProgramsData, dailyProgramsData] = await Promise.all([
           getMovies(year),
           getJurys(year),
-          getExtraPrograms(year)
+          getExtraPrograms(year),
+          getDailyPrograms(year)
         ])
         setMovies(moviesData)
         setJurys(jurysData)
         setExtraPrograms(extraProgramsData)
+        setDailyPrograms(dailyProgramsData)
       } catch (error) {
         console.error('Error loading data:', error)
       } finally {
@@ -60,6 +63,7 @@ export const DataProvider = ({ children }) => {
       movies,
       jurys,
       extraPrograms,
+      dailyPrograms,
       loading
     }}>
       {children}

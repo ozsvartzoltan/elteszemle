@@ -5,6 +5,7 @@ import JuryManager from './JuryManager'
 import SettingsManager from './SettingsManager'
 import BlockManager from './BlockManager'
 import ExtraProgramManager from './ExtraProgramManager'
+import DailyProgramManager from './DailyProgramManager'
 import { useData } from '../../contexts/DataContext'
 
 const AdminDashboard = ({ user, onLogout }) => {
@@ -74,6 +75,9 @@ const AdminDashboard = ({ user, onLogout }) => {
             </Tab>
             <Tab key="extra-programs" title="Szakmai programok">
               <ExtraProgramManager year={year} />
+            </Tab>
+            <Tab key="daily-programs" title="Napi bontás">
+              <DailyProgramManager year={year} />
             </Tab>
             <Tab key="settings" title="Beállítások">
               <SettingsManager />
