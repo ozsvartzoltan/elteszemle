@@ -7,6 +7,7 @@ export default function SettingsManager() {
   const { year } = useData()
   const { colors, updateTheme } = useTheme()
   const [mainColor, setMainColor] = useState(colors.mainColor)
+  const [textColor, setTextColor] = useState(colors.textColor || colors.mainColor)
   const [linkColor, setLinkColor] = useState(colors.linkColor)
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState('')
@@ -15,7 +16,7 @@ export default function SettingsManager() {
     setSaving(true)
     setMessage('')
     try {
-      await updateTheme({ mainColor, linkColor })
+      await updateTheme({ mainColor, textColor, linkColor })
       setMessage('Colors saved successfully!')
       setTimeout(() => setMessage(''), 3000)
     } catch (error) {
@@ -27,6 +28,7 @@ export default function SettingsManager() {
 
   const handleReset = () => {
     setMainColor(colors.mainColor)
+    setTextColor(colors.textColor || colors.mainColor)
     setLinkColor(colors.linkColor)
   }
 
@@ -110,6 +112,30 @@ export default function SettingsManager() {
                 </a>
               </div>
             </div>
+
+            <div>
+              <label className="text-gray-800 text-sm font-medium mb-2 block">
+                Text Color (Titles, highlighted text)
+              </label>
+              <div className="flex gap-4 items-center">
+                <Input
+                  type="color"
+                  value={textColor}
+                  onChange={(e) => setTextColor(e.target.value)}
+                  className="w-24 h-12 cursor-pointer"
+                />
+                <Input
+                  type="text"
+                  value={textColor}
+                  onChange={(e) => setTextColor(e.target.value)}
+                  placeholder="#cc2d1c"
+                  className="flex-1"
+                />
+              </div>
+              <div className="mt-2 p-4 rounded bg-gray-900">
+                <p className="font-semibold" style={{ color: textColor }}>Preview Text</p>
+              </div>
+            </div>
           </div>
 
           <div className="flex gap-4 pt-4">
@@ -144,6 +170,7 @@ export default function SettingsManager() {
           <h3 className="text-gray-800 font-semibold mb-2">Current Theme:</h3>
           <div className="space-y-2 text-sm text-gray-600">
             <p>Main Color: <span className="font-mono">{colors.mainColor}</span></p>
+            <p>Text Color: <span className="font-mono">{colors.textColor || colors.mainColor}</span></p>
             <p>Link Color: <span className="font-mono">{colors.linkColor}</span></p>
           </div>
         </CardBody>

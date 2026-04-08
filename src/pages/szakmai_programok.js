@@ -33,7 +33,7 @@ function SzakmaiProgramok() {
       <div className="space-y-16 max-w-4xl mx-auto">
         {Object.entries(extraPrograms || {}).map(([date, programs]) => (
           <div key={date} className="space-y-8">
-            <h2 className="text-2xl font-semibold" style={{ color: colors.mainColor }}>
+            <h2 className="text-2xl font-semibold" style={{ color: colors.textColor }}>
               {dayLabels[date] || date}
             </h2>
 
@@ -51,7 +51,7 @@ function SzakmaiProgramok() {
                   >
                     <p className="text-lg font-semibold text-white">
                       <span className="uppercase">{program.title} </span>
-                      <span className="text-sm font-normal" style={{ color: colors.mainColor }}>
+                      <span className="text-sm font-normal" style={{ color: colors.textColor }}>
                         – {program.time}
                         {program.place ? ` (${program.place})` : ""}
                       </span>

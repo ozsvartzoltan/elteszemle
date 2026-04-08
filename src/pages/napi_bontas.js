@@ -35,7 +35,7 @@ function NapiBontas() {
       <div className="space-y-16 max-w-4xl mx-auto">
         {Object.entries(grouped).map(([date, groups]) => (
           <div key={date} className="space-y-8">
-            <h2 className="text-2xl font-semibold" style={{ color: colors.mainColor }}>
+            <h2 className="text-2xl font-semibold" style={{ color: colors.textColor }}>
               {dayLabels[date] || date}
             </h2>
 
@@ -64,7 +64,7 @@ function NapiBontas() {
                           <span className=" font-medium text-lg">{program.title}</span>
                         </div>
                         <div>
-                          <span className="font-semibold flex text-right" style={{ color: colors.mainColor }}>
+                                <span className="font-semibold flex text-right" style={{ color: colors.textColor }}>
                             {program.time}
                           </span>
                         </div>

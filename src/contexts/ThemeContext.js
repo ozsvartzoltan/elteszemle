@@ -14,6 +14,7 @@ export const useTheme = () => {
 
 const DEFAULT_COLORS = {
   mainColor: '#cc2d1c',
+  textColor: '#cc2d1c',
   linkColor: '#cc2d1c'
 }
 
@@ -37,6 +38,7 @@ export const ThemeProvider = ({ children, year }) => {
           const data = settingsDoc.data()
           setColors({
             mainColor: data.mainColor || DEFAULT_COLORS.mainColor,
+            textColor: data.textColor || data.mainColor || DEFAULT_COLORS.textColor,
             linkColor: data.linkColor || DEFAULT_COLORS.linkColor
           })
         } else {
@@ -65,7 +67,11 @@ export const ThemeProvider = ({ children, year }) => {
         ...newColors,
         updatedAt: new Date()
       })
-      setColors(newColors)
+      setColors({
+        mainColor: newColors.mainColor || DEFAULT_COLORS.mainColor,
+        textColor: newColors.textColor || newColors.mainColor || DEFAULT_COLORS.textColor,
+        linkColor: newColors.linkColor || DEFAULT_COLORS.linkColor,
+      })
     } catch (error) {
       console.error('Error updating theme:', error)
       throw error

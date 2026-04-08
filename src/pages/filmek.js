@@ -144,7 +144,7 @@ function Filmek() {
               className="bg-gray-900 border border-white/10 rounded-xl shadow-xl flex flex-col md:flex-row overflow-hidden"
             >
               <div className="md:w-2/3 w-full p-6 space-y-2">
-                <h2 className="text-2xl font-bold" style={{ color: colors.mainColor }}>
+                <h2 className="text-2xl font-bold" style={{ color: colors.textColor }}>
                   {movie?.titleJSX ?? movie?.title}
                 </h2>
                 {movie?.director !== "-" && (
