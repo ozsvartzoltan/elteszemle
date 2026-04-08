@@ -8,8 +8,6 @@ import {
 import { getAuth } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
 
-// TODO: Replace with your Firebase config from Firebase Console
-// Go to: Firebase Console > Project Settings > Your Apps > Web App Config
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
