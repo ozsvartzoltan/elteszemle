@@ -172,7 +172,6 @@ export default function Header() {
         </NavbarMenuItem>
         {isProgramDropdownOpen &&
           programLinks
-            .filter(({ key }) => !(key === 'fotokiallitas' && year === 2026))
             .map(({ key, href, text }) => (
               <NavbarMenuItem key={key} className="ml-4">
                 <Link
