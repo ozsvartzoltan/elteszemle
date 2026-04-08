@@ -15,6 +15,7 @@ import Sajtokozlemenyketto from "pages/Sajtokozlemenyketto"
 import BestOfRegisztracio from "pages/BestOfRegisztracio"
 import Bestof from "pages/Bestof"
 import ErkezikAHarmadikElteSzemle from "pages/ErkezikAHarmadikElteSzemle"
+import TeljesAIIIElteSzemleProgramja from "pages/TeljesAIIIElteSzemleProgramja"
 import { ConsentProvider } from "./contexts/ConsentContext"
 import { DataProvider, useData } from "./contexts/DataContext"
 import { ThemeProvider } from "./contexts/ThemeContext"
@@ -74,6 +75,10 @@ const SEO_BY_PATH = {
     title: "Érkezik a harmadik ELTE Szemle | ELTE Szemle",
     description: "Információk a harmadik ELTE Szemle érkezéséről.",
   },
+  "/teljes_a_iii_elte_szemle_programja": {
+    title: "Teljes a III. ELTE Szemle programja | ELTE Szemle",
+    description: "A III. ELTE Szemle teljes programja és részletei.",
+  },
 }
 
 function SeoManager() {
@@ -125,6 +130,10 @@ function AppContent() {
               <Route
                 path="/erkezik_a_harmadik_elte_szemle"
                 element={<ErkezikAHarmadikElteSzemle />}
+              />
+              <Route
+                path="/teljes_a_iii_elte_szemle_programja"
+                element={<TeljesAIIIElteSzemleProgramja />}
               />
               <Route path="/best_of" element={<Bestof />} />
               <Route

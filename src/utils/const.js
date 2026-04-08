@@ -203,6 +203,17 @@ export const news = {
 
 export const news2026 = {
   0: {
+    title: "Teljes a III. ELTE Szemle programja",
+    date: "2026. április 08.",
+    image:
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/hirek/2_h%C3%ADr_cover.png",
+    link: {
+      page: "/teljes_a_iii_elte_szemle_programja",
+    },
+    description:
+      "Több, mint 60 hallgatói rövidfilmmel érkezik április végén az ELTE Szemle 2026-os évada. Az ELTE-s diploma- és vizsgafilmeken, valamint a különböző órai feladatra készült gyakorlatokon túl két vendég blokkba szedve az SZFE-n, a MOME-n, és a METU-n készülő filmek közül is láthatnak válogatást az érdeklődők. A fesztivál megnyitójának április 29-én este 8-kor a Kristály Színtér ad otthont.",
+  },
+  1: {
     title: "Érkezik a III. ELTE Szemle, hivatalos a zsűri névsora",
     date: "2026. március 08.",
     image:
@@ -212,17 +223,6 @@ export const news2026 = {
     },
     description:
       "A tavalyi évhez hasonlóan idén is április 29. és május 2. között rendezik meg az ELTE filmes képzésein készülő hallgatói filmek fesztiválját, az ELTE Szemlét.",
-  },
-  1: {
-    title: "Teljes a III. ELTE Szemle programja",
-    date: "2026. április 08.",
-    image:
-      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/hirek/2_h%C3%ADr_cover.png",
-    link: {
-      page: "/harmadik_elte_szemle",
-    },
-    description:
-      "Több, mint 60 hallgatói rövidfilmmel érkezik április végén az ELTE Szemle 2026-os évada. Az ELTE-s diploma- és vizsgafilmeken, valamint a különböző órai feladatra készült gyakorlatokon túl két vendég blokkba szedve az SZFE-n, a MOME-n, és a METU-n készülő filmek közül is láthatnak válogatást az érdeklődők. A fesztivál megnyitójának április 29-én este 8-kor a Kristály Színtér ad otthont.",
   },
 }
 
