@@ -40,7 +40,7 @@ function TeljesAIIIElteSzemleProgramja() {
         </p>
 
         <p>
-          Az első vendég blokkban látható lesz többek közt a tavalyi Friss Húson két nagy sikert arató alkotás: Nagyistók Edit <em>Ugar</em>, valamint Tóth Kristóf Zsolt <em>Túlpart</em> című munkája, a második blokkban pedig szerepel a tavalyi CineFest CineNewWave szekciójában a Nemzetközi Kritikusok díját elnyerő rövidfilm: dr. Mokrai Mihály <em>A Hóhér Reggelije</em> című alkotása. A teljes filmes programot <a href="/szakmai_programok" className="underline" style={{ color: colors.linkColor }}>itt</a> lehet megtekinteni.
+          Az első vendég blokkban látható lesz többek közt a tavalyi Friss Húson két nagy sikert arató alkotás: Nagyistók Edit <em>Ugar</em>, valamint Tóth Kristóf Zsolt <em>Túlpart</em> című munkája, a második blokkban pedig szerepel a tavalyi CineFest CineNewWave szekciójában a Nemzetközi Kritikusok díját elnyerő rövidfilm: dr. Mokrai Mihály <em>A Hóhér Reggelije</em> című alkotása. A teljes filmes programot <a href="/filmek" className="underline" style={{ color: colors.linkColor }}>itt</a> lehet megtekinteni.
         </p>
 
         <p>
