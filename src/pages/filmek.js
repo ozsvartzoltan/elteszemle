@@ -1,17 +1,78 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, useMemo } from "react"
 import { Tabs, Tab, Skeleton, Image, Button } from "@heroui/react"
-import { movies } from "utils/const"
 import SVG from "components/svg/SVG"
 import { useData } from "../contexts/DataContext"
 import { useTheme } from "../contexts/ThemeContext"
-import ComingSoon from "../components/ComingSoon"
 
 function Filmek() {
-  const { year } = useData()
+  const { year, movies, blocks } = useData()
   const { colors } = useTheme()
-  const [selectedTab, setSelectedTab] = useState(Object.keys(movies)[0])
+  const groupedMovies = useMemo(() => {
+    const blockNames = Object.keys(movies || {})
+    const isLegacyGroupedMovies = blockNames.length > 0 && Array.isArray(movies[blockNames[0]])
+
+    if (isLegacyGroupedMovies) {
+      return movies || {}
+    }
+
+    const blockNameById = (blocks || []).reduce((accumulator, block) => {
+      accumulator[block.id] = block.name || block.id
+      return accumulator
+    }, {})
+
+    const grouped = {}
+    Object.values(movies || {}).forEach((movie) => {
+      const blockName = blockNameById[movie.blockId] || 'Egyéb'
+      if (!grouped[blockName]) {
+        grouped[blockName] = []
+      }
+      grouped[blockName].push(movie)
+    })
+
+    Object.keys(grouped).forEach((blockName) => {
+      grouped[blockName].sort((first, second) => {
+        const firstIndex = Number.isFinite(first.indexInBlock) ? first.indexInBlock : Number.MAX_SAFE_INTEGER
+        const secondIndex = Number.isFinite(second.indexInBlock) ? second.indexInBlock : Number.MAX_SAFE_INTEGER
+        if (firstIndex !== secondIndex) {
+          return firstIndex - secondIndex
+        }
+        return (first.title || '').localeCompare(second.title || '')
+      })
+    })
+
+    return grouped
+  }, [movies, blocks])
+
+  const blockOrderByName = useMemo(() => {
+    return (blocks || []).reduce((accumulator, block) => {
+      accumulator[block.name] = Number.isFinite(block.order) ? block.order : Number.MAX_SAFE_INTEGER
+      return accumulator
+    }, {})
+  }, [blocks])
+
+  const blockKeys = useMemo(() => {
+    const keys = Object.keys(groupedMovies || {})
+    return keys.sort((first, second) => {
+      const firstOrder = blockOrderByName[first] ?? Number.MAX_SAFE_INTEGER
+      const secondOrder = blockOrderByName[second] ?? Number.MAX_SAFE_INTEGER
+      if (firstOrder !== secondOrder) {
+        return firstOrder - secondOrder
+      }
+      return first.localeCompare(second)
+    })
+  }, [groupedMovies, blockOrderByName])
+  const [selectedTab, setSelectedTab] = useState('')
   const [loadedImages, setLoadedImages] = useState({})
   const tabContainerRef = useRef(null)
+
+  useEffect(() => {
+    if (!selectedTab && blockKeys.length > 0) {
+      setSelectedTab(blockKeys[0])
+    }
+    if (selectedTab && !blockKeys.includes(selectedTab) && blockKeys.length > 0) {
+      setSelectedTab(blockKeys[0])
+    }
+  }, [blockKeys, selectedTab])
 
   const handleImageLoad = (index) => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }))
@@ -38,10 +99,6 @@ function Filmek() {
     document.body.scrollTop = 0
   }, [])
 
-  if (year === 2026) {
-    return <ComingSoon />
-  }
-
   return (
     <div className="bg-black text-white min-h-screen px-4 py-12">
       <div className="max-w-7xl mx-auto">
@@ -66,7 +123,7 @@ function Filmek() {
               variant="underlined"
               className="inline-flex min-w-max whitespace-nowrap"
             >
-              {Object.keys(movies).map((block) => (
+              {blockKeys.map((block) => (
                 <Tab key={block} title={block} />
               ))}
             </Tabs>
@@ -81,7 +138,7 @@ function Filmek() {
         </div>
 
         <div className="space-y-10">
-          {movies[selectedTab].map((movie, index) => (
+          {(groupedMovies[selectedTab] || []).map((movie, index) => (
             <div
               key={index}
               className="bg-gray-900 border border-white/10 rounded-xl shadow-xl flex flex-col md:flex-row overflow-hidden"

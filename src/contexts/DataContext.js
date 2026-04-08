@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { getMovies, getJurys, getExtraPrograms, getDailyPrograms } from '../lib/dataService'
+import { getMovies, getJurys, getExtraPrograms, getDailyPrograms, getBlocks } from '../lib/dataService'
 
 const DataContext = createContext()
 
@@ -17,6 +17,7 @@ export const DataProvider = ({ children }) => {
     return savedYear ? Number.parseInt(savedYear, 10) : 2026
   })
   const [movies, setMovies] = useState({})
+  const [blocks, setBlocks] = useState([])
   const [jurys, setJurys] = useState([])
   const [extraPrograms, setExtraPrograms] = useState({})
   const [dailyPrograms, setDailyPrograms] = useState({})
@@ -32,13 +33,15 @@ export const DataProvider = ({ children }) => {
     const loadData = async () => {
       setLoading(true)
       try {
-        const [moviesData, jurysData, extraProgramsData, dailyProgramsData] = await Promise.all([
+        const [moviesData, blocksData, jurysData, extraProgramsData, dailyProgramsData] = await Promise.all([
           getMovies(year),
+          getBlocks(year),
           getJurys(year),
           getExtraPrograms(year),
           getDailyPrograms(year)
         ])
-        setMovies(moviesData)
+        setMovies(moviesData)        
+        setBlocks(blocksData)
         setJurys(jurysData)
         setExtraPrograms(extraProgramsData)
         setDailyPrograms(dailyProgramsData)
@@ -61,6 +64,7 @@ export const DataProvider = ({ children }) => {
       year,
       changeYear,
       movies,
+      blocks,
       jurys,
       extraPrograms,
       dailyPrograms,

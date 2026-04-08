@@ -4,7 +4,6 @@ import { Button } from "@heroui/react"
 import SVG from "components/svg/SVG"
 import { useData } from "../contexts/DataContext"
 import { useTheme } from "../contexts/ThemeContext"
-import ComingSoon from "../components/ComingSoon"
 
 function SzakmaiProgramok() {
   const { year, extraPrograms } = useData()
@@ -24,10 +23,6 @@ function SzakmaiProgramok() {
     }
     localStorage.removeItem("name")
   }, [])
-
-  if (year === 2026) {
-    return <ComingSoon />
-  }
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">

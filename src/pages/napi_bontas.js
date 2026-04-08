@@ -5,7 +5,6 @@ import { dayLabels } from "utils/const"
 import { Button } from "@heroui/react"
 import { useData } from "../contexts/DataContext"
 import { useTheme } from "../contexts/ThemeContext"
-import ComingSoon from "../components/ComingSoon"
 
 function NapiBontas() {
   const { year, dailyPrograms } = useData()
@@ -28,10 +27,6 @@ function NapiBontas() {
   useEffect(() => {
     localStorage.removeItem("name")
   }, [])
-
-  if (year === 2026) {
-    return <ComingSoon />
-  }
 
   return (
     <div className="bg-black min-h-screen text-white py-16 px-4 sm:px-8">
