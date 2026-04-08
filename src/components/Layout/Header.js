@@ -80,7 +80,6 @@ export default function Header() {
             </NavbarItem>
             <DropdownMenu className="bg-black text-white rounded-none border-none p-0">
               {programLinks
-                .filter(({ key }) => !(key === 'fotokiallitas' && year === 2026))
                 .map(({ key, text, href }) => (
                   <DropdownItem key={key} className="h-14" href={href}>
                     {text}
