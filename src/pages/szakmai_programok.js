@@ -10,6 +10,36 @@ function SzakmaiProgramok() {
   const { colors } = useTheme()
   const blockRefs = useRef({})
 
+  const formatDateLabel = (dateKey) => {
+    if (year !== 2026) {
+      return dayLabels[dateKey] || dateKey
+    }
+
+    const capitalize = (text) =>
+      text ? `${text.charAt(0).toUpperCase()}${text.slice(1)}` : text
+
+    let parsedDate = null
+    const isoDateMatch = dateKey.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+    const monthDayMatch = dateKey.match(/^(\d{2})\.(\d{2})$/)
+
+    if (isoDateMatch) {
+      const [, yearPart, monthPart, dayPart] = isoDateMatch
+      parsedDate = new Date(Number(yearPart), Number(monthPart) - 1, Number(dayPart))
+    } else if (monthDayMatch) {
+      const [, monthPart, dayPart] = monthDayMatch
+      parsedDate = new Date(2026, Number(monthPart) - 1, Number(dayPart))
+    }
+
+    if (!parsedDate || Number.isNaN(parsedDate.getTime())) {
+      return dateKey
+    }
+
+    const month = new Intl.DateTimeFormat("hu-HU", { month: "long" }).format(parsedDate)
+    const weekday = new Intl.DateTimeFormat("hu-HU", { weekday: "long" }).format(parsedDate)
+
+    return `${capitalize(month)} ${parsedDate.getDate()}. (${capitalize(weekday)})`
+  }
+
   useEffect(() => {
     const stored = localStorage.getItem("name")
     if (stored) {
@@ -34,7 +64,7 @@ function SzakmaiProgramok() {
         {Object.entries(extraPrograms || {}).map(([date, programs]) => (
           <div key={date} className="space-y-8">
             <h2 className="text-2xl font-semibold" style={{ color: colors.textColor }}>
-              {dayLabels[date] || date}
+              {formatDateLabel(date)}
             </h2>
 
             <div className="space-y-6">
