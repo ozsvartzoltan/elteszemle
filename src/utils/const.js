@@ -203,6 +203,17 @@ export const news = {
 
 export const news2026 = {
   0: {
+    title: "Regisztráció a BEST OF vetítésre",
+    date: "2026. április 21.",
+    image:
+      "https://cdn.jsdelivr.net/gh/ozsvartzoltan/elteszemle-images@master/images/2026/hirek/3_hir_cover.jpg",
+    link: {
+      page: "/2026_best_of_regisztracio",
+    },
+    description:
+"A 2026-os ELTE Szemle utolsó napján a szakmai zsűri által összerakott BEST OF válogatást nézhetitek meg. A bekerülő filmekre május 1-én a zsűri kerekasztal-beszélgetésén derül fény, ami 19:30-kor kezdődik a Stúdió K-ban. A fesztivál fődíját a BEST OF vetítésen jelentjük be. A díj egy eszközbérlési csomag lesz fő támogatónk, a Canon Magyarország felajánlásából."
+  },
+  1: {
     title: "Teljes a III. ELTE Szemle programja",
     date: "2026. április 08.",
     image:
@@ -213,7 +224,7 @@ export const news2026 = {
     description:
       "Több, mint 60 hallgatói rövidfilmmel érkezik április végén az ELTE Szemle 2026-os évada. Az ELTE-s diploma- és vizsgafilmeken, valamint a különböző órai feladatra készült gyakorlatokon túl két vendég blokkba szedve az SZFE-n, a MOME-n, és a METU-n készülő filmek közül is láthatnak válogatást az érdeklődők. A fesztivál megnyitójának április 29-én este 8-kor a Kristály Színtér ad otthont.",
   },
-  1: {
+  2: {
     title: "Érkezik a III. ELTE Szemle, hivatalos a zsűri névsora",
     date: "2026. március 08.",
     image:
