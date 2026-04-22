@@ -101,7 +101,7 @@ export const stab = {
   2026: {
     "Főszervezők": "Tóth Anna Júlia és Kristóf Álmos",
     "Szervezői csapat": "Vajda Fruzsi, Hurtik Nóra, Nagy Sára, Papp Tánya Zsófia, Vigh Sára, Csókás Nándor, Nagy Dániel, Lelkes Sára, Mrena Dorka, Félegyházi Janka",
-    "Külön köszönet": "Bíró Rozi, Kriza Áron, Jó Kristóf, Kis Xavér, Győri Csilla, Bajomi Eszter, Rigó Karolina, Vigh Martin, Szalai Sámuel",
+    "Külön köszönet": "Bíró Rozi, Kriza Áron, Jó Kristóf, Kis Xavér, Győri Csilla, Bajomi Eszter, Rigó Karolina, Vigh Martin, Szalai Sámuel, Kirchknopf Marcell",
     "Mozigépészek": "dr. Kerekes Zoltán, Dér Zsolt, Gazdag Gergő",
     "Arculat": "Kristóf Viola",
     "Weboldal": "Ozsvárt Zoltán" 
