@@ -14,6 +14,7 @@ import Nevezes from "pages/nevezes"
 import Sajtokozlemenyketto from "pages/Sajtokozlemenyketto"
 import BestOfRegisztracio from "pages/BestOfRegisztracio"
 import BestOfRegisztracio2026 from "pages/BestOfRegisztracio2026"
+import BestOf2026 from "pages/BestOf2026"
 import Bestof from "pages/Bestof"
 import ErkezikAHarmadikElteSzemle from "pages/ErkezikAHarmadikElteSzemle"
 import TeljesAIIIElteSzemleProgramja from "pages/TeljesAIIIElteSzemleProgramja"
@@ -47,6 +48,10 @@ const SEO_BY_PATH = {
   "/best_of": {
     title: "Best Of | ELTE Szemle",
     description: "Az ELTE Szemle Best Of válogatása.",
+  },
+  "/2026_best_of": {
+    title: "A III. ELTE Szemle BEST OF válogatása | ELTE Szemle",
+    description: "A III. ELTE Szemle BEST OF válogatása, a 2026-os válogatás legfontosabb információi.",
   },
   "/best_of_regisztracio": {
     title: "Best Of Regisztráció | ELTE Szemle",
@@ -141,6 +146,7 @@ function AppContent() {
                 element={<TeljesAIIIElteSzemleProgramja />}
               />
               <Route path="/best_of" element={<Bestof />} />
+              <Route path="/2026_best_of" element={<BestOf2026 />} />
               <Route
                 path="/best_of_regisztracio"
                 element={<BestOfRegisztracio />}
