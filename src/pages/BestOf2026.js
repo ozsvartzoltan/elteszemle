@@ -38,6 +38,8 @@ export default function BestOf2026() {
           <p>Mrena Dorka: Nem vagyok faszán</p>
         </div>
 
+        <p>A fesztivál fődíját, és a vele járó eszközbérlési támogatást Ress Abigél Cudar világ című filmje nyerte.</p>
+
         <p className="text-xl font-semibold">Gratulálunk!</p>
 
       </div>
